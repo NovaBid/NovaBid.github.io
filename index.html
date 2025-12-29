@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NovaBid.market | Transparent Real-Time Auctions</title>
+  <title>NovaBid.market | Auction like you mean it</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -22,7 +22,19 @@
             nova: {
               400: '#00f3ff',
               500: '#00d1e0',
+            },
+            red: {
+              100: '#ff9999',
+              200: '#ff6666',
+              300: '#ff6666',
+              400: '#ff3333',
+              500: '#ff3333',
+              600: '#e02424',
+              700: '#b91c1c',
+              800: '#991b1b',
+              900: '#7f1d1d',
             }
+
           },
           animation: {
             'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
@@ -197,30 +209,23 @@
     <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
       <!-- LOGO CONTAINER - IMAGE BASED -->
       <div class="flex items-center group cursor-pointer min-w-fit">
-        <!-- Image Logo - RESPONSIVE SIZING -->
-        <div class="relative w-10 h-10 md:w-12 md:h-12 mr-2 md:mr-3 flex-shrink-0" id="nova-logo">
-          <img src="/logo.png" alt="NovaBid.market" class="w-full h-full object-contain" width="48" height="48">
-        </div>
+
 
         <!-- Domain Emphasis - OPTIMIZED FOR IMAGE LOGO -->
         <div class="flex flex-col min-w-0">
-          <div class="font-bold text-base md:text-lg lg:text-xl text-gray-900 flex flex-wrap items-baseline gap-x-1">
+          <div class="font-bold text-base md:text-lg lg:text-xl text-white flex flex-wrap items-baseline gap-x-1">
             <span class="truncate">NovaBid</span>
-            <span class="text-gray-500 text-xs md:text-sm font-normal shrink-0">.market</span>
           </div>
-          <div class="text-[0.65rem] md:text-xs text-gray-500/80 mt-[-2px] hidden md:block whitespace-nowrap">
+          <div class="text-[0.65rem] md:text-xs text-gray-200 mt-[-2px] hidden md:block whitespace-nowrap">
             Transparent auctions • Real-time bidding
           </div>
         </div>
       </div>
 
       <nav class="hidden md:flex items-center space-x-8">
-        <a href="#auctions" class="text-gray-700 hover:text-gray-900 font-medium transition">Active Auctions</a>
-        <a href="#how-it-works" class="text-gray-700 hover:text-gray-900 font-medium transition">How It Works</a>
-        <a href="#" class="text-gray-700 hover:text-gray-900 font-medium transition">Pricing</a>
-        <a href="#" class="text-gray-700 hover:text-nova-500 transition">
-          <i class="fas fa-user"></i>
-        </a>
+        <a href="#auctions" class="text-white hover:text-red-300 font-medium transition">Active Auctions</a>
+        <a href="#how-it-works" class="text-white hover:text-red-300 font-medium transition">How It Works</a>
+        <a href="#" class="text-white hover:text-red-300 font-medium transition">Pricing</a>
 
         <div class="flex items-center space-x-4 ml-6">
           <a href="#" class="text-cosmic-200 hover:text-nova-300 transition">
@@ -256,7 +261,10 @@
   <!-- Hero Section -->
   <section class="gradient-bg text-white pt-24 pb-16 px-4 relative overflow-hidden">
     <div class="max-w-6xl mx-auto relative z-10 text-center">
-
+      <!-- Image Logo - RESPONSIVE SIZING -->
+      <div class="relative w-10 h-10 md:w-12 md:h-12 mr-2 md:mr-3 flex-shrink-0" id="nova-logo">
+        <img src="/logo.png" alt="NovaBid.market" class="w-full h-full object-contain" width="48" height="48">
+      </div>
       <div class="flex justify-center mb-6">
         <div
           class="bg-nova-400/20 backdrop-blur-sm border border-nova-400/30 rounded-full px-4 py-1 inline-flex items-center">
