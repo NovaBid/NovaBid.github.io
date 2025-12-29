@@ -134,19 +134,60 @@
       box-shadow: 0 10px 25px -5px rgba(0, 195, 255, 0.25);
       border-color: #00f3ff;
     }
+/* Logo image optimizations */
+#nova-logo img {
+  filter: drop-shadow(0 2px 4px rgba(0, 20, 40, 0.2));
+  transition: all 0.3s ease;
+}
+#nova-logo img:hover {
+  filter: drop-shadow(0 4px 8px rgba(0, 243, 255, 0.25));
+}
+
+/* Mobile-specific sizing */
+@media (max-width: 480px) {
+  #nova-logo {
+    width: 2.125rem !important; /* 34px */
+    height: 2.125rem !important;
+    margin-right: 0.4rem !important;
+  }
+  
+  /* Hide text label completely on small mobile */
+  .truncate {
+    display: none;
+  }
+  
+  /* Reduce right padding */
+  .px-4 {
+    padding-left: 0.75rem !important;
+    padding-right: 0.75rem !important;
+  }
+}
+
+/* Prevent logo distortion */
+.logo-container {
+  max-width: 100%;
+  height: auto;
+}
   </style>
 </head>
 <body class="text-gray-800">
-<!-- Floating Navbar with Logo - FIXED SIZING -->
+<!-- FLOATING NAVBAR WITH IMAGE LOGO -->
 <header class="fixed top-0 left-0 w-full z-50 transition-all duration-300">
   <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
-    <!-- LOGO CONTAINER - RESPONSIVE SIZING -->
+    <!-- LOGO CONTAINER - IMAGE BASED -->
     <div class="flex items-center group cursor-pointer min-w-fit">
-      <!-- Animated Logo - MOBILE OPTIMIZED -->
-      <!-- Inside logo container -->
-<img src="logo.png" alt="NovaBid.market" class="w-10 h-10 md:w-12 md:h-12">
+      <!-- Image Logo - RESPONSIVE SIZING -->
+      <div class="relative w-10 h-10 md:w-12 md:h-12 mr-2 md:mr-3 flex-shrink-0" id="nova-logo">
+        <img 
+          src="logo.png" 
+          alt="NovaBid.market logo" 
+          class="w-full h-full object-contain transition-transform duration-500 group-hover:scale-[1.05]"
+          width="48"
+          height="48"
+        >
+      </div>
       
-      <!-- Domain Emphasis - FLEX WRAP FOR MOBILE -->
+      <!-- Domain Emphasis - OPTIMIZED FOR IMAGE LOGO -->
       <div class="flex flex-col min-w-0">
         <div class="font-bold text-base md:text-lg lg:text-xl text-white flex flex-wrap items-baseline gap-x-1">
           <span class="truncate">NovaBid</span>
@@ -158,7 +199,6 @@
       </div>
     </div>
 
-    <!-- Desktop Navigation -->
     <nav class="hidden md:flex items-center space-x-8">
       <a href="#auctions" class="text-cosmic-200 hover:text-white font-medium transition">Active Auctions</a>
       <a href="#how-it-works" class="text-cosmic-200 hover:text-white font-medium transition">How It Works</a>
@@ -168,22 +208,20 @@
         <a href="#" class="text-cosmic-200 hover:text-nova-300 transition">
           <i class="fas fa-user"></i>
         </a>
-        <a href="#" class="bg-white text-cosmic-700 font-bold py-2 px-5 rounded-xl hover:bg-gray-100 transition shadow-md">
+        <a href="#" class="bg-white text-cosmic-700 font-bold py-2 px-4 md:px-5 rounded-xl text-sm md:text-base hover:bg-gray-100 transition shadow-md whitespace-nowrap">
           Sign In
         </a>
       </div>
     </nav>
 
-    <!-- Mobile Menu Button -->
     <button class="md:hidden text-white focus:outline-none">
       <i class="fas fa-bars text-2xl"></i>
     </button>
   </div>
   
-  <!-- Sticky Shadow Effect -->
   <div class="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-nova-400 to-transparent opacity-0 transition-opacity duration-300" id="nav-shadow"></div>
-</div>
 </header>
+<div class="h-16 md:h-20"></div>
 
 <!-- Spacer for Fixed Header -->
 <div class="h-16 md:h-20"></div>
