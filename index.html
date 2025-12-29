@@ -1,192 +1,531 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>NovaBid | Transparent, Modern Auction Platform</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NovaBid.market | Transparent Real-Time Auctions</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            cosmic: {
+              50: '#f0f7ff',
+              100: '#e0f0ff',
+              500: '#0f1a3c',
+              600: '#0a1128',
+              700: '#070d1a',
+            },
+            nova: {
+              400: '#00f3ff',
+              500: '#00d1e0',
+            }
+          },
+          animation: {
+            'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+            'float': 'float 6s ease-in-out infinite',
+          },
+          keyframes: {
+            float: {
+              '0%, 100%': { transform: 'translateY(0)' },
+              '50%': { transform: 'translateY(-10px)' },
+            }
+          }
+        }
+      }
+    }
+  </script>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
-
-    :root {
-      --bg: #0d0d0f;
-      --fg: #f5f5f7;
-      --accent: #8b5cf6;
-      --accent-light: #a78bfa;
-      --card: #1a1a1d;
-    }
-
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
     body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Inter', sans-serif;
-      background: var(--bg);
-      color: var(--fg);
-      -webkit-font-smoothing: antialiased;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: #f8fafc;
     }
-
-    header {
-      text-align: center;
-      padding: 60px 20px;
-      background: radial-gradient(circle at top, #1f1f22, #0d0d0f);
+    .gradient-bg {
+      background: linear-gradient(135deg, #0f1a3c 0%, #1e3a8a 100%);
+      position: relative;
+      overflow: hidden;
     }
-
-    header h1 {
-      font-size: 3rem;
-      margin: 0;
-      font-weight: 700;
-      letter-spacing: -1px;
+    .gradient-bg::before {
+      content: "";
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(0, 243, 255, 0.15) 0%, transparent 70%);
+      transform: rotate(30deg);
     }
-
-    .tagline {
-      font-size: 1.2rem;
-      margin-top: 10px;
-      color: var(--accent-light);
-      font-weight: 600;
-    }
-
-    nav {
-      margin-top: 25px;
-    }
-
-    nav a {
-      color: var(--accent-light);
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: 600;
-      transition: opacity 0.2s;
-    }
-
-    nav a:hover {
+    .star {
+      position: absolute;
+      background: white;
+      border-radius: 50%;
       opacity: 0.7;
     }
-
-    section {
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 40px;
-      background: var(--card);
-      border-radius: 16px;
-      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
-      backdrop-filter: blur(8px);
+    .live-counter {
+      font-variant-numeric: tabular-nums;
+      animation: pulse-slow 3s infinite;
     }
-
-    h2 {
-      margin-top: 0;
-      font-size: 1.8rem;
-      border-left: 4px solid var(--accent);
-      padding-left: 12px;
-      font-weight: 700;
+    .card-hover {
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
     }
-
-    .feature-card {
-      background: #121214;
-      border: 1px solid #2c2c2f;
-      padding: 20px;
-      border-radius: 14px;
-      margin-bottom: 25px;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-
-    .feature-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 10px 25px rgba(0,0,0,0.5);
-    }
-
-    .highlight {
-      background: var(--accent);
-      padding: 6px 12px;
-      border-radius: 6px;
-      color: white;
-      font-weight: 600;
-    }
-
-    footer {
-      text-align: center;
-      padding: 30px 0;
-      background: #0b0b0d;
-      margin-top: 60px;
-      color: #666;
-      font-size: 0.9rem;
+    .card-hover:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px -5px rgba(0, 195, 255, 0.25);
+      border-color: #00f3ff;
     }
   </style>
 </head>
-<body>
-
-<header>
-  <div class="tagline"><img src="logo.png"></div>
-  <nav>
-    <a href="#intro">Intro</a>
-    <a href="#benefits">Benefits</a>
-    <a href="#features">Platform Features</a>
-    <a href="#why">Why NovaBid?</a>
-  </nav>
-</header>
-
-<section id="intro">
-  <h2>Welcome to NovaBid</h2>
-  <p>NovaBid is a next‑generation, fully transparent auction platform engineered to maximize value for both vendors and buyers. Every part of NovaBid is designed with fairness, clarity, and performance at its core — ensuring stronger bidding, cleaner data, and a better experience for everyone involved.</p>
-  <p>Unlike outdated legacy platforms, NovaBid is built for the modern auction world: mobile‑first, cloud‑powered, lightning‑fast, and relentlessly optimized for trust and transparency.</p>
-</section>
-
-<section id="benefits">
-  <h2>Benefits for Vendors & Buyers</h2>
-
-  <div class="feature-card">
-    <h3>🔥 Maximum Value Realization</h3>
-    <p>Fair bidding mechanics, smart engagement tools, and high‑speed performance drive more participation and stronger final prices.</p>
+<body class="text-gray-800">
+  <!-- Sticky CTA Bar -->
+  <div class="fixed bottom-4 left-1/2 transform -translate-x-1/2 z-50 md:hidden">
+    <a href="#auctions" class="bg-nova-400 text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-nova-500 transition flex items-center">
+      <i class="fas fa-gavel mr-2"></i> Browse Active Auctions
+    </a>
   </div>
 
-  <div class="feature-card">
-    <h3>⚖️ True Transparency</h3>
-    <p>Clear bidding history, consistent rules, and honest auction flow help build trust between sellers and bidders.</p>
-  </div>
+  <!-- Hero Section -->
+  <section class="gradient-bg text-white pt-24 pb-16 px-4 relative overflow-hidden">
+    <div class="max-w-6xl mx-auto relative z-10 text-center">
+      <div class="flex justify-center mb-6">
+        <div class="bg-nova-400/20 backdrop-blur-sm border border-nova-400/30 rounded-full px-4 py-1 inline-flex items-center">
+          <i class="fas fa-bolt text-nova-400 mr-2"></i>
+          <span class="text-sm font-medium">Live now: 1,248 bids placed in the last hour</span>
+        </div>
+      </div>
+      
+      <h1 class="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+        A better way to run and participate in auctions
+      </h1>
+      <p class="text-xl text-cosmic-100 max-w-3xl mx-auto mb-10">
+        NovaBid is a simple, transparent platform for running auctions and bidding on clearly defined items—in real time, with rules everyone can understand.
+      </p>
+      
+      <div class="flex flex-col sm:flex-row justify-center gap-4 mb-12">
+        <a href="#create" class="bg-white text-cosmic-700 font-bold py-4 px-8 rounded-xl text-lg hover:bg-gray-100 transition shadow-lg hover:shadow-xl">
+          Create an Auction
+        </a>
+        <a href="#auctions" class="bg-transparent border-2 border-white text-white font-bold py-4 px-8 rounded-xl text-lg hover:bg-white/10 transition">
+          Browse Active Auctions
+        </a>
+      </div>
 
-  <div class="feature-card">
-    <h3>📱 Seamless Mobile Experience</h3>
-    <p>Bidders can participate instantly from any device, increasing engagement and driving competitive bidding activity.</p>
-  </div>
+      <!-- Animated Bid Counter -->
+      <div class="bg-cosmic-600/50 backdrop-blur-sm border border-nova-400/20 rounded-2xl p-6 max-w-2xl mx-auto mt-8">
+        <div class="flex justify-between items-center">
+          <div>
+            <div class="text-sm text-nova-300 mb-1">LIVE AUCTION IN PROGRESS</div>
+            <div class="font-bold text-xl">Vintage Rolex Daytona</div>
+            <div class="text-nova-300 mt-1">27 bidders • Ends in 08:23:15</div>
+          </div>
+          <div class="text-right">
+            <div class="text-sm text-nova-300 mb-1">CURRENT BID</div>
+            <div class="text-3xl font-bold live-counter text-nova-400">$24,500</div>
+            <div class="text-nova-300 mt-1">+ $500 last bid</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Animated Stars -->
+    <div id="stars" class="absolute inset-0 pointer-events-none"></div>
+  </section>
 
-  <div class="feature-card">
-    <h3>📊 Powerful Vendor Tools</h3>
-    <p>Vendors get real‑time analytics, inventory insights, bidder data, and simplified management tools designed for efficiency.</p>
-  </div>
+  <!-- What Is NovaBid -->
+  <section class="py-20 px-4 bg-white">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">What Is NovaBid?</h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          NovaBid is an online auction platform built to make buying and selling through bidding fair, straightforward, and predictable.
+        </p>
+      </div>
+      
+      <div class="bg-cosmic-50 rounded-2xl p-8 md:p-12 border border-cosmic-100">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <p class="text-lg text-gray-700 mb-6">
+              Every auction on NovaBid follows clear rules, updates in real time, and produces outcomes that participants can trust. There are no hidden processes, special access, or unclear results—just open competition.
+            </p>
+            <p class="text-lg text-gray-700 mb-6">
+              Whether you are selling items, services, or opportunities, NovaBid gives you a reliable way to let the market determine value.
+            </p>
+            <div class="flex flex-wrap gap-4 mt-8">
+              <span class="bg-cosmic-100 text-cosmic-700 px-4 py-2 rounded-full font-medium">No hidden fees</span>
+              <span class="bg-cosmic-100 text-cosmic-700 px-4 py-2 rounded-full font-medium">Real-time verification</span>
+              <span class="bg-cosmic-100 text-cosmic-700 px-4 py-2 rounded-full font-medium">Rule-based outcomes</span>
+            </div>
+          </div>
+          <div class="relative">
+            <div class="bg-gradient-to-br from-cosmic-500 to-nova-500 rounded-2xl p-6 text-white h-full flex flex-col justify-center items-center text-center border-2 border-nova-400/30">
+              <i class="fas fa-shield-alt text-5xl mb-4 text-nova-300"></i>
+              <h3 class="text-2xl font-bold mb-3">Trust by Design</h3>
+              <p class="text-cosmic-100 max-w-md">
+                Auction outcomes are determined solely by published rules—not discretion or behind-the-scenes decisions.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <div class="feature-card">
-    <h3>🔒 Modern Security</h3>
-    <p>Robust fraud‑resistant systems protect both sides of the marketplace and ensure clean, trustworthy auction activity.</p>
-  </div>
-</section>
+  <!-- Why Use NovaBid -->
+  <section class="py-20 px-4 bg-cosmic-50" id="auctions">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">Why Use NovaBid?</h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          Built for transparency, speed, and absolute clarity in every transaction.
+        </p>
+      </div>
+      
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <!-- Card 1 -->
+        <div class="card-hover bg-white rounded-2xl p-8 border border-cosmic-100 text-center">
+          <div class="w-16 h-16 bg-cosmic-50 rounded-2xl flex items-center justify-center mx-auto mb-6">
+            <i class="fas fa-balance-scale text-2xl text-cosmic-600"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3">Clear and Fair Auctions</h3>
+          <p class="text-gray-600">
+            All auctions follow clearly stated rules that apply equally to everyone. Participants can see what is happening and why outcomes occur.
+          </p>
+        </div>
+        
+        <!-- Card 2 -->
+        <div class="card-hover bg-white rounded-2xl p-8 border border-cosmic-100 text-center">
+          <div class="w-16 h-16 bg-cosmic-50 rounded-2xl flex items-center justify-center mx-auto mb-6">
+            <i class="fas fa-bolt text-2xl text-cosmic-600"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3">Real-Time Bidding</h3>
+          <p class="text-gray-600">
+            Bids update instantly, so participants always know where they stand. No delays, no uncertainty, no surprises.
+          </p>
+        </div>
+        
+        <!-- Card 3 -->
+        <div class="card-hover bg-white rounded-2xl p-8 border border-cosmic-100 text-center">
+          <div class="w-16 h-16 bg-cosmic-50 rounded-2xl flex items-center justify-center mx-auto mb-6">
+            <i class="fas fa-file-contract text-2xl text-cosmic-600"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3">Defined Items and Terms</h3>
+          <p class="text-gray-600">
+            Every auction lists exactly what is being offered, how bidding works, and how the winner is determined. This reduces confusion and disputes.
+          </p>
+        </div>
+        
+        <!-- Card 4 -->
+        <div class="card-hover bg-white rounded-2xl p-8 border border-cosmic-100 text-center">
+          <div class="w-16 h-16 bg-cosmic-50 rounded-2xl flex items-center justify-center mx-auto mb-6">
+            <i class="fas fa-shield-alt text-2xl text-cosmic-600"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3">Trust You Can Rely On</h3>
+          <p class="text-gray-600">
+            Auction outcomes are based on the rules—not discretion or behind-the-scenes decisions. What you see is what you get.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<section id="features">
-  <h2>Core Platform Features</h2>
-  <ul>
-    <li><strong>Live and Timed Auctions</strong> — Flexible formats for every type of sale.</li>
-    <li><strong>Smart Bid Extensions</strong> — Designed to prevent unfair last‑second sniping.</li>
-    <li><strong>Real‑time Notifications</strong> — Stay informed with instant updates.</li>
-    <li><strong>Bulk Lot Import Tools</strong> — Speed up catalog creation with drag‑and‑drop CSV uploads.</li>
-    <li><strong>High‑Resolution Photo & Media Support</strong> — Showcase lots with clarity.</li>
-    <li><strong>Secure User Accounts</strong> — Permissioned access and audit trails for accountability.</li>
-    <li><strong>Automated Invoicing & Reporting</strong> — Streamline settlement and post‑auction workflows.</li>
-    <li><strong>SEO‑Optimized Lot Pages</strong> — Attract more organic bidders.</li>
-  </ul>
-</section>
+  <!-- Audience Sections -->
+  <section class="py-20 px-4 bg-white">
+    <div class="max-w-6xl mx-auto">
+      <div class="grid md:grid-cols-2 gap-16">
+        <!-- For Vendors -->
+        <div>
+          <div class="flex items-center mb-6">
+            <div class="w-12 h-12 bg-cosmic-100 rounded-xl flex items-center justify-center mr-4">
+              <i class="fas fa-crown text-xl text-cosmic-600"></i>
+            </div>
+            <h2 class="text-2xl font-bold">For Vendors and Auction Hosts</h2>
+          </div>
+          <p class="text-gray-600 mb-6">
+            NovaBid is designed to make hosting auctions easy and dependable.
+          </p>
+          
+          <div class="space-y-4 mb-8">
+            <div class="flex">
+              <i class="fas fa-check-circle text-nova-400 mt-1 mr-3"></i>
+              <span>Create auctions with clear terms and timelines</span>
+            </div>
+            <div class="flex">
+              <i class="fas fa-check-circle text-nova-400 mt-1 mr-3"></i>
+              <span>Offer single items or grouped offerings</span>
+            </div>
+            <div class="flex">
+              <i class="fas fa-check-circle text-nova-400 mt-1 mr-3"></i>
+              <span>Let competitive bidding determine the final outcome</span>
+            </div>
+            <div class="flex">
+              <i class="fas fa-check-circle text-nova-400 mt-1 mr-3"></i>
+              <span>Reduce disputes with transparent rules and visible activity</span>
+            </div>
+          </div>
+          
+          <p class="text-gray-600 italic mb-6">
+            Whether you are selling inventory, allocating limited availability, or running competitive offers, NovaBid gives you a professional auction environment without complexity.
+          </p>
+          
+          <a href="#create" class="inline-flex items-center text-nova-500 font-medium group">
+            Get started as a seller
+            <i class="fas fa-arrow-right ml-2 group-hover:ml-3 transition-all"></i>
+          </a>
+        </div>
+        
+        <!-- For Buyers -->
+        <div>
+          <div class="flex items-center mb-6">
+            <div class="w-12 h-12 bg-cosmic-100 rounded-xl flex items-center justify-center mr-4">
+              <i class="fas fa-user text-xl text-cosmic-600"></i>
+            </div>
+            <h2 class="text-2xl font-bold">For Participants and Buyers</h2>
+          </div>
+          <p class="text-gray-600 mb-6">
+            NovaBid gives bidders confidence that auctions are run fairly.
+          </p>
+          
+          <div class="space-y-4 mb-8">
+            <div class="flex">
+              <i class="fas fa-check-circle text-nova-400 mt-1 mr-3"></i>
+              <span>See bids update in real time</span>
+            </div>
+            <div class="flex">
+              <i class="fas fa-check-circle text-nova-400 mt-1 mr-3"></i>
+              <span>Understand exactly what you are bidding on</span>
+            </div>
+            <div class="flex">
+              <i class="fas fa-check-circle text-nova-400 mt-1 mr-3"></i>
+              <span>Compete on equal footing with other participants</span>
+            </div>
+            <div class="flex">
+              <i class="fas fa-check-circle text-nova-400 mt-1 mr-3"></i>
+              <span>Trust that results are final and rule-based</span>
+            </div>
+          </div>
+          
+          <p class="text-gray-600 italic mb-6">
+            You always know where you stand and how outcomes are decided.
+          </p>
+          
+          <a href="#auctions" class="inline-flex items-center text-nova-500 font-medium group">
+            Browse active auctions
+            <i class="fas fa-arrow-right ml-2 group-hover:ml-3 transition-all"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<section id="why">
-  <h2>Why Choose NovaBid?</h2>
-  <p>NovaBid is designed to be a balanced, value‑maximizing platform for vendors and buyers alike. With a focus on transparency, performance, and trust, NovaBid offers:</p>
-  <ul>
-    <li>Higher bidder confidence through clear rules and clean UX</li>
-    <li>Greater auction participation from mobile‑optimized tools</li>
-    <li>Faster, smoother auction management for vendors</li>
-    <li>More consistent results with data‑driven insights</li>
-    <li>A scalable platform built for the future of auctions</li>
-  </ul>
-  <p>NovaBid helps vendors and buyers engage with confidence — fast, fair, and built to maximize value for everyone.</p>
-</section>
+  <!-- How It Works -->
+  <section class="py-20 px-4 bg-gradient-to-b from-cosmic-50 to-white">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">How NovaBid Works</h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          Simple, predictable, and transparent from start to finish.
+        </p>
+      </div>
+      
+      <div class="relative">
+        <!-- Timeline Line -->
+        <div class="hidden md:block absolute left-1/2 top-0 bottom-0 w-1 bg-cosmic-200 transform -translate-x-1/2"></div>
+        
+        <div class="grid md:grid-cols-3 gap-12">
+          <!-- Step 1 -->
+          <div class="text-center md:text-left relative z-10">
+            <div class="w-16 h-16 bg-cosmic-600 text-white rounded-2xl flex items-center justify-center mx-auto md:mx-0 mb-6 border-4 border-nova-400">
+              <span class="text-2xl font-bold">1</span>
+            </div>
+            <h3 class="text-xl font-bold mb-3">An auction is created</h3>
+            <p class="text-gray-600">
+              The item or offering, bidding rules, and timeline are clearly defined upfront.
+            </p>
+          </div>
+          
+          <!-- Step 2 -->
+          <div class="text-center md:text-left relative z-10">
+            <div class="w-16 h-16 bg-cosmic-600 text-white rounded-2xl flex items-center justify-center mx-auto md:mx-0 mb-6 border-4 border-nova-400">
+              <span class="text-2xl font-bold">2</span>
+            </div>
+            <h3 class="text-xl font-bold mb-3">Participants place bids</h3>
+            <p class="text-gray-600">
+              Bidding happens live, with instant updates visible to all participants.
+            </p>
+          </div>
+          
+          <!-- Step 3 -->
+          <div class="text-center md:text-left relative z-10">
+            <div class="w-16 h-16 bg-cosmic-600 text-white rounded-2xl flex items-center justify-center mx-auto md:mx-0 mb-6 border-4 border-nova-400">
+              <span class="text-2xl font-bold">3</span>
+            </div>
+            <h3 class="text-xl font-bold mb-3">The auction closes</h3>
+            <p class="text-gray-600">
+              When the auction ends, the winner is determined strictly by the published rules.
+            </p>
+          </div>
+        </div>
+        
+        <div class="mt-16 text-center">
+          <div class="inline-block bg-cosmic-50 text-cosmic-700 px-6 py-3 rounded-xl font-medium border border-cosmic-200">
+            Results are final and clear: Outcomes are visible, traceable, and consistent with the auction terms.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<footer>
-  <p>© 2025 NovaBid.market — Auction Like You Mean It</p>
-</footer>
+  <!-- CTA Section -->
+  <section class="py-20 px-4 gradient-bg text-white relative overflow-hidden" id="create">
+    <div class="max-w-4xl mx-auto text-center relative z-10">
+      <div class="flex justify-center mb-6">
+        <div class="bg-nova-400/20 backdrop-blur-sm border border-nova-400/30 rounded-full px-4 py-1 inline-flex items-center">
+          <i class="fas fa-lightbulb text-nova-400 mr-2"></i>
+          <span class="text-sm font-medium">Trusted by 2,300+ auction hosts worldwide</span>
+        </div>
+      </div>
+      
+      <h2 class="text-3xl md:text-4xl font-bold mb-6">Designed for Transparency</h2>
+      <p class="text-xl text-cosmic-100 max-w-3xl mx-auto mb-10">
+        NovaBid is built on a simple idea: auctions work best when everyone understands the rules and can see the process.
+      </p>
+      <p class="text-lg text-cosmic-100 max-w-2xl mx-auto mb-12">
+        By removing ambiguity and hidden mechanics, NovaBid creates an environment where buyers and sellers can participate with confidence.
+      </p>
+      
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <a href="#" class="bg-white text-cosmic-700 font-bold py-4 px-8 rounded-xl text-lg hover:bg-gray-100 transition shadow-lg">
+          Create Your First Auction
+        </a>
+        <a href="#auctions" class="bg-transparent border-2 border-white text-white font-bold py-4 px-8 rounded-xl text-lg hover:bg-white/10 transition">
+          View Live Auctions
+        </a>
+      </div>
+      
+      <div class="mt-16 flex justify-center flex-wrap gap-8 opacity-90">
+        <div class="flex items-center">
+          <i class="fas fa-lock text-nova-300 text-2xl mr-3"></i>
+          <span>Bank-grade security</span>
+        </div>
+        <div class="flex items-center">
+          <i class="fas fa-file-invoice text-nova-300 text-2xl mr-3"></i>
+          <span>Zero hidden fees</span>
+        </div>
+        <div class="flex items-center">
+          <i class="fas fa-headset text-nova-300 text-2xl mr-3"></i>
+          <span>24/7 support</span>
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <!-- Footer -->
+  <footer class="bg-cosmic-700 text-cosmic-200 py-12 px-4">
+    <div class="max-w-6xl mx-auto grid md:grid-cols-4 gap-8">
+      <div>
+        <div class="flex items-center mb-4">
+          <div class="w-10 h-10 bg-nova-400 rounded-xl flex items-center justify-center mr-3">
+            <span class="font-bold text-cosmic-800">N</span>
+          </div>
+          <div class="text-xl font-bold text-white">NovaBid</div>
+        </div>
+        <p class="text-cosmic-300 mb-4">
+          The transparent auction platform for the modern market.
+        </p>
+        <div class="flex space-x-4">
+          <a href="#" class="text-cosmic-300 hover:text-white transition">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="#" class="text-cosmic-300 hover:text-white transition">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="#" class="text-cosmic-300 hover:text-white transition">
+            <i class="fab fa-instagram"></i>
+          </a>
+        </div>
+      </div>
+      
+      <div>
+        <h3 class="text-white font-bold mb-4">For Sellers</h3>
+        <ul class="space-y-2">
+          <li><a href="#" class="text-cosmic-300 hover:text-white transition">Create Auction</a></li>
+          <li><a href="#" class="text-cosmic-300 hover:text-white transition">Seller Guide</a></li>
+          <li><a href="#" class="text-cosmic-300 hover:text-white transition">Fees & Payments</a></li>
+          <li><a href="#" class="text-cosmic-300 hover:text-white transition">Success Stories</a></li>
+        </ul>
+      </div>
+      
+      <div>
+        <h3 class="text-white font-bold mb-4">For Buyers</h3>
+        <ul class="space-y-2">
+          <li><a href="#" class="text-cosmic-300 hover:text-white transition">How to Bid</a></li>
+          <li><a href="#" class="text-cosmic-300 hover:text-white transition">Payment Methods</a></li>
+          <li><a href="#" class="text-cosmic-300 hover:text-white transition">Buyer Protection</a></li>
+          <li><a href="#" class="text-cosmic-300 hover:text-white transition">Dispute Resolution</a></li>
+        </ul>
+      </div>
+      
+      <div>
+        <h3 class="text-white font-bold mb-4">Trust & Safety</h3>
+        <ul class="space-y-2">
+          <li><a href="#" class="text-cosmic-300 hover:text-white transition">Transparency Pledge</a></li>
+          <li><a href="#" class="text-cosmic-300 hover:text-white transition">Security Standards</a></li>
+          <li><a href="#" class="text-cosmic-300 hover:text-white transition">Verified Sellers</a></li>
+          <li><a href="#" class="text-cosmic-300 hover:text-white transition">Escrow Services</a></li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="border-t border-cosmic-600 mt-12 pt-8 text-center text-cosmic-400 text-sm max-w-4xl mx-auto">
+      <p>© 2025 NovaBid.market • All auctions governed by published rules • Independent dispute resolution available</p>
+      <p class="mt-2 flex flex-wrap justify-center gap-4">
+        <a href="#" class="hover:text-white transition">Terms of Service</a>
+        <a href="#" class="hover:text-white transition">Privacy Policy</a>
+        <a href="#" class="hover:text-white transition">Security Documentation</a>
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    // Generate animated stars in hero section
+    document.addEventListener('DOMContentLoaded', () => {
+      const starsContainer = document.getElementById('stars');
+      const starCount = 50;
+      
+      for (let i = 0; i < starCount; i++) {
+        const star = document.createElement('div');
+        star.classList.add('star');
+        
+        // Random size (1-3px)
+        const size = Math.random() * 2 + 1;
+        star.style.width = `${size}px`;
+        star.style.height = `${size}px`;
+        
+        // Random position
+        star.style.top = `${Math.random() * 100}%`;
+        star.style.left = `${Math.random() * 100}%`;
+        
+        // Random animation delay
+        star.style.animation = `pulse-slow ${Math.random() * 5 + 3}s infinite`;
+        
+        starsContainer.appendChild(star);
+      }
+      
+      // Simulate live bid counter
+      let currentBid = 24500;
+      const bidElement = document.querySelector('.live-counter');
+      
+      if (bidElement) {
+        setInterval(() => {
+          const increment = Math.floor(Math.random() * 300) + 100;
+          currentBid += increment;
+          bidElement.textContent = `$${currentBid.toLocaleString()}`;
+        }, 4000);
+      }
+    });
+  </script>
 </body>
 </html>
