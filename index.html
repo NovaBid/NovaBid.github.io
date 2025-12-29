@@ -60,6 +60,42 @@
 .nav-shadow-visible {
   opacity: 1 !important;
 }
+/* Prevent logo text overflow on mobile */
+@media (max-width: 768px) {
+  .truncate {
+    max-width: 140px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  /* Reduce orbit animation speed on mobile */
+  .animate-spin-slow {
+    animation-duration: 30s !important;
+  }
+}
+
+/* Fix for iOS Safari flex-wrap issue */
+@media (max-width: 480px) {
+  .min-w-fit {
+    min-width: auto !important;
+  }
+  
+  /* Hide tagline completely on small mobile */
+  .text-xs {
+    display: none;
+  }
+  
+  /* Reduce logo container size */
+  #nova-logo {
+    width: 2.25rem !important;
+    height: 2.25rem !important;
+    margin-right: 0.5rem !important;
+  }
+  
+  #nova-logo span {
+    font-size: 0.875rem !important;
+  }
+}
     body {
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
       background-color: #f8fafc;
@@ -101,20 +137,22 @@
   </style>
 </head>
 <body class="text-gray-800">
-<!-- Floating Navbar with Logo -->
+<!-- Floating Navbar with Logo - FIXED SIZING -->
 <header class="fixed top-0 left-0 w-full z-50 transition-all duration-300">
   <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
-    <!-- Logo Container -->
-    <div class="flex items-center group cursor-pointer">
-      <img src="/logo.png" alt="NovaBid.market" class="w-40">
+    <!-- LOGO CONTAINER - RESPONSIVE SIZING -->
+    <div class="flex items-center group cursor-pointer min-w-fit">
+      <!-- Animated Logo - MOBILE OPTIMIZED -->
+      <!-- Inside logo container -->
+<img src="nova-logo.svg" alt="NovaBid.market" class="w-10 h-10 md:w-12 md:h-12">
       
-      <!-- Domain Emphasis -->
-      <div class="flex flex-col">
-        <div class="font-bold text-lg md:text-xl text-white flex items-baseline">
-          NovaBid
-          <span class="text-nova-300 ml-1 text-sm md:text-base font-normal">.market</span>
+      <!-- Domain Emphasis - FLEX WRAP FOR MOBILE -->
+      <div class="flex flex-col min-w-0">
+        <div class="font-bold text-base md:text-lg lg:text-xl text-white flex flex-wrap items-baseline gap-x-1">
+          <span class="truncate">NovaBid</span>
+          <span class="text-nova-300 text-xs md:text-sm font-normal shrink-0">.market</span>
         </div>
-        <div class="text-xs text-cosmic-200/80 mt-[-2px] hidden md:block">
+        <div class="text-[0.65rem] md:text-xs text-cosmic-200/80 mt-[-2px] hidden md:block whitespace-nowrap">
           Transparent auctions • Real-time bidding
         </div>
       </div>
@@ -144,6 +182,7 @@
   
   <!-- Sticky Shadow Effect -->
   <div class="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-nova-400 to-transparent opacity-0 transition-opacity duration-300" id="nav-shadow"></div>
+</div>
 </header>
 
 <!-- Spacer for Fixed Header -->
