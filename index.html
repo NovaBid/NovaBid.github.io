@@ -178,13 +178,13 @@
     <div class="flex items-center group cursor-pointer min-w-fit">
       <!-- Image Logo - RESPONSIVE SIZING -->
       <div class="relative w-10 h-10 md:w-12 md:h-12 mr-2 md:mr-3 flex-shrink-0" id="nova-logo">
-        <img 
-          src="logo.png" 
-          alt="NovaBid.market logo" 
-          class="w-full h-full object-contain transition-transform duration-500 group-hover:scale-[1.05]"
-          width="48"
-          height="48"
-        >
+        <img
+src="/logo.png"
+alt="NovaBid.market"
+class="w-full h-full object-contain"
+width="48"
+height="48"
+>
       </div>
       
       <!-- Domain Emphasis - OPTIMIZED FOR IMAGE LOGO -->
@@ -225,7 +225,6 @@
 
 <!-- Spacer for Fixed Header -->
 <div class="h-16 md:h-20"></div>
-<img src="/logo.png" alt="NovaBid.market" class="w-40">
   <!-- Sticky CTA Bar -->
   <div class="fixed bottom-4 left-1/2 transform -translate-x-1/2 z-50 md:hidden">
     <a href="#auctions" class="bg-nova-400 text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-nova-500 transition flex items-center">
@@ -637,78 +636,71 @@
   </footer>
 
   <script>
-    // Generate animated stars in hero section
-    document.addEventListener('DOMContentLoaded', () => {
-      const starsContainer = document.getElementById('stars');
-      const starCount = 50;
-      
-      for (let i = 0; i < starCount; i++) {
-        const star = document.createElement('div');
-        star.classList.add('star');
-        
-        // Random size (1-3px)
-        const size = Math.random() * 2 + 1;
-        star.style.width = `${size}px`;
-        star.style.height = `${size}px`;
-        
-        // Random position
-        star.style.top = `${Math.random() * 100}%`;
-        star.style.left = `${Math.random() * 100}%`;
-        
-        // Random animation delay
-        star.style.animation = `pulse-slow ${Math.random() * 5 + 3}s infinite`;
-        
-        starsContainer.appendChild(star);
-      }
-      
-      // Simulate live bid counter
-      let currentBid = 24500;
-      const bidElement = document.querySelector('.live-counter');
-      
-      if (bidElement) {
-        setInterval(() => {
-          const increment = Math.floor(Math.random() * 300) + 100;
-          currentBid += increment;
-          bidElement.textContent = `$${currentBid.toLocaleString()}`;
-        }, 4000);
-      }
-    });
-// Navbar scroll effects
+// Generate animated stars in hero section
 document.addEventListener('DOMContentLoaded', () => {
+  const starsContainer = document.getElementById('stars');
+  if (starsContainer) {
+    const starCount = 50;
+    for (let i = 0; i < starCount; i++) {
+      const star = document.createElement('div');
+      star.classList.add('star');
+      
+      // Random size (1-3px)
+      const size = Math.random() * 2 + 1;
+      star.style.width = `${size}px`;
+      star.style.height = `${size}px`;
+      
+      // Random position
+      star.style.top = `${Math.random() * 100}%`;
+      star.style.left = `${Math.random() * 100}%`;
+      
+      // Random animation delay
+      star.style.animation = `pulse-slow ${Math.random() * 5 + 3}s infinite`;
+      
+      starsContainer.appendChild(star);
+    }
+  }
+  
+  // Simulate live bid counter
+  const bidElement = document.querySelector('.live-counter');
+  if (bidElement) {
+    let currentBid = 24500;
+    setInterval(() => {
+      const increment = Math.floor(Math.random() * 300) + 100;
+      currentBid += increment;
+      bidElement.textContent = `$${currentBid.toLocaleString()}`;
+    }, 4000);
+  }
+  
+  // Navbar scroll effects - FIXED VERSION
   const header = document.querySelector('header');
   const navShadow = document.getElementById('nav-shadow');
-  let lastScroll = 0;
-
-  window.addEventListener('scroll', () => {
-    const currentScroll = window.pageYOffset;
+  
+  if (header && navShadow) {
+    let lastScroll = 0;
     
-    // Show/hide shadow on scroll
-    if (currentScroll > 10) {
-      header.classList.add('nav-scrolled');
-      navShadow.classList.add('nav-shadow-visible');
-    } else {
-      header.classList.remove('nav-scrolled');
-      navShadow.classList.remove('nav-shadow-visible');
-    }
-    
-    // Direction-based hiding (optional)
-    if (currentScroll > lastScroll && currentScroll > 100) {
-      header.style.transform = 'translateY(-100%)';
-    } else {
-      header.style.transform = 'translateY(0)';
-    }
-    
-    lastScroll = currentScroll;
-  });
-
-  // Logo hover pulse effect
-  const logo = document.getElementById('nova-logo');
-  logo.addEventListener('mouseenter', () => {
-    logo.querySelector('div').style.boxShadow = '0 0 20px rgba(0, 243, 255, 0.4)';
-  });
-  logo.addEventListener('mouseleave', () => {
-    logo.querySelector('div').style.boxShadow = '';
-  });
+    window.addEventListener('scroll', () => {
+      const currentScroll = window.pageYOffset;
+      
+      // Show/hide shadow on scroll
+      if (currentScroll > 10) {
+        header.classList.add('nav-scrolled');
+        navShadow.classList.add('nav-shadow-visible');
+      } else {
+        header.classList.remove('nav-scrolled');
+        navShadow.classList.remove('nav-shadow-visible');
+      }
+      
+      // Direction-based hiding
+      if (currentScroll > lastScroll && currentScroll > 100) {
+        header.style.transform = 'translateY(-100%)';
+      } else {
+        header.style.transform = 'translateY(0)';
+      }
+      
+      lastScroll = currentScroll;
+    });
+  }
 });
   </script>
 </body>
