@@ -116,6 +116,16 @@
       #nova-logo span {
         font-size: 0.875rem !important;
       }
+
+      .truncate {
+        overflow: hidden;
+      }
+
+      /* Reduce right padding */
+      .px-4 {
+        padding-left: 0.75rem !important;
+        padding-right: 0.75rem !important;
+      }
     }
 
     body {
@@ -171,25 +181,6 @@
 
     #nova-logo img:hover {
       filter: drop-shadow(0 4px 8px rgba(0, 243, 255, 0.25));
-    }
-
-    /* Mobile-specific sizing */
-    @media (max-width: 480px) {
-      #nova-logo {
-        width: 40vw !important;
-        height: 40vw !important;
-      }
-
-      /* Hide text label completely on small mobile */
-      .truncate {
-        overflow: hidden;
-      }
-
-      /* Reduce right padding */
-      .px-4 {
-        padding-left: 0.75rem !important;
-        padding-right: 0.75rem !important;
-      }
     }
 
     /* Prevent logo distortion */
