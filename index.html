@@ -226,9 +226,18 @@
         </div>
       </nav>
 
-      <button class="md:hidden text-white focus:outline-none">
+      <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
         <i class="fas fa-bars text-2xl"></i>
       </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-cosmic-600/90 backdrop-blur-lg">
+        <a href="#auctions" class="block text-white text-center py-3 text-lg font-semibold hover:bg-nova-500/50 transition">Active Auctions</a>
+        <a href="#how-it-works" class="block text-white text-center py-3 text-lg font-semibold hover:bg-nova-500/50 transition">How It Works</a>
+        <a href="#" class="block text-white text-center py-3 text-lg font-semibold hover:bg-nova-500/50 transition">Pricing</a>
+        <div class="border-t border-cosmic-500 my-2"></div>
+        <a href="#" class="block text-white text-center py-3 text-lg font-semibold hover:bg-nova-500/50 transition">Sign In</a>
     </div>
 
     <div
@@ -741,6 +750,16 @@
           }
 
           lastScroll = currentScroll;
+        });
+      }
+
+      // Mobile menu toggle
+      const mobileMenuButton = document.getElementById('mobile-menu-button');
+      const mobileMenu = document.getElementById('mobile-menu');
+
+      if (mobileMenuButton && mobileMenu) {
+        mobileMenuButton.addEventListener('click', () => {
+          mobileMenu.classList.toggle('hidden');
         });
       }
     });
