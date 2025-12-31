@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Active Auctions | NovaBid.market</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body class="text-gray-800 bg-cosmic-50">
+  <div id="header-placeholder"></div>
+
+  <!-- Spacer for Fixed Header -->
+  <div class="h-16 md:h-20"></div>
+
+  <!-- Auctions Section -->
+  <section class="py-20 px-4">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">Active Auctions</h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          Browse our live auctions and place your bids.
+        </p>
+      </div>
+
+      <div id="auctions-container" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Auction cards will be inserted here by JavaScript -->
+      </div>
+    </div>
+  </section>
+
+  <div id="footer-placeholder"></div>
+
+  <script src="../js/script.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      fetch('../common/header.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('header-placeholder').innerHTML = data;
+        });
+
+      fetch('../common/footer.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('footer-placeholder').innerHTML = data;
+        });
+
+      const auctions = [
+        {
+          "title": "Kilpatrick Estate Auction",
+          "description": "Massive collector's estate including coins, dolls, and antique furniture.",
+          "image": "https://picsum.photos/seed/1/400/300"
+        },
+        {
+          "title": "Modern Art Collection",
+          "description": "A curated collection of modern and contemporary art from emerging artists.",
+          "image": "https://picsum.photos/seed/2/400/300"
+        },
+        {
+          "title": "Vintage Car Auction",
+          "description": "Featuring classic cars from the 1950s and 60s, all in pristine condition.",
+          "image": "https://picsum.photos/seed/3/400/300"
+        },
+        {
+          "title": "Jewelry and Watch Auction",
+          "description": "Exclusive collection of luxury watches, diamonds, and rare gemstones.",
+          "image": "https://picsum.photos/seed/4/400/300"
+        },
+        {
+          "title": "Rare Book Collection",
+          "description": "First editions and signed copies from world-renowned authors.",
+          "image": "https://picsum.photos/seed/5/400/300"
+        },
+        {
+          "title": "Sports Memorabilia Auction",
+          "description": "Game-worn jerseys, signed balls, and other memorabilia from sports legends.",
+          "image": "https://picsum.photos/seed/6/400/300"
+        }
+      ];
+
+      const auctionsContainer = document.getElementById('auctions-container');
+
+      auctions.forEach(auction => {
+        const auctionCard = `
+          <div class="card-hover bg-white rounded-2xl p-6 border border-cosmic-100 flex flex-col">
+            <div class="relative mb-4">
+                <img src="${auction.image}" alt="${auction.title}" class="rounded-lg w-full h-48 object-cover">
+            </div>
+            <h3 class="text-xl font-bold mb-2">${auction.title}</h3>
+            <p class="text-gray-600 mb-4 flex-grow">${auction.description}</p>
+            <a href="#" class="inline-flex items-center justify-center bg-cosmic-600 text-white font-bold py-2 px-4 rounded-lg hover:bg-cosmic-700 transition">
+              View Auction
+              <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+          </div>
+        `;
+        auctionsContainer.innerHTML += auctionCard;
+      });
+    });
+  </script>
+</body>
+
+</html>
