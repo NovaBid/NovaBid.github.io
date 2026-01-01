@@ -4229,6 +4229,2006 @@ const mockAuctions = [{
       "auctionId": 35,
       "starting_bid": 2700,
       "reserve": true
+    },
+    {
+      "title": "Lot Item 503 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/503/400/300",
+      "images": ["https://picsum.photos/seed/503-0/800/600", "https://picsum.photos/seed/503-1/800/600", "https://picsum.photos/seed/503-2/800/600"],
+      "lotId": 503,
+      "auctionId": 2,
+      "starting_bid": 4600,
+      "reserve": true
+    },
+    {
+      "title": "Lot Item 504 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/504/400/300",
+      "images": ["https://picsum.photos/seed/504-0/800/600", "https://picsum.photos/seed/504-1/800/600"],
+      "lotId": 504,
+      "auctionId": 2,
+      "starting_bid": 3000,
+      "reserve": true
+    },
+    {
+      "title": "Lot Item 505 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/505/400/300",
+      "images": ["https://picsum.photos/seed/505-0/800/600", "https://picsum.photos/seed/505-1/800/600"],
+      "lotId": 505,
+      "auctionId": 2,
+      "starting_bid": 3800,
+      "reserve": true
+    },
+    {
+      "title": "Lot Item 506 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/506/400/300",
+      "images": ["https://picsum.photos/seed/506-0/800/600", "https://picsum.photos/seed/506-1/800/600", "https://picsum.photos/seed/506-2/800/600"],
+      "lotId": 506,
+      "auctionId": 2,
+      "starting_bid": 1800,
+      "reserve": false
+    },
+    {
+      "title": "Lot Item 507 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/507/400/300",
+      "images": ["https://picsum.photos/seed/507-0/800/600", "https://picsum.photos/seed/507-1/800/600", "https://picsum.photos/seed/507-2/800/600"],
+      "lotId": 507,
+      "auctionId": 2,
+      "starting_bid": 1500,
+      "reserve": false
+    },
+    {
+      "title": "Lot Item 508 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/508/400/300",
+      "images": ["https://picsum.photos/seed/508-0/800/600", "https://picsum.photos/seed/508-1/800/600", "https://picsum.photos/seed/508-2/800/600"],
+      "lotId": 508,
+      "auctionId": 2,
+      "starting_bid": 2700,
+      "reserve": false
+    },
+    {
+      "title": "Lot Item 509 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/509/400/300",
+      "images": ["https://picsum.photos/seed/509-0/800/600", "https://picsum.photos/seed/509-1/800/600", "https://picsum.photos/seed/509-2/800/600", "https://picsum.photos/seed/509-3/800/600"],
+      "lotId": 509,
+      "auctionId": 2,
+      "starting_bid": 900,
+      "reserve": false
+    },
+    {
+      "title": "Lot Item 510 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/510/400/300",
+      "images": ["https://picsum.photos/seed/510-0/800/600", "https://picsum.photos/seed/510-1/800/600", "https://picsum.photos/seed/510-2/800/600", "https://picsum.photos/seed/510-3/800/600"],
+      "lotId": 510,
+      "auctionId": 2,
+      "starting_bid": 1800,
+      "reserve": false
+    },
+    {
+      "title": "Lot Item 511 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/511/400/300",
+      "images": ["https://picsum.photos/seed/511-0/800/600", "https://picsum.photos/seed/511-1/800/600", "https://picsum.photos/seed/511-2/800/600", "https://picsum.photos/seed/511-3/800/600"],
+      "lotId": 511,
+      "auctionId": 2,
+      "starting_bid": 1400,
+      "reserve": false
+    },
+    {
+      "title": "Lot Item 512 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/512/400/300",
+      "images": ["https://picsum.photos/seed/512-0/800/600", "https://picsum.photos/seed/512-1/800/600", "https://picsum.photos/seed/512-2/800/600"],
+      "lotId": 512,
+      "auctionId": 2,
+      "starting_bid": 1300,
+      "reserve": false
+    },
+    {
+      "title": "Lot Item 513 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/513/400/300",
+      "images": ["https://picsum.photos/seed/513-0/800/600", "https://picsum.photos/seed/513-1/800/600", "https://picsum.photos/seed/513-2/800/600"],
+      "lotId": 513,
+      "auctionId": 2,
+      "starting_bid": 2000,
+      "reserve": false
+    },
+    {
+      "title": "Lot Item 514 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/514/400/300",
+      "images": ["https://picsum.photos/seed/514-0/800/600", "https://picsum.photos/seed/514-1/800/600", "https://picsum.photos/seed/514-2/800/600"],
+      "lotId": 514,
+      "auctionId": 2,
+      "starting_bid": 1000,
+      "reserve": false
+    },
+    {
+      "title": "Lot Item 515 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/515/400/300",
+      "images": ["https://picsum.photos/seed/515-0/800/600", "https://picsum.photos/seed/515-1/800/600"],
+      "lotId": 515,
+      "auctionId": 2,
+      "starting_bid": 1700,
+      "reserve": false
+    },
+    {
+      "title": "Lot Item 516 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/516/400/300",
+      "images": ["https://picsum.photos/seed/516-0/800/600", "https://picsum.photos/seed/516-1/800/600", "https://picsum.photos/seed/516-2/800/600"],
+      "lotId": 516,
+      "auctionId": 2,
+      "starting_bid": 3700,
+      "reserve": false
+    },
+    {
+      "title": "Lot Item 517 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/517/400/300",
+      "images": ["https://picsum.photos/seed/517-0/800/600", "https://picsum.photos/seed/517-1/800/600", "https://picsum.photos/seed/517-2/800/600"],
+      "lotId": 517,
+      "auctionId": 2,
+      "starting_bid": 4700,
+      "reserve": false
+    },
+    {
+      "title": "Lot Item 518 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/518/400/300",
+      "images": ["https://picsum.photos/seed/518-0/800/600", "https://picsum.photos/seed/518-1/800/600", "https://picsum.photos/seed/518-2/800/600", "https://picsum.photos/seed/518-3/800/600"],
+      "lotId": 518,
+      "auctionId": 2,
+      "starting_bid": 3600,
+      "reserve": true
+    },
+    {
+      "title": "Lot Item 519 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/519/400/300",
+      "images": ["https://picsum.photos/seed/519-0/800/600", "https://picsum.photos/seed/519-1/800/600", "https://picsum.photos/seed/519-2/800/600", "https://picsum.photos/seed/519-3/800/600"],
+      "lotId": 519,
+      "auctionId": 2,
+      "starting_bid": 2400,
+      "reserve": false
+    },
+    {
+      "title": "Lot Item 520 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/520/400/300",
+      "images": ["https://picsum.photos/seed/520-0/800/600", "https://picsum.photos/seed/520-1/800/600", "https://picsum.photos/seed/520-2/800/600"],
+      "lotId": 520,
+      "auctionId": 2,
+      "starting_bid": 2700,
+      "reserve": true
+    },
+    {
+      "title": "Lot Item 521 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/521/400/300",
+      "images": ["https://picsum.photos/seed/521-0/800/600", "https://picsum.photos/seed/521-1/800/600"],
+      "lotId": 521,
+      "auctionId": 2,
+      "starting_bid": 2100,
+      "reserve": true
+    },
+    {
+      "title": "Lot Item 522 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/522/400/300",
+      "images": ["https://picsum.photos/seed/522-0/800/600", "https://picsum.photos/seed/522-1/800/600", "https://picsum.photos/seed/522-2/800/600"],
+      "lotId": 522,
+      "auctionId": 2,
+      "starting_bid": 3000,
+      "reserve": true
+    },
+    {
+      "title": "Lot Item 523 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/523/400/300",
+      "images": ["https://picsum.photos/seed/523-0/800/600", "https://picsum.photos/seed/523-1/800/600", "https://picsum.photos/seed/523-2/800/600", "https://picsum.photos/seed/523-3/800/600"],
+      "lotId": 523,
+      "auctionId": 2,
+      "starting_bid": 4200,
+      "reserve": false
+    },
+    {
+      "title": "Lot Item 524 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/524/400/300",
+      "images": ["https://picsum.photos/seed/524-0/800/600", "https://picsum.photos/seed/524-1/800/600"],
+      "lotId": 524,
+      "auctionId": 2,
+      "starting_bid": 800,
+      "reserve": true
+    },
+    {
+      "title": "Lot Item 525 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/525/400/300",
+      "images": ["https://picsum.photos/seed/525-0/800/600", "https://picsum.photos/seed/525-1/800/600"],
+      "lotId": 525,
+      "auctionId": 2,
+      "starting_bid": 1800,
+      "reserve": false
+    },
+    {
+      "title": "Lot Item 526 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/526/400/300",
+      "images": ["https://picsum.photos/seed/526-0/800/600", "https://picsum.photos/seed/526-1/800/600", "https://picsum.photos/seed/526-2/800/600"],
+      "lotId": 526,
+      "auctionId": 2,
+      "starting_bid": 2900,
+      "reserve": true
+    },
+    {
+      "title": "Lot Item 527 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/527/400/300",
+      "images": ["https://picsum.photos/seed/527-0/800/600", "https://picsum.photos/seed/527-1/800/600", "https://picsum.photos/seed/527-2/800/600", "https://picsum.photos/seed/527-3/800/600"],
+      "lotId": 527,
+      "auctionId": 2,
+      "starting_bid": 900,
+      "reserve": true
+    },
+    {
+      "title": "Lot Item 528 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/528/400/300",
+      "images": ["https://picsum.photos/seed/528-0/800/600", "https://picsum.photos/seed/528-1/800/600", "https://picsum.photos/seed/528-2/800/600"],
+      "lotId": 528,
+      "auctionId": 2,
+      "starting_bid": 3600,
+      "reserve": false
+    },
+    {
+      "title": "Lot Item 529 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/529/400/300",
+      "images": ["https://picsum.photos/seed/529-0/800/600", "https://picsum.photos/seed/529-1/800/600", "https://picsum.photos/seed/529-2/800/600", "https://picsum.photos/seed/529-3/800/600"],
+      "lotId": 529,
+      "auctionId": 2,
+      "starting_bid": 1300,
+      "reserve": false
+    },
+    {
+      "title": "Lot Item 530 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/530/400/300",
+      "images": ["https://picsum.photos/seed/530-0/800/600", "https://picsum.photos/seed/530-1/800/600", "https://picsum.photos/seed/530-2/800/600", "https://picsum.photos/seed/530-3/800/600"],
+      "lotId": 530,
+      "auctionId": 2,
+      "starting_bid": 4000,
+      "reserve": false
+    },
+    {
+      "title": "Lot Item 531 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/531/400/300",
+      "images": ["https://picsum.photos/seed/531-0/800/600", "https://picsum.photos/seed/531-1/800/600"],
+      "lotId": 531,
+      "auctionId": 2,
+      "starting_bid": 4600,
+      "reserve": true
+    },
+    {
+      "title": "Lot Item 532 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/532/400/300",
+      "images": ["https://picsum.photos/seed/532-0/800/600", "https://picsum.photos/seed/532-1/800/600", "https://picsum.photos/seed/532-2/800/600"],
+      "lotId": 532,
+      "auctionId": 2,
+      "starting_bid": 1200,
+      "reserve": false
+    },
+    {
+      "title": "Lot Item 533 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/533/400/300",
+      "images": ["https://picsum.photos/seed/533-0/800/600", "https://picsum.photos/seed/533-1/800/600", "https://picsum.photos/seed/533-2/800/600"],
+      "lotId": 533,
+      "auctionId": 2,
+      "starting_bid": 2900,
+      "reserve": false
+    },
+    {
+      "title": "Lot Item 534 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/534/400/300",
+      "images": ["https://picsum.photos/seed/534-0/800/600", "https://picsum.photos/seed/534-1/800/600"],
+      "lotId": 534,
+      "auctionId": 2,
+      "starting_bid": 1600,
+      "reserve": false
+    },
+    {
+      "title": "Lot Item 535 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/535/400/300",
+      "images": ["https://picsum.photos/seed/535-0/800/600", "https://picsum.photos/seed/535-1/800/600"],
+      "lotId": 535,
+      "auctionId": 2,
+      "starting_bid": 3000,
+      "reserve": true
+    },
+    {
+      "title": "Lot Item 536 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/536/400/300",
+      "images": ["https://picsum.photos/seed/536-0/800/600", "https://picsum.photos/seed/536-1/800/600"],
+      "lotId": 536,
+      "auctionId": 2,
+      "starting_bid": 3200,
+      "reserve": true
+    },
+    {
+      "title": "Lot Item 537 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/537/400/300",
+      "images": ["https://picsum.photos/seed/537-0/800/600", "https://picsum.photos/seed/537-1/800/600", "https://picsum.photos/seed/537-2/800/600", "https://picsum.photos/seed/537-3/800/600"],
+      "lotId": 537,
+      "auctionId": 2,
+      "starting_bid": 1000,
+      "reserve": false
+    },
+    {
+      "title": "Lot Item 538 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/538/400/300",
+      "images": ["https://picsum.photos/seed/538-0/800/600", "https://picsum.photos/seed/538-1/800/600"],
+      "lotId": 538,
+      "auctionId": 2,
+      "starting_bid": 3100,
+      "reserve": true
+    },
+    {
+      "title": "Lot Item 539 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/539/400/300",
+      "images": ["https://picsum.photos/seed/539-0/800/600", "https://picsum.photos/seed/539-1/800/600", "https://picsum.photos/seed/539-2/800/600"],
+      "lotId": 539,
+      "auctionId": 2,
+      "starting_bid": 1900,
+      "reserve": true
+    },
+    {
+      "title": "Lot Item 540 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/540/400/300",
+      "images": ["https://picsum.photos/seed/540-0/800/600", "https://picsum.photos/seed/540-1/800/600", "https://picsum.photos/seed/540-2/800/600"],
+      "lotId": 540,
+      "auctionId": 2,
+      "starting_bid": 1700,
+      "reserve": true
+    },
+    {
+      "title": "Lot Item 541 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/541/400/300",
+      "images": ["https://picsum.photos/seed/541-0/800/600", "https://picsum.photos/seed/541-1/800/600", "https://picsum.photos/seed/541-2/800/600"],
+      "lotId": 541,
+      "auctionId": 2,
+      "starting_bid": 4000,
+      "reserve": true
+    },
+    {
+      "title": "Lot Item 542 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/542/400/300",
+      "images": ["https://picsum.photos/seed/542-0/800/600", "https://picsum.photos/seed/542-1/800/600", "https://picsum.photos/seed/542-2/800/600"],
+      "lotId": 542,
+      "auctionId": 2,
+      "starting_bid": 2400,
+      "reserve": false
+    },
+    {
+      "title": "Lot Item 543 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/543/400/300",
+      "images": ["https://picsum.photos/seed/543-0/800/600", "https://picsum.photos/seed/543-1/800/600", "https://picsum.photos/seed/543-2/800/600"],
+      "lotId": 543,
+      "auctionId": 2,
+      "starting_bid": 4900,
+      "reserve": true
+    },
+    {
+      "title": "Lot Item 544 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/544/400/300",
+      "images": ["https://picsum.photos/seed/544-0/800/600", "https://picsum.photos/seed/544-1/800/600", "https://picsum.photos/seed/544-2/800/600"],
+      "lotId": 544,
+      "auctionId": 2,
+      "starting_bid": 600,
+      "reserve": false
+    },
+    {
+      "title": "Lot Item 545 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/545/400/300",
+      "images": ["https://picsum.photos/seed/545-0/800/600", "https://picsum.photos/seed/545-1/800/600"],
+      "lotId": 545,
+      "auctionId": 2,
+      "starting_bid": 4400,
+      "reserve": false
+    },
+    {
+      "title": "Lot Item 546 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/546/400/300",
+      "images": ["https://picsum.photos/seed/546-0/800/600", "https://picsum.photos/seed/546-1/800/600"],
+      "lotId": 546,
+      "auctionId": 2,
+      "starting_bid": 3800,
+      "reserve": false
+    },
+    {
+      "title": "Lot Item 547 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/547/400/300",
+      "images": ["https://picsum.photos/seed/547-0/800/600", "https://picsum.photos/seed/547-1/800/600"],
+      "lotId": 547,
+      "auctionId": 2,
+      "starting_bid": 2800,
+      "reserve": true
+    },
+    {
+      "title": "Lot Item 548 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/548/400/300",
+      "images": ["https://picsum.photos/seed/548-0/800/600", "https://picsum.photos/seed/548-1/800/600", "https://picsum.photos/seed/548-2/800/600"],
+      "lotId": 548,
+      "auctionId": 2,
+      "starting_bid": 3100,
+      "reserve": false
+    },
+    {
+      "title": "Lot Item 549 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/549/400/300",
+      "images": ["https://picsum.photos/seed/549-0/800/600", "https://picsum.photos/seed/549-1/800/600", "https://picsum.photos/seed/549-2/800/600", "https://picsum.photos/seed/549-3/800/600"],
+      "lotId": 549,
+      "auctionId": 2,
+      "starting_bid": 4800,
+      "reserve": false
+    },
+    {
+      "title": "Lot Item 550 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/550/400/300",
+      "images": ["https://picsum.photos/seed/550-0/800/600", "https://picsum.photos/seed/550-1/800/600", "https://picsum.photos/seed/550-2/800/600"],
+      "lotId": 550,
+      "auctionId": 2,
+      "starting_bid": 3600,
+      "reserve": false
+    },
+    {
+      "title": "Lot Item 551 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/551/400/300",
+      "images": ["https://picsum.photos/seed/551-0/800/600", "https://picsum.photos/seed/551-1/800/600", "https://picsum.photos/seed/551-2/800/600"],
+      "lotId": 551,
+      "auctionId": 2,
+      "starting_bid": 1900,
+      "reserve": true
+    },
+    {
+      "title": "Lot Item 552 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/552/400/300",
+      "images": ["https://picsum.photos/seed/552-0/800/600", "https://picsum.photos/seed/552-1/800/600", "https://picsum.photos/seed/552-2/800/600"],
+      "lotId": 552,
+      "auctionId": 2,
+      "starting_bid": 4600,
+      "reserve": true
+    },
+    {
+      "title": "Lot Item 553 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/553/400/300",
+      "images": ["https://picsum.photos/seed/553-0/800/600", "https://picsum.photos/seed/553-1/800/600", "https://picsum.photos/seed/553-2/800/600", "https://picsum.photos/seed/553-3/800/600"],
+      "lotId": 553,
+      "auctionId": 2,
+      "starting_bid": 2700,
+      "reserve": false
+    },
+    {
+      "title": "Lot Item 554 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/554/400/300",
+      "images": ["https://picsum.photos/seed/554-0/800/600", "https://picsum.photos/seed/554-1/800/600"],
+      "lotId": 554,
+      "auctionId": 2,
+      "starting_bid": 1400,
+      "reserve": true
+    },
+    {
+      "title": "Lot Item 555 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/555/400/300",
+      "images": ["https://picsum.photos/seed/555-0/800/600", "https://picsum.photos/seed/555-1/800/600", "https://picsum.photos/seed/555-2/800/600", "https://picsum.photos/seed/555-3/800/600"],
+      "lotId": 555,
+      "auctionId": 2,
+      "starting_bid": 600,
+      "reserve": false
+    },
+    {
+      "title": "Lot Item 556 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/556/400/300",
+      "images": ["https://picsum.photos/seed/556-0/800/600", "https://picsum.photos/seed/556-1/800/600", "https://picsum.photos/seed/556-2/800/600", "https://picsum.photos/seed/556-3/800/600"],
+      "lotId": 556,
+      "auctionId": 2,
+      "starting_bid": 3100,
+      "reserve": true
+    },
+    {
+      "title": "Lot Item 557 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/557/400/300",
+      "images": ["https://picsum.photos/seed/557-0/800/600", "https://picsum.photos/seed/557-1/800/600", "https://picsum.photos/seed/557-2/800/600", "https://picsum.photos/seed/557-3/800/600"],
+      "lotId": 557,
+      "auctionId": 2,
+      "starting_bid": 1300,
+      "reserve": true
+    },
+    {
+      "title": "Lot Item 558 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/558/400/300",
+      "images": ["https://picsum.photos/seed/558-0/800/600", "https://picsum.photos/seed/558-1/800/600", "https://picsum.photos/seed/558-2/800/600"],
+      "lotId": 558,
+      "auctionId": 2,
+      "starting_bid": 3500,
+      "reserve": false
+    },
+    {
+      "title": "Lot Item 559 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/559/400/300",
+      "images": ["https://picsum.photos/seed/559-0/800/600", "https://picsum.photos/seed/559-1/800/600", "https://picsum.photos/seed/559-2/800/600", "https://picsum.photos/seed/559-3/800/600"],
+      "lotId": 559,
+      "auctionId": 2,
+      "starting_bid": 700,
+      "reserve": true
+    },
+    {
+      "title": "Lot Item 560 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/560/400/300",
+      "images": ["https://picsum.photos/seed/560-0/800/600", "https://picsum.photos/seed/560-1/800/600"],
+      "lotId": 560,
+      "auctionId": 2,
+      "starting_bid": 1900,
+      "reserve": false
+    },
+    {
+      "title": "Lot Item 561 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/561/400/300",
+      "images": ["https://picsum.photos/seed/561-0/800/600", "https://picsum.photos/seed/561-1/800/600", "https://picsum.photos/seed/561-2/800/600"],
+      "lotId": 561,
+      "auctionId": 2,
+      "starting_bid": 1200,
+      "reserve": true
+    },
+    {
+      "title": "Lot Item 562 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/562/400/300",
+      "images": ["https://picsum.photos/seed/562-0/800/600", "https://picsum.photos/seed/562-1/800/600", "https://picsum.photos/seed/562-2/800/600"],
+      "lotId": 562,
+      "auctionId": 2,
+      "starting_bid": 4400,
+      "reserve": false
+    },
+    {
+      "title": "Lot Item 563 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/563/400/300",
+      "images": ["https://picsum.photos/seed/563-0/800/600", "https://picsum.photos/seed/563-1/800/600", "https://picsum.photos/seed/563-2/800/600"],
+      "lotId": 563,
+      "auctionId": 2,
+      "starting_bid": 2100,
+      "reserve": true
+    },
+    {
+      "title": "Lot Item 564 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/564/400/300",
+      "images": ["https://picsum.photos/seed/564-0/800/600", "https://picsum.photos/seed/564-1/800/600"],
+      "lotId": 564,
+      "auctionId": 2,
+      "starting_bid": 4500,
+      "reserve": true
+    },
+    {
+      "title": "Lot Item 565 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/565/400/300",
+      "images": ["https://picsum.photos/seed/565-0/800/600", "https://picsum.photos/seed/565-1/800/600", "https://picsum.photos/seed/565-2/800/600"],
+      "lotId": 565,
+      "auctionId": 2,
+      "starting_bid": 1800,
+      "reserve": false
+    },
+    {
+      "title": "Lot Item 566 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/566/400/300",
+      "images": ["https://picsum.photos/seed/566-0/800/600", "https://picsum.photos/seed/566-1/800/600", "https://picsum.photos/seed/566-2/800/600", "https://picsum.photos/seed/566-3/800/600"],
+      "lotId": 566,
+      "auctionId": 2,
+      "starting_bid": 2000,
+      "reserve": true
+    },
+    {
+      "title": "Lot Item 567 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/567/400/300",
+      "images": ["https://picsum.photos/seed/567-0/800/600", "https://picsum.photos/seed/567-1/800/600", "https://picsum.photos/seed/567-2/800/600"],
+      "lotId": 567,
+      "auctionId": 2,
+      "starting_bid": 4300,
+      "reserve": false
+    },
+    {
+      "title": "Lot Item 568 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/568/400/300",
+      "images": ["https://picsum.photos/seed/568-0/800/600", "https://picsum.photos/seed/568-1/800/600"],
+      "lotId": 568,
+      "auctionId": 2,
+      "starting_bid": 3100,
+      "reserve": false
+    },
+    {
+      "title": "Lot Item 569 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/569/400/300",
+      "images": ["https://picsum.photos/seed/569-0/800/600", "https://picsum.photos/seed/569-1/800/600", "https://picsum.photos/seed/569-2/800/600"],
+      "lotId": 569,
+      "auctionId": 2,
+      "starting_bid": 2900,
+      "reserve": false
+    },
+    {
+      "title": "Lot Item 570 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/570/400/300",
+      "images": ["https://picsum.photos/seed/570-0/800/600", "https://picsum.photos/seed/570-1/800/600"],
+      "lotId": 570,
+      "auctionId": 2,
+      "starting_bid": 2400,
+      "reserve": true
+    },
+    {
+      "title": "Lot Item 571 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/571/400/300",
+      "images": ["https://picsum.photos/seed/571-0/800/600", "https://picsum.photos/seed/571-1/800/600", "https://picsum.photos/seed/571-2/800/600", "https://picsum.photos/seed/571-3/800/600"],
+      "lotId": 571,
+      "auctionId": 2,
+      "starting_bid": 1900,
+      "reserve": false
+    },
+    {
+      "title": "Lot Item 572 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/572/400/300",
+      "images": ["https://picsum.photos/seed/572-0/800/600", "https://picsum.photos/seed/572-1/800/600", "https://picsum.photos/seed/572-2/800/600"],
+      "lotId": 572,
+      "auctionId": 2,
+      "starting_bid": 4600,
+      "reserve": true
+    },
+    {
+      "title": "Lot Item 573 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/573/400/300",
+      "images": ["https://picsum.photos/seed/573-0/800/600", "https://picsum.photos/seed/573-1/800/600", "https://picsum.photos/seed/573-2/800/600"],
+      "lotId": 573,
+      "auctionId": 2,
+      "starting_bid": 1500,
+      "reserve": true
+    },
+    {
+      "title": "Lot Item 574 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/574/400/300",
+      "images": ["https://picsum.photos/seed/574-0/800/600", "https://picsum.photos/seed/574-1/800/600", "https://picsum.photos/seed/574-2/800/600", "https://picsum.photos/seed/574-3/800/600"],
+      "lotId": 574,
+      "auctionId": 2,
+      "starting_bid": 2900,
+      "reserve": true
+    },
+    {
+      "title": "Lot Item 575 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/575/400/300",
+      "images": ["https://picsum.photos/seed/575-0/800/600", "https://picsum.photos/seed/575-1/800/600", "https://picsum.photos/seed/575-2/800/600", "https://picsum.photos/seed/575-3/800/600"],
+      "lotId": 575,
+      "auctionId": 2,
+      "starting_bid": 3200,
+      "reserve": true
+    },
+    {
+      "title": "Lot Item 576 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/576/400/300",
+      "images": ["https://picsum.photos/seed/576-0/800/600", "https://picsum.photos/seed/576-1/800/600", "https://picsum.photos/seed/576-2/800/600", "https://picsum.photos/seed/576-3/800/600"],
+      "lotId": 576,
+      "auctionId": 2,
+      "starting_bid": 1300,
+      "reserve": true
+    },
+    {
+      "title": "Lot Item 577 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/577/400/300",
+      "images": ["https://picsum.photos/seed/577-0/800/600", "https://picsum.photos/seed/577-1/800/600", "https://picsum.photos/seed/577-2/800/600"],
+      "lotId": 577,
+      "auctionId": 2,
+      "starting_bid": 3200,
+      "reserve": true
+    },
+    {
+      "title": "Lot Item 578 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/578/400/300",
+      "images": ["https://picsum.photos/seed/578-0/800/600", "https://picsum.photos/seed/578-1/800/600", "https://picsum.photos/seed/578-2/800/600"],
+      "lotId": 578,
+      "auctionId": 2,
+      "starting_bid": 1800,
+      "reserve": false
+    },
+    {
+      "title": "Lot Item 579 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/579/400/300",
+      "images": ["https://picsum.photos/seed/579-0/800/600", "https://picsum.photos/seed/579-1/800/600", "https://picsum.photos/seed/579-2/800/600", "https://picsum.photos/seed/579-3/800/600"],
+      "lotId": 579,
+      "auctionId": 2,
+      "starting_bid": 500,
+      "reserve": true
+    },
+    {
+      "title": "Lot Item 580 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/580/400/300",
+      "images": ["https://picsum.photos/seed/580-0/800/600", "https://picsum.photos/seed/580-1/800/600", "https://picsum.photos/seed/580-2/800/600"],
+      "lotId": 580,
+      "auctionId": 2,
+      "starting_bid": 2600,
+      "reserve": true
+    },
+    {
+      "title": "Lot Item 581 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/581/400/300",
+      "images": ["https://picsum.photos/seed/581-0/800/600", "https://picsum.photos/seed/581-1/800/600", "https://picsum.photos/seed/581-2/800/600", "https://picsum.photos/seed/581-3/800/600"],
+      "lotId": 581,
+      "auctionId": 2,
+      "starting_bid": 3600,
+      "reserve": true
+    },
+    {
+      "title": "Lot Item 582 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/582/400/300",
+      "images": ["https://picsum.photos/seed/582-0/800/600", "https://picsum.photos/seed/582-1/800/600", "https://picsum.photos/seed/582-2/800/600"],
+      "lotId": 582,
+      "auctionId": 2,
+      "starting_bid": 2200,
+      "reserve": true
+    },
+    {
+      "title": "Lot Item 583 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/583/400/300",
+      "images": ["https://picsum.photos/seed/583-0/800/600", "https://picsum.photos/seed/583-1/800/600", "https://picsum.photos/seed/583-2/800/600", "https://picsum.photos/seed/583-3/800/600"],
+      "lotId": 583,
+      "auctionId": 2,
+      "starting_bid": 4400,
+      "reserve": true
+    },
+    {
+      "title": "Lot Item 584 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/584/400/300",
+      "images": ["https://picsum.photos/seed/584-0/800/600", "https://picsum.photos/seed/584-1/800/600"],
+      "lotId": 584,
+      "auctionId": 2,
+      "starting_bid": 3100,
+      "reserve": false
+    },
+    {
+      "title": "Lot Item 585 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/585/400/300",
+      "images": ["https://picsum.photos/seed/585-0/800/600", "https://picsum.photos/seed/585-1/800/600", "https://picsum.photos/seed/585-2/800/600", "https://picsum.photos/seed/585-3/800/600"],
+      "lotId": 585,
+      "auctionId": 2,
+      "starting_bid": 3900,
+      "reserve": true
+    },
+    {
+      "title": "Lot Item 586 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/586/400/300",
+      "images": ["https://picsum.photos/seed/586-0/800/600", "https://picsum.photos/seed/586-1/800/600"],
+      "lotId": 586,
+      "auctionId": 2,
+      "starting_bid": 4100,
+      "reserve": false
+    },
+    {
+      "title": "Lot Item 587 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/587/400/300",
+      "images": ["https://picsum.photos/seed/587-0/800/600", "https://picsum.photos/seed/587-1/800/600"],
+      "lotId": 587,
+      "auctionId": 2,
+      "starting_bid": 3600,
+      "reserve": false
+    },
+    {
+      "title": "Lot Item 588 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/588/400/300",
+      "images": ["https://picsum.photos/seed/588-0/800/600", "https://picsum.photos/seed/588-1/800/600", "https://picsum.photos/seed/588-2/800/600", "https://picsum.photos/seed/588-3/800/600"],
+      "lotId": 588,
+      "auctionId": 2,
+      "starting_bid": 700,
+      "reserve": false
+    },
+    {
+      "title": "Lot Item 589 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/589/400/300",
+      "images": ["https://picsum.photos/seed/589-0/800/600", "https://picsum.photos/seed/589-1/800/600", "https://picsum.photos/seed/589-2/800/600"],
+      "lotId": 589,
+      "auctionId": 2,
+      "starting_bid": 3200,
+      "reserve": true
+    },
+    {
+      "title": "Lot Item 590 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/590/400/300",
+      "images": ["https://picsum.photos/seed/590-0/800/600", "https://picsum.photos/seed/590-1/800/600", "https://picsum.photos/seed/590-2/800/600", "https://picsum.photos/seed/590-3/800/600"],
+      "lotId": 590,
+      "auctionId": 2,
+      "starting_bid": 1700,
+      "reserve": true
+    },
+    {
+      "title": "Lot Item 591 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/591/400/300",
+      "images": ["https://picsum.photos/seed/591-0/800/600", "https://picsum.photos/seed/591-1/800/600", "https://picsum.photos/seed/591-2/800/600"],
+      "lotId": 591,
+      "auctionId": 2,
+      "starting_bid": 2600,
+      "reserve": true
+    },
+    {
+      "title": "Lot Item 592 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/592/400/300",
+      "images": ["https://picsum.photos/seed/592-0/800/600", "https://picsum.photos/seed/592-1/800/600", "https://picsum.photos/seed/592-2/800/600"],
+      "lotId": 592,
+      "auctionId": 2,
+      "starting_bid": 800,
+      "reserve": true
+    },
+    {
+      "title": "Lot Item 593 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/593/400/300",
+      "images": ["https://picsum.photos/seed/593-0/800/600", "https://picsum.photos/seed/593-1/800/600", "https://picsum.photos/seed/593-2/800/600"],
+      "lotId": 593,
+      "auctionId": 2,
+      "starting_bid": 2600,
+      "reserve": false
+    },
+    {
+      "title": "Lot Item 594 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/594/400/300",
+      "images": ["https://picsum.photos/seed/594-0/800/600", "https://picsum.photos/seed/594-1/800/600", "https://picsum.photos/seed/594-2/800/600"],
+      "lotId": 594,
+      "auctionId": 2,
+      "starting_bid": 3100,
+      "reserve": true
+    },
+    {
+      "title": "Lot Item 595 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/595/400/300",
+      "images": ["https://picsum.photos/seed/595-0/800/600", "https://picsum.photos/seed/595-1/800/600", "https://picsum.photos/seed/595-2/800/600"],
+      "lotId": 595,
+      "auctionId": 2,
+      "starting_bid": 4800,
+      "reserve": false
+    },
+    {
+      "title": "Lot Item 596 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/596/400/300",
+      "images": ["https://picsum.photos/seed/596-0/800/600", "https://picsum.photos/seed/596-1/800/600"],
+      "lotId": 596,
+      "auctionId": 2,
+      "starting_bid": 4300,
+      "reserve": true
+    },
+    {
+      "title": "Lot Item 597 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/597/400/300",
+      "images": ["https://picsum.photos/seed/597-0/800/600", "https://picsum.photos/seed/597-1/800/600", "https://picsum.photos/seed/597-2/800/600", "https://picsum.photos/seed/597-3/800/600"],
+      "lotId": 597,
+      "auctionId": 2,
+      "starting_bid": 2600,
+      "reserve": false
+    },
+    {
+      "title": "Lot Item 598 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/598/400/300",
+      "images": ["https://picsum.photos/seed/598-0/800/600", "https://picsum.photos/seed/598-1/800/600"],
+      "lotId": 598,
+      "auctionId": 2,
+      "starting_bid": 3200,
+      "reserve": true
+    },
+    {
+      "title": "Lot Item 599 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/599/400/300",
+      "images": ["https://picsum.photos/seed/599-0/800/600", "https://picsum.photos/seed/599-1/800/600", "https://picsum.photos/seed/599-2/800/600"],
+      "lotId": 599,
+      "auctionId": 2,
+      "starting_bid": 4300,
+      "reserve": true
+    },
+    {
+      "title": "Lot Item 600 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/600/400/300",
+      "images": ["https://picsum.photos/seed/600-0/800/600", "https://picsum.photos/seed/600-1/800/600", "https://picsum.photos/seed/600-2/800/600", "https://picsum.photos/seed/600-3/800/600"],
+      "lotId": 600,
+      "auctionId": 2,
+      "starting_bid": 2700,
+      "reserve": true
+    },
+    {
+      "title": "Lot Item 601 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/601/400/300",
+      "images": ["https://picsum.photos/seed/601-0/800/600", "https://picsum.photos/seed/601-1/800/600", "https://picsum.photos/seed/601-2/800/600", "https://picsum.photos/seed/601-3/800/600"],
+      "lotId": 601,
+      "auctionId": 2,
+      "starting_bid": 2600,
+      "reserve": true
+    },
+    {
+      "title": "Lot Item 602 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/602/400/300",
+      "images": ["https://picsum.photos/seed/602-0/800/600", "https://picsum.photos/seed/602-1/800/600"],
+      "lotId": 602,
+      "auctionId": 2,
+      "starting_bid": 4900,
+      "reserve": true
+    },
+    {
+      "title": "Lot Item 603 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/603/400/300",
+      "images": ["https://picsum.photos/seed/603-0/800/600", "https://picsum.photos/seed/603-1/800/600", "https://picsum.photos/seed/603-2/800/600", "https://picsum.photos/seed/603-3/800/600"],
+      "lotId": 603,
+      "auctionId": 2,
+      "starting_bid": 2600,
+      "reserve": true
+    },
+    {
+      "title": "Lot Item 604 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/604/400/300",
+      "images": ["https://picsum.photos/seed/604-0/800/600", "https://picsum.photos/seed/604-1/800/600"],
+      "lotId": 604,
+      "auctionId": 2,
+      "starting_bid": 1800,
+      "reserve": false
+    },
+    {
+      "title": "Lot Item 605 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/605/400/300",
+      "images": ["https://picsum.photos/seed/605-0/800/600", "https://picsum.photos/seed/605-1/800/600"],
+      "lotId": 605,
+      "auctionId": 2,
+      "starting_bid": 800,
+      "reserve": true
+    },
+    {
+      "title": "Lot Item 606 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/606/400/300",
+      "images": ["https://picsum.photos/seed/606-0/800/600", "https://picsum.photos/seed/606-1/800/600", "https://picsum.photos/seed/606-2/800/600"],
+      "lotId": 606,
+      "auctionId": 2,
+      "starting_bid": 2100,
+      "reserve": false
+    },
+    {
+      "title": "Lot Item 607 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/607/400/300",
+      "images": ["https://picsum.photos/seed/607-0/800/600", "https://picsum.photos/seed/607-1/800/600", "https://picsum.photos/seed/607-2/800/600", "https://picsum.photos/seed/607-3/800/600"],
+      "lotId": 607,
+      "auctionId": 2,
+      "starting_bid": 4100,
+      "reserve": true
+    },
+    {
+      "title": "Lot Item 608 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/608/400/300",
+      "images": ["https://picsum.photos/seed/608-0/800/600", "https://picsum.photos/seed/608-1/800/600"],
+      "lotId": 608,
+      "auctionId": 2,
+      "starting_bid": 2800,
+      "reserve": false
+    },
+    {
+      "title": "Lot Item 609 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/609/400/300",
+      "images": ["https://picsum.photos/seed/609-0/800/600", "https://picsum.photos/seed/609-1/800/600", "https://picsum.photos/seed/609-2/800/600", "https://picsum.photos/seed/609-3/800/600"],
+      "lotId": 609,
+      "auctionId": 2,
+      "starting_bid": 1100,
+      "reserve": true
+    },
+    {
+      "title": "Lot Item 610 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/610/400/300",
+      "images": ["https://picsum.photos/seed/610-0/800/600", "https://picsum.photos/seed/610-1/800/600"],
+      "lotId": 610,
+      "auctionId": 2,
+      "starting_bid": 4100,
+      "reserve": false
+    },
+    {
+      "title": "Lot Item 611 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/611/400/300",
+      "images": ["https://picsum.photos/seed/611-0/800/600", "https://picsum.photos/seed/611-1/800/600"],
+      "lotId": 611,
+      "auctionId": 2,
+      "starting_bid": 4700,
+      "reserve": false
+    },
+    {
+      "title": "Lot Item 612 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/612/400/300",
+      "images": ["https://picsum.photos/seed/612-0/800/600", "https://picsum.photos/seed/612-1/800/600", "https://picsum.photos/seed/612-2/800/600", "https://picsum.photos/seed/612-3/800/600"],
+      "lotId": 612,
+      "auctionId": 2,
+      "starting_bid": 3800,
+      "reserve": false
+    },
+    {
+      "title": "Lot Item 613 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/613/400/300",
+      "images": ["https://picsum.photos/seed/613-0/800/600", "https://picsum.photos/seed/613-1/800/600", "https://picsum.photos/seed/613-2/800/600", "https://picsum.photos/seed/613-3/800/600"],
+      "lotId": 613,
+      "auctionId": 2,
+      "starting_bid": 500,
+      "reserve": true
+    },
+    {
+      "title": "Lot Item 614 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/614/400/300",
+      "images": ["https://picsum.photos/seed/614-0/800/600", "https://picsum.photos/seed/614-1/800/600", "https://picsum.photos/seed/614-2/800/600", "https://picsum.photos/seed/614-3/800/600"],
+      "lotId": 614,
+      "auctionId": 2,
+      "starting_bid": 4300,
+      "reserve": true
+    },
+    {
+      "title": "Lot Item 615 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/615/400/300",
+      "images": ["https://picsum.photos/seed/615-0/800/600", "https://picsum.photos/seed/615-1/800/600"],
+      "lotId": 615,
+      "auctionId": 2,
+      "starting_bid": 1100,
+      "reserve": false
+    },
+    {
+      "title": "Lot Item 616 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/616/400/300",
+      "images": ["https://picsum.photos/seed/616-0/800/600", "https://picsum.photos/seed/616-1/800/600", "https://picsum.photos/seed/616-2/800/600", "https://picsum.photos/seed/616-3/800/600"],
+      "lotId": 616,
+      "auctionId": 2,
+      "starting_bid": 3500,
+      "reserve": false
+    },
+    {
+      "title": "Lot Item 617 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/617/400/300",
+      "images": ["https://picsum.photos/seed/617-0/800/600", "https://picsum.photos/seed/617-1/800/600"],
+      "lotId": 617,
+      "auctionId": 2,
+      "starting_bid": 1500,
+      "reserve": false
+    },
+    {
+      "title": "Lot Item 618 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/618/400/300",
+      "images": ["https://picsum.photos/seed/618-0/800/600", "https://picsum.photos/seed/618-1/800/600"],
+      "lotId": 618,
+      "auctionId": 2,
+      "starting_bid": 2400,
+      "reserve": true
+    },
+    {
+      "title": "Lot Item 619 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/619/400/300",
+      "images": ["https://picsum.photos/seed/619-0/800/600", "https://picsum.photos/seed/619-1/800/600", "https://picsum.photos/seed/619-2/800/600", "https://picsum.photos/seed/619-3/800/600"],
+      "lotId": 619,
+      "auctionId": 2,
+      "starting_bid": 4200,
+      "reserve": false
+    },
+    {
+      "title": "Lot Item 620 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/620/400/300",
+      "images": ["https://picsum.photos/seed/620-0/800/600", "https://picsum.photos/seed/620-1/800/600", "https://picsum.photos/seed/620-2/800/600"],
+      "lotId": 620,
+      "auctionId": 2,
+      "starting_bid": 1500,
+      "reserve": false
+    },
+    {
+      "title": "Lot Item 621 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/621/400/300",
+      "images": ["https://picsum.photos/seed/621-0/800/600", "https://picsum.photos/seed/621-1/800/600", "https://picsum.photos/seed/621-2/800/600", "https://picsum.photos/seed/621-3/800/600"],
+      "lotId": 621,
+      "auctionId": 2,
+      "starting_bid": 2100,
+      "reserve": true
+    },
+    {
+      "title": "Lot Item 622 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/622/400/300",
+      "images": ["https://picsum.photos/seed/622-0/800/600", "https://picsum.photos/seed/622-1/800/600", "https://picsum.photos/seed/622-2/800/600"],
+      "lotId": 622,
+      "auctionId": 2,
+      "starting_bid": 2300,
+      "reserve": true
+    },
+    {
+      "title": "Lot Item 623 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/623/400/300",
+      "images": ["https://picsum.photos/seed/623-0/800/600", "https://picsum.photos/seed/623-1/800/600"],
+      "lotId": 623,
+      "auctionId": 2,
+      "starting_bid": 2400,
+      "reserve": false
+    },
+    {
+      "title": "Lot Item 624 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/624/400/300",
+      "images": ["https://picsum.photos/seed/624-0/800/600", "https://picsum.photos/seed/624-1/800/600", "https://picsum.photos/seed/624-2/800/600", "https://picsum.photos/seed/624-3/800/600"],
+      "lotId": 624,
+      "auctionId": 2,
+      "starting_bid": 4800,
+      "reserve": true
+    },
+    {
+      "title": "Lot Item 625 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/625/400/300",
+      "images": ["https://picsum.photos/seed/625-0/800/600", "https://picsum.photos/seed/625-1/800/600"],
+      "lotId": 625,
+      "auctionId": 2,
+      "starting_bid": 2200,
+      "reserve": false
+    },
+    {
+      "title": "Lot Item 626 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/626/400/300",
+      "images": ["https://picsum.photos/seed/626-0/800/600", "https://picsum.photos/seed/626-1/800/600", "https://picsum.photos/seed/626-2/800/600", "https://picsum.photos/seed/626-3/800/600"],
+      "lotId": 626,
+      "auctionId": 2,
+      "starting_bid": 1000,
+      "reserve": false
+    },
+    {
+      "title": "Lot Item 627 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/627/400/300",
+      "images": ["https://picsum.photos/seed/627-0/800/600", "https://picsum.photos/seed/627-1/800/600", "https://picsum.photos/seed/627-2/800/600", "https://picsum.photos/seed/627-3/800/600"],
+      "lotId": 627,
+      "auctionId": 2,
+      "starting_bid": 3200,
+      "reserve": true
+    },
+    {
+      "title": "Lot Item 628 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/628/400/300",
+      "images": ["https://picsum.photos/seed/628-0/800/600", "https://picsum.photos/seed/628-1/800/600", "https://picsum.photos/seed/628-2/800/600", "https://picsum.photos/seed/628-3/800/600"],
+      "lotId": 628,
+      "auctionId": 2,
+      "starting_bid": 900,
+      "reserve": true
+    },
+    {
+      "title": "Lot Item 629 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/629/400/300",
+      "images": ["https://picsum.photos/seed/629-0/800/600", "https://picsum.photos/seed/629-1/800/600", "https://picsum.photos/seed/629-2/800/600"],
+      "lotId": 629,
+      "auctionId": 2,
+      "starting_bid": 1600,
+      "reserve": true
+    },
+    {
+      "title": "Lot Item 630 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/630/400/300",
+      "images": ["https://picsum.photos/seed/630-0/800/600", "https://picsum.photos/seed/630-1/800/600"],
+      "lotId": 630,
+      "auctionId": 2,
+      "starting_bid": 4300,
+      "reserve": true
+    },
+    {
+      "title": "Lot Item 631 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/631/400/300",
+      "images": ["https://picsum.photos/seed/631-0/800/600", "https://picsum.photos/seed/631-1/800/600", "https://picsum.photos/seed/631-2/800/600", "https://picsum.photos/seed/631-3/800/600"],
+      "lotId": 631,
+      "auctionId": 2,
+      "starting_bid": 900,
+      "reserve": false
+    },
+    {
+      "title": "Lot Item 632 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/632/400/300",
+      "images": ["https://picsum.photos/seed/632-0/800/600", "https://picsum.photos/seed/632-1/800/600", "https://picsum.photos/seed/632-2/800/600"],
+      "lotId": 632,
+      "auctionId": 2,
+      "starting_bid": 600,
+      "reserve": false
+    },
+    {
+      "title": "Lot Item 633 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/633/400/300",
+      "images": ["https://picsum.photos/seed/633-0/800/600", "https://picsum.photos/seed/633-1/800/600", "https://picsum.photos/seed/633-2/800/600", "https://picsum.photos/seed/633-3/800/600"],
+      "lotId": 633,
+      "auctionId": 2,
+      "starting_bid": 3500,
+      "reserve": true
+    },
+    {
+      "title": "Lot Item 634 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/634/400/300",
+      "images": ["https://picsum.photos/seed/634-0/800/600", "https://picsum.photos/seed/634-1/800/600", "https://picsum.photos/seed/634-2/800/600", "https://picsum.photos/seed/634-3/800/600"],
+      "lotId": 634,
+      "auctionId": 2,
+      "starting_bid": 1500,
+      "reserve": false
+    },
+    {
+      "title": "Lot Item 635 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/635/400/300",
+      "images": ["https://picsum.photos/seed/635-0/800/600", "https://picsum.photos/seed/635-1/800/600", "https://picsum.photos/seed/635-2/800/600", "https://picsum.photos/seed/635-3/800/600"],
+      "lotId": 635,
+      "auctionId": 2,
+      "starting_bid": 4600,
+      "reserve": false
+    },
+    {
+      "title": "Lot Item 636 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/636/400/300",
+      "images": ["https://picsum.photos/seed/636-0/800/600", "https://picsum.photos/seed/636-1/800/600", "https://picsum.photos/seed/636-2/800/600"],
+      "lotId": 636,
+      "auctionId": 2,
+      "starting_bid": 2000,
+      "reserve": false
+    },
+    {
+      "title": "Lot Item 637 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/637/400/300",
+      "images": ["https://picsum.photos/seed/637-0/800/600", "https://picsum.photos/seed/637-1/800/600"],
+      "lotId": 637,
+      "auctionId": 2,
+      "starting_bid": 1300,
+      "reserve": true
+    },
+    {
+      "title": "Lot Item 638 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/638/400/300",
+      "images": ["https://picsum.photos/seed/638-0/800/600", "https://picsum.photos/seed/638-1/800/600"],
+      "lotId": 638,
+      "auctionId": 2,
+      "starting_bid": 600,
+      "reserve": false
+    },
+    {
+      "title": "Lot Item 639 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/639/400/300",
+      "images": ["https://picsum.photos/seed/639-0/800/600", "https://picsum.photos/seed/639-1/800/600"],
+      "lotId": 639,
+      "auctionId": 2,
+      "starting_bid": 2800,
+      "reserve": false
+    },
+    {
+      "title": "Lot Item 640 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/640/400/300",
+      "images": ["https://picsum.photos/seed/640-0/800/600", "https://picsum.photos/seed/640-1/800/600", "https://picsum.photos/seed/640-2/800/600", "https://picsum.photos/seed/640-3/800/600"],
+      "lotId": 640,
+      "auctionId": 2,
+      "starting_bid": 2200,
+      "reserve": false
+    },
+    {
+      "title": "Lot Item 641 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/641/400/300",
+      "images": ["https://picsum.photos/seed/641-0/800/600", "https://picsum.photos/seed/641-1/800/600", "https://picsum.photos/seed/641-2/800/600", "https://picsum.photos/seed/641-3/800/600"],
+      "lotId": 641,
+      "auctionId": 2,
+      "starting_bid": 1500,
+      "reserve": true
+    },
+    {
+      "title": "Lot Item 642 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/642/400/300",
+      "images": ["https://picsum.photos/seed/642-0/800/600", "https://picsum.photos/seed/642-1/800/600", "https://picsum.photos/seed/642-2/800/600", "https://picsum.photos/seed/642-3/800/600"],
+      "lotId": 642,
+      "auctionId": 2,
+      "starting_bid": 900,
+      "reserve": false
+    },
+    {
+      "title": "Lot Item 643 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/643/400/300",
+      "images": ["https://picsum.photos/seed/643-0/800/600", "https://picsum.photos/seed/643-1/800/600"],
+      "lotId": 643,
+      "auctionId": 2,
+      "starting_bid": 2600,
+      "reserve": false
+    },
+    {
+      "title": "Lot Item 644 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/644/400/300",
+      "images": ["https://picsum.photos/seed/644-0/800/600", "https://picsum.photos/seed/644-1/800/600", "https://picsum.photos/seed/644-2/800/600", "https://picsum.photos/seed/644-3/800/600"],
+      "lotId": 644,
+      "auctionId": 2,
+      "starting_bid": 2100,
+      "reserve": false
+    },
+    {
+      "title": "Lot Item 645 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/645/400/300",
+      "images": ["https://picsum.photos/seed/645-0/800/600", "https://picsum.photos/seed/645-1/800/600", "https://picsum.photos/seed/645-2/800/600", "https://picsum.photos/seed/645-3/800/600"],
+      "lotId": 645,
+      "auctionId": 2,
+      "starting_bid": 2100,
+      "reserve": true
+    },
+    {
+      "title": "Lot Item 646 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/646/400/300",
+      "images": ["https://picsum.photos/seed/646-0/800/600", "https://picsum.photos/seed/646-1/800/600", "https://picsum.photos/seed/646-2/800/600"],
+      "lotId": 646,
+      "auctionId": 2,
+      "starting_bid": 2700,
+      "reserve": false
+    },
+    {
+      "title": "Lot Item 647 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/647/400/300",
+      "images": ["https://picsum.photos/seed/647-0/800/600", "https://picsum.photos/seed/647-1/800/600", "https://picsum.photos/seed/647-2/800/600", "https://picsum.photos/seed/647-3/800/600"],
+      "lotId": 647,
+      "auctionId": 2,
+      "starting_bid": 800,
+      "reserve": false
+    },
+    {
+      "title": "Lot Item 648 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/648/400/300",
+      "images": ["https://picsum.photos/seed/648-0/800/600", "https://picsum.photos/seed/648-1/800/600"],
+      "lotId": 648,
+      "auctionId": 2,
+      "starting_bid": 900,
+      "reserve": false
+    },
+    {
+      "title": "Lot Item 649 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/649/400/300",
+      "images": ["https://picsum.photos/seed/649-0/800/600", "https://picsum.photos/seed/649-1/800/600", "https://picsum.photos/seed/649-2/800/600"],
+      "lotId": 649,
+      "auctionId": 2,
+      "starting_bid": 1500,
+      "reserve": false
+    },
+    {
+      "title": "Lot Item 650 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/650/400/300",
+      "images": ["https://picsum.photos/seed/650-0/800/600", "https://picsum.photos/seed/650-1/800/600", "https://picsum.photos/seed/650-2/800/600", "https://picsum.photos/seed/650-3/800/600"],
+      "lotId": 650,
+      "auctionId": 2,
+      "starting_bid": 500,
+      "reserve": false
+    },
+    {
+      "title": "Lot Item 651 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/651/400/300",
+      "images": ["https://picsum.photos/seed/651-0/800/600", "https://picsum.photos/seed/651-1/800/600"],
+      "lotId": 651,
+      "auctionId": 2,
+      "starting_bid": 4000,
+      "reserve": true
+    },
+    {
+      "title": "Lot Item 652 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/652/400/300",
+      "images": ["https://picsum.photos/seed/652-0/800/600", "https://picsum.photos/seed/652-1/800/600", "https://picsum.photos/seed/652-2/800/600", "https://picsum.photos/seed/652-3/800/600"],
+      "lotId": 652,
+      "auctionId": 2,
+      "starting_bid": 3900,
+      "reserve": true
+    },
+    {
+      "title": "Lot Item 653 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/653/400/300",
+      "images": ["https://picsum.photos/seed/653-0/800/600", "https://picsum.photos/seed/653-1/800/600"],
+      "lotId": 653,
+      "auctionId": 2,
+      "starting_bid": 1400,
+      "reserve": true
+    },
+    {
+      "title": "Lot Item 654 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/654/400/300",
+      "images": ["https://picsum.photos/seed/654-0/800/600", "https://picsum.photos/seed/654-1/800/600", "https://picsum.photos/seed/654-2/800/600", "https://picsum.photos/seed/654-3/800/600"],
+      "lotId": 654,
+      "auctionId": 2,
+      "starting_bid": 1500,
+      "reserve": false
+    },
+    {
+      "title": "Lot Item 655 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/655/400/300",
+      "images": ["https://picsum.photos/seed/655-0/800/600", "https://picsum.photos/seed/655-1/800/600", "https://picsum.photos/seed/655-2/800/600", "https://picsum.photos/seed/655-3/800/600"],
+      "lotId": 655,
+      "auctionId": 2,
+      "starting_bid": 1300,
+      "reserve": false
+    },
+    {
+      "title": "Lot Item 656 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/656/400/300",
+      "images": ["https://picsum.photos/seed/656-0/800/600", "https://picsum.photos/seed/656-1/800/600", "https://picsum.photos/seed/656-2/800/600"],
+      "lotId": 656,
+      "auctionId": 2,
+      "starting_bid": 500,
+      "reserve": false
+    },
+    {
+      "title": "Lot Item 657 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/657/400/300",
+      "images": ["https://picsum.photos/seed/657-0/800/600", "https://picsum.photos/seed/657-1/800/600", "https://picsum.photos/seed/657-2/800/600", "https://picsum.photos/seed/657-3/800/600"],
+      "lotId": 657,
+      "auctionId": 2,
+      "starting_bid": 2300,
+      "reserve": false
+    },
+    {
+      "title": "Lot Item 658 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/658/400/300",
+      "images": ["https://picsum.photos/seed/658-0/800/600", "https://picsum.photos/seed/658-1/800/600", "https://picsum.photos/seed/658-2/800/600"],
+      "lotId": 658,
+      "auctionId": 2,
+      "starting_bid": 500,
+      "reserve": true
+    },
+    {
+      "title": "Lot Item 659 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/659/400/300",
+      "images": ["https://picsum.photos/seed/659-0/800/600", "https://picsum.photos/seed/659-1/800/600", "https://picsum.photos/seed/659-2/800/600"],
+      "lotId": 659,
+      "auctionId": 2,
+      "starting_bid": 4700,
+      "reserve": false
+    },
+    {
+      "title": "Lot Item 660 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/660/400/300",
+      "images": ["https://picsum.photos/seed/660-0/800/600", "https://picsum.photos/seed/660-1/800/600", "https://picsum.photos/seed/660-2/800/600", "https://picsum.photos/seed/660-3/800/600"],
+      "lotId": 660,
+      "auctionId": 2,
+      "starting_bid": 800,
+      "reserve": false
+    },
+    {
+      "title": "Lot Item 661 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/661/400/300",
+      "images": ["https://picsum.photos/seed/661-0/800/600", "https://picsum.photos/seed/661-1/800/600"],
+      "lotId": 661,
+      "auctionId": 2,
+      "starting_bid": 700,
+      "reserve": true
+    },
+    {
+      "title": "Lot Item 662 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/662/400/300",
+      "images": ["https://picsum.photos/seed/662-0/800/600", "https://picsum.photos/seed/662-1/800/600"],
+      "lotId": 662,
+      "auctionId": 2,
+      "starting_bid": 4000,
+      "reserve": false
+    },
+    {
+      "title": "Lot Item 663 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/663/400/300",
+      "images": ["https://picsum.photos/seed/663-0/800/600", "https://picsum.photos/seed/663-1/800/600", "https://picsum.photos/seed/663-2/800/600"],
+      "lotId": 663,
+      "auctionId": 2,
+      "starting_bid": 1900,
+      "reserve": true
+    },
+    {
+      "title": "Lot Item 664 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/664/400/300",
+      "images": ["https://picsum.photos/seed/664-0/800/600", "https://picsum.photos/seed/664-1/800/600"],
+      "lotId": 664,
+      "auctionId": 2,
+      "starting_bid": 700,
+      "reserve": true
+    },
+    {
+      "title": "Lot Item 665 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/665/400/300",
+      "images": ["https://picsum.photos/seed/665-0/800/600", "https://picsum.photos/seed/665-1/800/600", "https://picsum.photos/seed/665-2/800/600", "https://picsum.photos/seed/665-3/800/600"],
+      "lotId": 665,
+      "auctionId": 2,
+      "starting_bid": 4800,
+      "reserve": true
+    },
+    {
+      "title": "Lot Item 666 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/666/400/300",
+      "images": ["https://picsum.photos/seed/666-0/800/600", "https://picsum.photos/seed/666-1/800/600", "https://picsum.photos/seed/666-2/800/600", "https://picsum.photos/seed/666-3/800/600"],
+      "lotId": 666,
+      "auctionId": 2,
+      "starting_bid": 1400,
+      "reserve": true
+    },
+    {
+      "title": "Lot Item 667 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/667/400/300",
+      "images": ["https://picsum.photos/seed/667-0/800/600", "https://picsum.photos/seed/667-1/800/600", "https://picsum.photos/seed/667-2/800/600"],
+      "lotId": 667,
+      "auctionId": 2,
+      "starting_bid": 3800,
+      "reserve": true
+    },
+    {
+      "title": "Lot Item 668 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/668/400/300",
+      "images": ["https://picsum.photos/seed/668-0/800/600", "https://picsum.photos/seed/668-1/800/600", "https://picsum.photos/seed/668-2/800/600", "https://picsum.photos/seed/668-3/800/600"],
+      "lotId": 668,
+      "auctionId": 2,
+      "starting_bid": 3500,
+      "reserve": true
+    },
+    {
+      "title": "Lot Item 669 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/669/400/300",
+      "images": ["https://picsum.photos/seed/669-0/800/600", "https://picsum.photos/seed/669-1/800/600", "https://picsum.photos/seed/669-2/800/600"],
+      "lotId": 669,
+      "auctionId": 2,
+      "starting_bid": 2100,
+      "reserve": false
+    },
+    {
+      "title": "Lot Item 670 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/670/400/300",
+      "images": ["https://picsum.photos/seed/670-0/800/600", "https://picsum.photos/seed/670-1/800/600", "https://picsum.photos/seed/670-2/800/600"],
+      "lotId": 670,
+      "auctionId": 2,
+      "starting_bid": 1300,
+      "reserve": true
+    },
+    {
+      "title": "Lot Item 671 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/671/400/300",
+      "images": ["https://picsum.photos/seed/671-0/800/600", "https://picsum.photos/seed/671-1/800/600"],
+      "lotId": 671,
+      "auctionId": 2,
+      "starting_bid": 3100,
+      "reserve": true
+    },
+    {
+      "title": "Lot Item 672 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/672/400/300",
+      "images": ["https://picsum.photos/seed/672-0/800/600", "https://picsum.photos/seed/672-1/800/600"],
+      "lotId": 672,
+      "auctionId": 2,
+      "starting_bid": 4400,
+      "reserve": false
+    },
+    {
+      "title": "Lot Item 673 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/673/400/300",
+      "images": ["https://picsum.photos/seed/673-0/800/600", "https://picsum.photos/seed/673-1/800/600", "https://picsum.photos/seed/673-2/800/600", "https://picsum.photos/seed/673-3/800/600"],
+      "lotId": 673,
+      "auctionId": 2,
+      "starting_bid": 1300,
+      "reserve": true
+    },
+    {
+      "title": "Lot Item 674 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/674/400/300",
+      "images": ["https://picsum.photos/seed/674-0/800/600", "https://picsum.photos/seed/674-1/800/600", "https://picsum.photos/seed/674-2/800/600"],
+      "lotId": 674,
+      "auctionId": 2,
+      "starting_bid": 4900,
+      "reserve": false
+    },
+    {
+      "title": "Lot Item 675 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/675/400/300",
+      "images": ["https://picsum.photos/seed/675-0/800/600", "https://picsum.photos/seed/675-1/800/600"],
+      "lotId": 675,
+      "auctionId": 2,
+      "starting_bid": 2700,
+      "reserve": true
+    },
+    {
+      "title": "Lot Item 676 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/676/400/300",
+      "images": ["https://picsum.photos/seed/676-0/800/600", "https://picsum.photos/seed/676-1/800/600"],
+      "lotId": 676,
+      "auctionId": 2,
+      "starting_bid": 2600,
+      "reserve": true
+    },
+    {
+      "title": "Lot Item 677 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/677/400/300",
+      "images": ["https://picsum.photos/seed/677-0/800/600", "https://picsum.photos/seed/677-1/800/600", "https://picsum.photos/seed/677-2/800/600", "https://picsum.photos/seed/677-3/800/600"],
+      "lotId": 677,
+      "auctionId": 2,
+      "starting_bid": 4600,
+      "reserve": false
+    },
+    {
+      "title": "Lot Item 678 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/678/400/300",
+      "images": ["https://picsum.photos/seed/678-0/800/600", "https://picsum.photos/seed/678-1/800/600", "https://picsum.photos/seed/678-2/800/600", "https://picsum.photos/seed/678-3/800/600"],
+      "lotId": 678,
+      "auctionId": 2,
+      "starting_bid": 1800,
+      "reserve": false
+    },
+    {
+      "title": "Lot Item 679 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/679/400/300",
+      "images": ["https://picsum.photos/seed/679-0/800/600", "https://picsum.photos/seed/679-1/800/600", "https://picsum.photos/seed/679-2/800/600"],
+      "lotId": 679,
+      "auctionId": 2,
+      "starting_bid": 4300,
+      "reserve": true
+    },
+    {
+      "title": "Lot Item 680 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/680/400/300",
+      "images": ["https://picsum.photos/seed/680-0/800/600", "https://picsum.photos/seed/680-1/800/600", "https://picsum.photos/seed/680-2/800/600", "https://picsum.photos/seed/680-3/800/600"],
+      "lotId": 680,
+      "auctionId": 2,
+      "starting_bid": 2700,
+      "reserve": false
+    },
+    {
+      "title": "Lot Item 681 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/681/400/300",
+      "images": ["https://picsum.photos/seed/681-0/800/600", "https://picsum.photos/seed/681-1/800/600", "https://picsum.photos/seed/681-2/800/600"],
+      "lotId": 681,
+      "auctionId": 2,
+      "starting_bid": 2300,
+      "reserve": false
+    },
+    {
+      "title": "Lot Item 682 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/682/400/300",
+      "images": ["https://picsum.photos/seed/682-0/800/600", "https://picsum.photos/seed/682-1/800/600"],
+      "lotId": 682,
+      "auctionId": 2,
+      "starting_bid": 2200,
+      "reserve": true
+    },
+    {
+      "title": "Lot Item 683 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/683/400/300",
+      "images": ["https://picsum.photos/seed/683-0/800/600", "https://picsum.photos/seed/683-1/800/600", "https://picsum.photos/seed/683-2/800/600"],
+      "lotId": 683,
+      "auctionId": 2,
+      "starting_bid": 4600,
+      "reserve": false
+    },
+    {
+      "title": "Lot Item 684 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/684/400/300",
+      "images": ["https://picsum.photos/seed/684-0/800/600", "https://picsum.photos/seed/684-1/800/600", "https://picsum.photos/seed/684-2/800/600", "https://picsum.photos/seed/684-3/800/600"],
+      "lotId": 684,
+      "auctionId": 2,
+      "starting_bid": 1600,
+      "reserve": true
+    },
+    {
+      "title": "Lot Item 685 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/685/400/300",
+      "images": ["https://picsum.photos/seed/685-0/800/600", "https://picsum.photos/seed/685-1/800/600"],
+      "lotId": 685,
+      "auctionId": 2,
+      "starting_bid": 3400,
+      "reserve": true
+    },
+    {
+      "title": "Lot Item 686 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/686/400/300",
+      "images": ["https://picsum.photos/seed/686-0/800/600", "https://picsum.photos/seed/686-1/800/600", "https://picsum.photos/seed/686-2/800/600"],
+      "lotId": 686,
+      "auctionId": 2,
+      "starting_bid": 1800,
+      "reserve": true
+    },
+    {
+      "title": "Lot Item 687 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/687/400/300",
+      "images": ["https://picsum.photos/seed/687-0/800/600", "https://picsum.photos/seed/687-1/800/600", "https://picsum.photos/seed/687-2/800/600", "https://picsum.photos/seed/687-3/800/600"],
+      "lotId": 687,
+      "auctionId": 2,
+      "starting_bid": 2300,
+      "reserve": true
+    },
+    {
+      "title": "Lot Item 688 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/688/400/300",
+      "images": ["https://picsum.photos/seed/688-0/800/600", "https://picsum.photos/seed/688-1/800/600"],
+      "lotId": 688,
+      "auctionId": 2,
+      "starting_bid": 1900,
+      "reserve": false
+    },
+    {
+      "title": "Lot Item 689 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/689/400/300",
+      "images": ["https://picsum.photos/seed/689-0/800/600", "https://picsum.photos/seed/689-1/800/600"],
+      "lotId": 689,
+      "auctionId": 2,
+      "starting_bid": 4500,
+      "reserve": true
+    },
+    {
+      "title": "Lot Item 690 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/690/400/300",
+      "images": ["https://picsum.photos/seed/690-0/800/600", "https://picsum.photos/seed/690-1/800/600"],
+      "lotId": 690,
+      "auctionId": 2,
+      "starting_bid": 2600,
+      "reserve": true
+    },
+    {
+      "title": "Lot Item 691 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/691/400/300",
+      "images": ["https://picsum.photos/seed/691-0/800/600", "https://picsum.photos/seed/691-1/800/600"],
+      "lotId": 691,
+      "auctionId": 2,
+      "starting_bid": 4300,
+      "reserve": true
+    },
+    {
+      "title": "Lot Item 692 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/692/400/300",
+      "images": ["https://picsum.photos/seed/692-0/800/600", "https://picsum.photos/seed/692-1/800/600"],
+      "lotId": 692,
+      "auctionId": 2,
+      "starting_bid": 3700,
+      "reserve": true
+    },
+    {
+      "title": "Lot Item 693 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/693/400/300",
+      "images": ["https://picsum.photos/seed/693-0/800/600", "https://picsum.photos/seed/693-1/800/600", "https://picsum.photos/seed/693-2/800/600"],
+      "lotId": 693,
+      "auctionId": 2,
+      "starting_bid": 2500,
+      "reserve": false
+    },
+    {
+      "title": "Lot Item 694 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/694/400/300",
+      "images": ["https://picsum.photos/seed/694-0/800/600", "https://picsum.photos/seed/694-1/800/600"],
+      "lotId": 694,
+      "auctionId": 2,
+      "starting_bid": 2400,
+      "reserve": true
+    },
+    {
+      "title": "Lot Item 695 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/695/400/300",
+      "images": ["https://picsum.photos/seed/695-0/800/600", "https://picsum.photos/seed/695-1/800/600"],
+      "lotId": 695,
+      "auctionId": 2,
+      "starting_bid": 1100,
+      "reserve": false
+    },
+    {
+      "title": "Lot Item 696 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/696/400/300",
+      "images": ["https://picsum.photos/seed/696-0/800/600", "https://picsum.photos/seed/696-1/800/600", "https://picsum.photos/seed/696-2/800/600"],
+      "lotId": 696,
+      "auctionId": 2,
+      "starting_bid": 3000,
+      "reserve": false
+    },
+    {
+      "title": "Lot Item 697 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/697/400/300",
+      "images": ["https://picsum.photos/seed/697-0/800/600", "https://picsum.photos/seed/697-1/800/600"],
+      "lotId": 697,
+      "auctionId": 2,
+      "starting_bid": 3000,
+      "reserve": true
+    },
+    {
+      "title": "Lot Item 698 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/698/400/300",
+      "images": ["https://picsum.photos/seed/698-0/800/600", "https://picsum.photos/seed/698-1/800/600"],
+      "lotId": 698,
+      "auctionId": 2,
+      "starting_bid": 3500,
+      "reserve": false
+    },
+    {
+      "title": "Lot Item 699 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/699/400/300",
+      "images": ["https://picsum.photos/seed/699-0/800/600", "https://picsum.photos/seed/699-1/800/600", "https://picsum.photos/seed/699-2/800/600"],
+      "lotId": 699,
+      "auctionId": 2,
+      "starting_bid": 2300,
+      "reserve": true
+    },
+    {
+      "title": "Lot Item 700 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/700/400/300",
+      "images": ["https://picsum.photos/seed/700-0/800/600", "https://picsum.photos/seed/700-1/800/600", "https://picsum.photos/seed/700-2/800/600"],
+      "lotId": 700,
+      "auctionId": 2,
+      "starting_bid": 2600,
+      "reserve": false
+    },
+    {
+      "title": "Lot Item 701 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/701/400/300",
+      "images": ["https://picsum.photos/seed/701-0/800/600", "https://picsum.photos/seed/701-1/800/600", "https://picsum.photos/seed/701-2/800/600", "https://picsum.photos/seed/701-3/800/600"],
+      "lotId": 701,
+      "auctionId": 2,
+      "starting_bid": 3800,
+      "reserve": true
+    },
+    {
+      "title": "Lot Item 702 - Auction 2",
+      "description": "A unique collectible item from auction 2, carefully curated for discerning collectors.",
+      "thumb": "https://picsum.photos/seed/702/400/300",
+      "images": ["https://picsum.photos/seed/702-0/800/600", "https://picsum.photos/seed/702-1/800/600", "https://picsum.photos/seed/702-2/800/600"],
+      "lotId": 702,
+      "auctionId": 2,
+      "starting_bid": 1200,
+      "reserve": false
     }
   
 
