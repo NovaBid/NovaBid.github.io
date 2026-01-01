@@ -9,7 +9,7 @@ const CardRenderer = {
    * @param {object} auction - Auction data object
    * @returns {string} - HTML string for the auction card
    */
-  createAuctionCard(auction) {
+  createAuctionCard(auction, auctionCommon) {
     return `
       <div class="card-hover bg-white rounded-2xl p-6 border border-cosmic-100 flex flex-col">
         <div class="relative mb-4">
@@ -17,6 +17,9 @@ const CardRenderer = {
         </div>
         <h3 class="text-xl font-bold mb-2">${auction.title}</h3>
         <p class="text-gray-600 mb-4 flex-grow">${auction.description}</p>
+        <div class="text-lg font-bold text-nova-400 mb-4">
+            Auction Closes: ${new Date(auctionCommon.endDate).toLocaleDateString()}
+        </div>
         <a href="auction.html?id=${auction.auctionId}" class="inline-flex items-center justify-center bg-cosmic-600 text-white font-bold py-2 px-4 rounded-lg hover:bg-cosmic-700 transition">
           View Auction
           <i class="fas fa-arrow-right ml-2"></i>
