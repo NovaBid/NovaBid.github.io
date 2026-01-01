@@ -7,9 +7,19 @@ const CardRenderer = {
   /**
    * Create an auction card HTML element
    * @param {object} auction - Auction data object
+   * @param {object} auctionCommon - Auction commons data object with dates/info
    * @returns {string} - HTML string for the auction card
    */
   createAuctionCard(auction, auctionCommon) {
+    const endDate = auctionCommon ? new Date(auctionCommon.endDate).toLocaleString('en-US', {
+      weekday: 'long',
+      month: 'short',
+      day: 'numeric',
+      year: 'numeric',
+      hour: 'numeric',
+      minute: '2-digit',
+      hour12: true
+    }) : 'TBD';
     return `
       <div class="card-hover bg-white rounded-2xl p-6 border border-cosmic-100 flex flex-col">
         <div class="relative mb-4">
@@ -17,9 +27,7 @@ const CardRenderer = {
         </div>
         <h3 class="text-xl font-bold mb-2">${auction.title}</h3>
         <p class="text-gray-600 mb-4 flex-grow">${auction.description}</p>
-        <div class="text-lg font-bold text-nova-400 mb-4">
-            Auction Closes: ${new Date(auctionCommon.endDate).toLocaleDateString()}
-        </div>
+        <div class="text-lg font-bold text-nova-400 mb-4">Closes: ${endDate}</div>
         <a href="auction.html?id=${auction.auctionId}" class="inline-flex items-center justify-center bg-cosmic-600 text-white font-bold py-2 px-4 rounded-lg hover:bg-cosmic-700 transition">
           View Auction
           <i class="fas fa-arrow-right ml-2"></i>
@@ -55,10 +63,11 @@ const CardRenderer = {
    * Render cards to a container
    * @param {HTMLElement} container - Target container element
    * @param {array} items - Array of items to render
+   * @param {array} itemCommons - Optional array of commons data matching items
    * @param {function} cardCreator - Function to create card HTML
    * @param {string} emptyMessage - Message when no items
    */
-  renderCards(container, items, cardCreator, emptyMessage = 'No items available.') {
+  renderCards(container, items, itemCommons, cardCreator, emptyMessage = 'No items available.') {
     if (!container) return;
 
     if (items.length === 0) {
@@ -66,8 +75,9 @@ const CardRenderer = {
       return;
     }
 
-    items.forEach(item => {
-      container.innerHTML += cardCreator(item);
+    items.forEach((item, index) => {
+      const itemCommon = itemCommons ? itemCommons[index] : null;
+      container.innerHTML += cardCreator(item, itemCommon);
     });
   }
 };
