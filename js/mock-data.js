@@ -206,7 +206,7 @@ const mockAuctions = [{
     }
   ];
 
-  mockAuctionCommon = [
+  const mockAuctionCommons = [
     {
       "auctionId": 1,
       "startDate": "2024-07-01T10:00:00Z",
