@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lot Details | NovaBid.market</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="text-gray-800 bg-cosmic-50">
+  <div id="header-placeholder"></div>
+
+  <!-- Spacer for Fixed Header -->
+  <div class="h-16 md:h-20"></div>
+
+  <section class="py-20 px-4">
+    <div class="max-w-4xl mx-auto">
+      <!-- Back to Auction Link -->
+      <div class="mb-8">
+        <a href="/bidder/auction.html" id="back-link" class="inline-flex items-center text-nova-500 font-medium hover:text-nova-400">
+          <i class="fas fa-arrow-left mr-2"></i> Back to Auction
+        </a>
+      </div>
+
+      <!-- Lot Details Container -->
+      <div class="bg-white rounded-2xl shadow-lg p-8 border border-cosmic-100 mb-8">
+        <!-- Image Carousel -->
+        <div class="carousel-container mb-8">
+          <img id="carousel-main-image" src="" alt="Lot Image" class="carousel-image">
+
+          <!-- Carousel Controls -->
+          <div class="carousel-controls">
+            <button id="carousel-prev-btn" class="carousel-btn" title="Previous image">
+              <i class="fas fa-chevron-left"></i>
+            </button>
+            <span class="carousel-counter">
+              <span id="carousel-current">1</span> / <span id="carousel-total">1</span>
+            </span>
+            <button id="carousel-next-btn" class="carousel-btn" title="Next image">
+              <i class="fas fa-chevron-right"></i>
+            </button>
+          </div>
+
+          <!-- Thumbnail Strip -->
+          <div class="thumbnail-strip" id="thumbnail-strip">
+            <!-- Thumbnails will be inserted here -->
+          </div>
+        </div>
+
+        <!-- Lot Information -->
+        <div class="border-t border-cosmic-100 pt-8">
+          <h1 class="text-4xl font-bold mb-4" id="lot-title"></h1>
+          <p class="text-xl text-gray-600 mb-6" id="lot-description"></p>
+
+          <div class="grid grid-cols-2 gap-6 mb-8">
+            <div>
+              <p class="text-sm text-gray-500 font-medium">Starting Bid</p>
+              <p class="text-2xl font-bold text-nova-400" id="lot-starting-bid">-</p>
+            </div>
+            <div>
+              <p class="text-sm text-gray-500 font-medium">Lot ID</p>
+              <p class="text-2xl font-bold text-cosmic-600" id="lot-id">-</p>
+            </div>
+          </div>
+
+          <!-- Action Button -->
+          <button class="w-full bg-cosmic-600 text-white font-bold py-4 px-6 rounded-lg hover:bg-cosmic-700 transition shadow-md">
+            Place Bid
+            <i class="fas fa-gavel ml-2"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Zoom Modal -->
+  <div class="zoom-modal" id="zoom-modal">
+    <button class="zoom-close-btn" id="zoom-close-btn" title="Close">
+      <i class="fas fa-times"></i>
+    </button>
+    <div class="zoom-modal-content">
+      <img id="zoom-modal-image" src="" alt="Zoomed Lot Image" class="zoom-modal-image">
+    </div>
+  </div>
+
+  <div id="footer-placeholder"></div>
+
+  <script src="/js/script.js"></script>
+  <script src="/js/loader.js"></script>
+  <script src="/js/common.js"></script>
+  <script src="/js/navigation.js"></script>
+  <script src="/js/mock-data.js"></script>
+  <script src="/js/lot-page.js"></script>
+  <script src="/js/main.js"></script>
+</body>
+</html>

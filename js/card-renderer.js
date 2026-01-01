@@ -46,12 +46,12 @@ const CardRenderer = {
     return `
       <div class="card-hover bg-white rounded-2xl p-6 border border-cosmic-100 flex flex-col">
         <div class="relative mb-4">
-          <img src="${lot.image}" alt="${lot.title}" class="rounded-lg w-full h-48 object-cover">
+          <img src="${lot.thumb}" alt="${lot.title}" class="rounded-lg w-full h-48 object-cover">
         </div>
         <h3 class="text-xl font-bold mb-2">${lot.title}</h3>
         <p class="text-gray-600 mb-4 flex-grow">${lot.description}</p>
         <div class="text-lg font-bold text-nova-400 mb-4">Starting Bid: $${startingBid.toLocaleString()}</div>
-        <a href="#" class="inline-flex items-center justify-center bg-cosmic-600 text-white font-bold py-2 px-4 rounded-lg hover:bg-cosmic-700 transition">
+        <a href="/bidder/lot.html?id=${lot.lotId}" class="inline-flex items-center justify-center bg-cosmic-600 text-white font-bold py-2 px-4 rounded-lg hover:bg-cosmic-700 transition">
           View Lot
           <i class="fas fa-arrow-right ml-2"></i>
         </a>
