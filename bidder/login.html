@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="csrf-token" content="">
   <title>Bidder Login | NovaBid.market</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <script src="https://cdn.tailwindcss.com"></script>
@@ -21,19 +22,23 @@
     <section class="py-20 px-4">
         <div class="max-w-md mx-auto bg-white rounded-2xl shadow-lg p-8 md:p-12 border border-cosmic-100">
             <div class="text-center mb-8">
-                <h2 class="text-3xl md:text-4xl font-bold mb-2">Bidder Login</h2>
-                <p class="text-gray-600">Access your account to start bidding.</p>
+                <h2 id="form-title" class="text-3xl md:text-4xl font-bold mb-2">Bidder Login</h2>
+                <p id="form-subtitle" class="text-gray-600">Access your account to start bidding.</p>
             </div>
 
-            <form>
+            <!-- Login Form -->
+            <form id="login-form" method="POST" action="/">
+                <input type="hidden" name="csrf_token" class="csrf-token-input" value="">
+                <input type="hidden" name="form_type" value="login">
+                
                 <div class="mb-6">
-                    <label for="email" class="block text-gray-700 font-medium mb-2">Email Address</label>
-                    <input type="email" id="email" name="email" class="w-full px-4 py-3 border border-cosmic-200 rounded-lg focus:ring-nova-500 focus:border-nova-500" placeholder="you@example.com" required>
+                    <label for="login-email" class="block text-gray-700 font-medium mb-2">Email Address</label>
+                    <input type="email" id="login-email" name="email" class="w-full px-4 py-3 border border-cosmic-200 rounded-lg focus:ring-nova-500 focus:border-nova-500" placeholder="you@example.com" required>
                 </div>
 
                 <div class="mb-6">
-                    <label for="password" class="block text-gray-700 font-medium mb-2">Password</label>
-                    <input type="password" id="password" name="password" class="w-full px-4 py-3 border border-cosmic-200 rounded-lg focus:ring-nova-500 focus:border-nova-500" placeholder="••••••••" required>
+                    <label for="login-password" class="block text-gray-700 font-medium mb-2">Password</label>
+                    <input type="password" id="login-password" name="password" class="w-full px-4 py-3 border border-cosmic-200 rounded-lg focus:ring-nova-500 focus:border-nova-500" placeholder="••••••••" required>
                 </div>
 
                 <div class="flex items-center justify-between mb-6">
@@ -52,8 +57,33 @@
                 </div>
             </form>
 
+            <!-- Registration Form (Hidden by Default) -->
+            <form id="register-form" method="POST" action="/" style="display: none;">
+                <input type="hidden" name="csrf_token" class="csrf-token-input" value="">
+                <input type="hidden" name="form_type" value="register">
+                
+                <div class="mb-6">
+                    <label for="register-email" class="block text-gray-700 font-medium mb-2">Email Address</label>
+                    <input type="email" id="register-email" name="email" class="w-full px-4 py-3 border border-cosmic-200 rounded-lg focus:ring-nova-500 focus:border-nova-500" placeholder="you@example.com" required>
+                </div>
+
+                <div class="mb-6">
+                    <label for="register-password" class="block text-gray-700 font-medium mb-2">Password</label>
+                    <input type="password" id="register-password" name="password" class="w-full px-4 py-3 border border-cosmic-200 rounded-lg focus:ring-nova-500 focus:border-nova-500" placeholder="••••••••" required>
+                </div>
+
+                <div class="mb-6">
+                    <label for="register-password-confirm" class="block text-gray-700 font-medium mb-2">Confirm Password</label>
+                    <input type="password" id="register-password-confirm" name="password_confirm" class="w-full px-4 py-3 border border-cosmic-200 rounded-lg focus:ring-nova-500 focus:border-nova-500" placeholder="••••••••" required>
+                </div>
+
+                <div>
+                    <button type="submit" class="w-full bg-cosmic-600 text-white font-bold py-3 px-6 rounded-lg hover:bg-cosmic-700 transition shadow-md">Create Account</button>
+                </div>
+            </form>
+
             <div class="mt-8 text-center text-sm text-gray-600">
-                <p>Don't have an account? <a href="/vendor/register.html" class="font-medium text-nova-500 hover:text-nova-400">Sign up</a></p>
+                <p id="toggle-text">Don't have an account? <a href="#" id="toggle-form-link" class="font-medium text-nova-500 hover:text-nova-400">Sign up</a></p>
             </div>
         </div>
     </section>
@@ -65,6 +95,67 @@
   <script src="/js/common.js"></script>
   <script src="/js/navigation.js"></script>
   <script src="/js/main.js"></script>
+  
+  <script>
+    // Populate CSRF token from meta tag into all hidden inputs
+    (function() {
+      const csrfMeta = document.querySelector('meta[name="csrf-token"]');
+      if (csrfMeta) {
+        const csrfToken = csrfMeta.getAttribute('content');
+        const csrfInputs = document.querySelectorAll('.csrf-token-input');
+        csrfInputs.forEach(input => {
+          input.value = csrfToken;
+        });
+      }
+    })();
+
+    // Toggle between Login and Register forms using event delegation
+    (function() {
+      const loginForm = document.getElementById('login-form');
+      const registerForm = document.getElementById('register-form');
+      const formTitle = document.getElementById('form-title');
+      const formSubtitle = document.getElementById('form-subtitle');
+      const toggleTextContainer = document.getElementById('toggle-text');
+      
+      function updateToggleLink(text, linkText) {
+        // Clear existing content
+        toggleTextContainer.textContent = text + ' ';
+        
+        // Create and append link element safely
+        const link = document.createElement('a');
+        link.href = '#';
+        link.id = 'toggle-form-link';
+        link.className = 'font-medium text-nova-500 hover:text-nova-400';
+        link.textContent = linkText;
+        toggleTextContainer.appendChild(link);
+      }
+      
+      function toggleForms(e) {
+        if (e.target.id === 'toggle-form-link') {
+          e.preventDefault();
+          
+          if (loginForm.style.display === 'none') {
+            // Switch to Login
+            loginForm.style.display = 'block';
+            registerForm.style.display = 'none';
+            formTitle.textContent = 'Bidder Login';
+            formSubtitle.textContent = 'Access your account to start bidding.';
+            updateToggleLink("Don't have an account?", 'Sign up');
+          } else {
+            // Switch to Register
+            loginForm.style.display = 'none';
+            registerForm.style.display = 'block';
+            formTitle.textContent = 'Create Account';
+            formSubtitle.textContent = 'Register to start bidding on auctions.';
+            updateToggleLink('Already have an account?', 'Sign in');
+          }
+        }
+      }
+      
+      // Use event delegation on parent container
+      toggleTextContainer.addEventListener('click', toggleForms);
+    })();
+  </script>
 </body>
 
 </html>
