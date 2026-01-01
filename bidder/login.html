@@ -109,37 +109,52 @@
       }
     })();
 
-    // Toggle between Login and Register forms
-    function toggleForms(e) {
-      e.preventDefault();
-      
+    // Toggle between Login and Register forms using event delegation
+    (function() {
       const loginForm = document.getElementById('login-form');
       const registerForm = document.getElementById('register-form');
       const formTitle = document.getElementById('form-title');
       const formSubtitle = document.getElementById('form-subtitle');
-      const toggleText = document.getElementById('toggle-text');
+      const toggleTextContainer = document.getElementById('toggle-text');
       
-      if (loginForm.style.display === 'none') {
-        // Switch to Login
-        loginForm.style.display = 'block';
-        registerForm.style.display = 'none';
-        formTitle.textContent = 'Bidder Login';
-        formSubtitle.textContent = 'Access your account to start bidding.';
-        toggleText.innerHTML = 'Don\'t have an account? <a href="#" id="toggle-form-link" class="font-medium text-nova-500 hover:text-nova-400">Sign up</a>';
-      } else {
-        // Switch to Register
-        loginForm.style.display = 'none';
-        registerForm.style.display = 'block';
-        formTitle.textContent = 'Create Account';
-        formSubtitle.textContent = 'Register to start bidding on auctions.';
-        toggleText.innerHTML = 'Already have an account? <a href="#" id="toggle-form-link" class="font-medium text-nova-500 hover:text-nova-400">Sign in</a>';
+      function updateToggleLink(text, linkText) {
+        // Clear existing content
+        toggleTextContainer.textContent = text + ' ';
+        
+        // Create and append link element safely
+        const link = document.createElement('a');
+        link.href = '#';
+        link.id = 'toggle-form-link';
+        link.className = 'font-medium text-nova-500 hover:text-nova-400';
+        link.textContent = linkText;
+        toggleTextContainer.appendChild(link);
       }
       
-      // Re-attach event listener to the new link
-      document.getElementById('toggle-form-link').addEventListener('click', toggleForms);
-    }
-    
-    document.getElementById('toggle-form-link').addEventListener('click', toggleForms);
+      function toggleForms(e) {
+        if (e.target.id === 'toggle-form-link') {
+          e.preventDefault();
+          
+          if (loginForm.style.display === 'none') {
+            // Switch to Login
+            loginForm.style.display = 'block';
+            registerForm.style.display = 'none';
+            formTitle.textContent = 'Bidder Login';
+            formSubtitle.textContent = 'Access your account to start bidding.';
+            updateToggleLink("Don't have an account?", 'Sign up');
+          } else {
+            // Switch to Register
+            loginForm.style.display = 'none';
+            registerForm.style.display = 'block';
+            formTitle.textContent = 'Create Account';
+            formSubtitle.textContent = 'Register to start bidding on auctions.';
+            updateToggleLink('Already have an account?', 'Sign in');
+          }
+        }
+      }
+      
+      // Use event delegation on parent container
+      toggleTextContainer.addEventListener('click', toggleForms);
+    })();
   </script>
 </body>
 
