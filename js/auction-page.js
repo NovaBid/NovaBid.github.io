@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   const auction = mockAuctions.find(a => a.auctionId === auctionId);
-  const auctionCommon = mockAuctionCommons.find(ac => ac.auctionId === auctionId);
+  const auctionCommon = mockAuctionCommon.find(ac => ac.auctionId === auctionId);
 
   if (!auction) {
     console.error(`Auction with ID ${auctionId} not found.`);
