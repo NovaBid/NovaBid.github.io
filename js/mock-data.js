@@ -6230,7 +6230,7 @@ const mockAuctions = [{
       "starting_bid": 1200,
       "reserve": false
     }
-  
+  ];
 
   const mockAuctionCommons = [
     {
