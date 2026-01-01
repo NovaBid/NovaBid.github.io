@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
   CardRenderer.renderCards(
     auctionsContainer,
     mockAuctions,
-    mockAuctionCommons,
+    mockAuctionCommon,
     (auction, auctionCommon) => CardRenderer.createAuctionCard(auction, auctionCommon),
     'No auctions available at this time.'
   );
