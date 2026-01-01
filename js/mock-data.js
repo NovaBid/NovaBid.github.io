@@ -42,7 +42,9 @@ const mockAuctions = [{
       "thumb": "https://picsum.photos/seed/11/400/300",
       "images": ["https://picsum.photos/seed/11a/800/600", "https://picsum.photos/seed/11b/800/600"],
       "lotId": 101,
-      "auctionId": 1
+      "auctionId": 1,
+      "starting_bid": 1400,
+      "reserve": false
     },
     {
       "title": "Abstract Painting by Jane Doe",
@@ -50,7 +52,9 @@ const mockAuctions = [{
       "thumb": "https://picsum.photos/seed/12/400/300",
       "images": ["https://picsum.photos/seed/12a/800/600", "https://picsum.photos/seed/12b/800/600"],
       "lotId": 102,
-      "auctionId": 2
+      "auctionId": 2,
+      "starting_bid": 700,
+      "reserve": false
     },
     {
       "title": "1965 Ford Mustang",
@@ -58,7 +62,9 @@ const mockAuctions = [{
       "thumb": "https://picsum.photos/seed/13/400/300",
       "images": ["https://picsum.photos/seed/13a/800/600", "https://picsum.photos/seed/13b/800/600", "https://picsum.photos/seed/13c/800/600"],
       "lotId": 103,
-      "auctionId": 3
+      "auctionId": 3,
+      "starting_bid": 3800,
+      "reserve": false
     },
     {
       "title": "Rolex Submariner Watch",
@@ -66,7 +72,9 @@ const mockAuctions = [{
       "thumb": "https://picsum.photos/seed/14/400/300",
       "images": ["https://picsum.photos/seed/14a/800/600", "https://picsum.photos/seed/14b/800/600"],
       "lotId": 104,
-      "auctionId": 4
+      "auctionId": 4,
+      "starting_bid": 2400,
+      "reserve": false
     },
     {
       "title": "First Edition 'The Great Gatsby'",
@@ -74,7 +82,9 @@ const mockAuctions = [{
       "thumb": "https://picsum.photos/seed/15/400/300",
       "images": ["https://picsum.photos/seed/15a/800/600", "https://picsum.photos/seed/15b/800/600"],
       "lotId": 105,
-      "auctionId": 5
+      "auctionId": 5,
+      "starting_bid": 2800,
+      "reserve": true
     },
     {
       "title": "Signed Baseball by Babe Ruth",
@@ -82,7 +92,9 @@ const mockAuctions = [{
       "thumb": "https://picsum.photos/seed/16/400/300",
       "images": ["https://picsum.photos/seed/16a/800/600", "https://picsum.photos/seed/16b/800/600"],
       "lotId": 106,
-      "auctionId": 6
+      "auctionId": 6,
+      "starting_bid": 1600,
+      "reserve": false
     },
     {
       "title": "Antique Wooden Doll",
@@ -90,7 +102,9 @@ const mockAuctions = [{
       "thumb": "https://picsum.photos/seed/17/400/300",
       "images": ["https://picsum.photos/seed/17a/800/600", "https://picsum.photos/seed/17b/800/600"],
       "lotId": 107,
-      "auctionId": 1
+      "auctionId": 1,
+      "starting_bid": 1600,
+      "reserve": true
     },
     {
       "title": "Contemporary Sculpture",
@@ -98,7 +112,9 @@ const mockAuctions = [{
       "thumb": "https://picsum.photos/seed/18/400/300",
       "images": ["https://picsum.photos/seed/18a/800/600", "https://picsum.photos/seed/18b/800/600"],
       "lotId": 108,
-      "auctionId": 2
+      "auctionId": 2,
+      "starting_bid": 3200,
+      "reserve": false
     },
     {
       "title": "1970s Chevrolet Camaro",
@@ -106,7 +122,9 @@ const mockAuctions = [{
       "thumb": "https://picsum.photos/seed/19/400/300",
       "images": ["https://picsum.photos/seed/19a/800/600", "https://picsum.photos/seed/19b/800/600"],
       "lotId": 109,
-      "auctionId": 3
+      "auctionId": 3,
+      "starting_bid": 2700,
+      "reserve": false
     },
     {
       "title": "Diamond Necklace",
@@ -114,7 +132,9 @@ const mockAuctions = [{
       "thumb": "https://picsum.photos/seed/20/400/300",
       "images": ["https://picsum.photos/seed/20a/800/600", "https://picsum.photos/seed/20b/800/600"],
       "lotId": 110,
-      "auctionId": 4
+      "auctionId": 4,
+      "starting_bid": 1200,
+      "reserve": true
     },
     {
       "title": "Signed Copy of '1984' by George Orwell",
@@ -122,7 +142,9 @@ const mockAuctions = [{
       "thumb": "https://picsum.photos/seed/21/400/300",
       "images": ["https://picsum.photos/seed/21a/800/600", "https://picsum.photos/seed/21b/800/600"],
       "lotId": 111,
-      "auctionId": 5
+      "auctionId": 5,
+      "starting_bid": 3200,
+      "reserve": true
     },
     {
       "title": "Game-Worn Jersey by Michael Jordan",
@@ -130,7 +152,9 @@ const mockAuctions = [{
       "thumb": "https://picsum.photos/seed/22/400/300",
       "images": ["https://picsum.photos/seed/22a/800/600", "https://picsum.photos/seed/22b/800/600"],
       "lotId": 112,
-      "auctionId": 6
+      "auctionId": 6,
+      "starting_bid": 2900,
+      "reserve": true
     },
     {
       "title": "Antique Wooden Chair",
@@ -138,7 +162,9 @@ const mockAuctions = [{
       "thumb": "https://picsum.photos/seed/23/400/300",
       "images": ["https://picsum.photos/seed/23a/800/600", "https://picsum.photos/seed/23b/800/600"],
       "lotId": 113,
-      "auctionId": 1
+      "auctionId": 1,
+      "starting_bid": 2000,
+      "reserve": true
     },
     {
       "title": "Landscape Painting by John Smith",
@@ -146,7 +172,9 @@ const mockAuctions = [{
       "thumb": "https://picsum.photos/seed/24/400/300",
       "images": ["https://picsum.photos/seed/24a/800/600", "https://picsum.photos/seed/24b/800/600"],
       "lotId": 114,
-      "auctionId": 2
+      "auctionId": 2,
+      "starting_bid": 2100,
+      "reserve": true
     },
     {
       "title": "1950s Cadillac",
@@ -154,7 +182,9 @@ const mockAuctions = [{
       "thumb": "https://picsum.photos/seed/25/400/300",
       "images": ["https://picsum.photos/seed/25a/800/600", "https://picsum.photos/seed/25b/800/600"],
       "lotId": 115,
-      "auctionId": 3
+      "auctionId": 3,
+      "starting_bid": 4700,
+      "reserve": false
     },
     {
       "title": "Emerald Ring",
@@ -162,7 +192,9 @@ const mockAuctions = [{
       "thumb": "https://picsum.photos/seed/26/400/300",
       "images": ["https://picsum.photos/seed/26a/800/600", "https://picsum.photos/seed/26b/800/600"],
       "lotId": 116,
-      "auctionId": 4
+      "auctionId": 4,
+      "starting_bid": 3500,
+      "reserve": false
     },
     {
       "title": "First Edition 'To Kill a Mockingbird'",
@@ -170,7 +202,9 @@ const mockAuctions = [{
       "thumb": "https://picsum.photos/seed/27/400/300",
       "images": ["https://picsum.photos/seed/27a/800/600", "https://picsum.photos/seed/27b/800/600"],
       "lotId": 117,
-      "auctionId": 5
+      "auctionId": 5,
+      "starting_bid": 2000,
+      "reserve": false
     },
     {
       "title": "Signed Football by Tom Brady",
@@ -178,7 +212,9 @@ const mockAuctions = [{
       "thumb": "https://picsum.photos/seed/28/400/300",
       "images": ["https://picsum.photos/seed/28a/800/600", "https://picsum.photos/seed/28b/800/600"],
       "lotId": 118,
-      "auctionId": 6
+      "auctionId": 6,
+      "starting_bid": 4600,
+      "reserve": true
     },
     {
       "title": "Vintage Pocket Watch",
@@ -186,7 +222,9 @@ const mockAuctions = [{
       "thumb": "https://picsum.photos/seed/29/400/300",
       "images": ["https://picsum.photos/seed/29a/800/600", "https://picsum.photos/seed/29b/800/600"],
       "lotId": 119,
-      "auctionId": 1
+      "auctionId": 1,
+      "starting_bid": 900,
+      "reserve": false
     },
     {
       "title": "Modern Art Print",
@@ -194,7 +232,9 @@ const mockAuctions = [{
       "thumb": "https://picsum.photos/seed/30/400/300",
       "images": ["https://picsum.photos/seed/30a/800/600", "https://picsum.photos/seed/30b/800/600"],
       "lotId": 120,
-      "auctionId": 2
+      "auctionId": 2,
+      "starting_bid": 3500,
+      "reserve": false
     },
     {
       "title": "1980s BMW M3",
@@ -202,7 +242,9 @@ const mockAuctions = [{
       "thumb": "https://picsum.photos/seed/31/400/300",
       "images": ["https://picsum.photos/seed/31a/800/600", "https://picsum.photos/seed/31b/800/600"],
       "lotId": 121,
-      "auctionId": 3
+      "auctionId": 3,
+      "starting_bid": 2800,
+      "reserve": true
     }
   ];
 

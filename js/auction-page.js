@@ -1,6 +1,6 @@
 /**
  * Auction Page Module
- * Handles auction detail page rendering
+ * Handles auction detail page rendering with pagination
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -26,15 +26,93 @@ document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('auction-image').src = auction.image;
   document.getElementById('auction-image').alt = auction.title;
 
-  // Filter and render lots
+  // Filter lots for this auction
   const lotsContainer = document.getElementById('lots-container');
+  const paginationContainer = document.getElementById('lots-pagination-container');
   const filteredLots = mockLots.filter(lot => lot.auctionId === auctionId);
+  const ITEMS_PER_PAGE = 20;
+  let currentPage = 1;
 
-  CardRenderer.renderCards(
-    lotsContainer,
-    filteredLots,
-    null,
-    (lot) => CardRenderer.createLotCard(lot),
-    'No lots available for this auction yet.'
-  );
+  function renderPage(page) {
+    currentPage = page;
+    const startIndex = (page - 1) * ITEMS_PER_PAGE;
+    const endIndex = startIndex + ITEMS_PER_PAGE;
+    
+    const paginatedLots = filteredLots.slice(startIndex, endIndex);
+
+    // Clear container
+    lotsContainer.innerHTML = '';
+
+    // Render cards
+    CardRenderer.renderCards(
+      lotsContainer,
+      paginatedLots,
+      null,
+      (lot) => CardRenderer.createLotCard(lot),
+      'No lots available for this auction yet.'
+    );
+
+    // Render pagination
+    renderPagination();
+
+    // Scroll to lots section
+    document.getElementById('lots-section').scrollIntoView({ behavior: 'smooth' });
+  }
+
+  function renderPagination() {
+    const totalPages = Math.ceil(filteredLots.length / ITEMS_PER_PAGE);
+    
+    if (totalPages <= 1) {
+      paginationContainer.innerHTML = '';
+      return;
+    }
+
+    let paginationHTML = '<div class="flex justify-center items-center gap-2 mt-12">';
+
+    // Previous button
+    paginationHTML += `
+      <button 
+        onclick="window.lotsPagination.goToPage(${currentPage - 1})" 
+        ${currentPage === 1 ? 'disabled' : ''}
+        class="px-4 py-2 rounded-lg border border-cosmic-300 hover:bg-cosmic-100 disabled:opacity-50 disabled:cursor-not-allowed transition">
+        <i class="fas fa-chevron-left"></i>
+      </button>
+    `;
+
+    // Page numbers
+    for (let i = 1; i <= totalPages; i++) {
+      if (i === 1 || i === totalPages || (i >= currentPage - 1 && i <= currentPage + 1)) {
+        paginationHTML += `
+          <button 
+            onclick="window.lotsPagination.goToPage(${i})" 
+            class="px-4 py-2 rounded-lg border ${i === currentPage ? 'bg-cosmic-600 text-white border-cosmic-600' : 'border-cosmic-300 hover:bg-cosmic-100'} transition">
+            ${i}
+          </button>
+        `;
+      } else if (i === currentPage - 2 || i === currentPage + 2) {
+        paginationHTML += '<span class="px-2">...</span>';
+      }
+    }
+
+    // Next button
+    paginationHTML += `
+      <button 
+        onclick="window.lotsPagination.goToPage(${currentPage + 1})" 
+        ${currentPage === totalPages ? 'disabled' : ''}
+        class="px-4 py-2 rounded-lg border border-cosmic-300 hover:bg-cosmic-100 disabled:opacity-50 disabled:cursor-not-allowed transition">
+        <i class="fas fa-chevron-right"></i>
+      </button>
+    `;
+
+    paginationHTML += '</div>';
+    paginationContainer.innerHTML = paginationHTML;
+  }
+
+  // Expose pagination function globally
+  window.lotsPagination = {
+    goToPage: renderPage
+  };
+
+  // Initial render
+  renderPage(1);
 });
