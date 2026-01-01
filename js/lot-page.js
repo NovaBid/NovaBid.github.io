@@ -23,6 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
   document.getElementById('lot-description').textContent = lot.description;
   document.getElementById('lot-starting-bid').textContent = `$${lot.starting_bid}`;
   document.getElementById('lot-id').textContent = lot.lotId;
+  document.getElementById('lot-reserve').textContent = lot.reserve ? 'Reserve Not Met' : '';
 
   // Update back link to go to correct auction
   if (auction) {
