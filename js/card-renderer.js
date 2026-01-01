@@ -28,7 +28,7 @@ const CardRenderer = {
         <h3 class="text-xl font-bold mb-2">${auction.title}</h3>
         <p class="text-gray-600 mb-4 flex-grow">${auction.description}</p>
         <div class="text-lg font-bold text-nova-400 mb-4">Closes: ${endDate}</div>
-        <a href="auction.html?id=${auction.auctionId}" class="inline-flex items-center justify-center bg-cosmic-600 text-white font-bold py-2 px-4 rounded-lg hover:bg-cosmic-700 transition">
+        <a href="/bidder/auction.html?id=${auction.auctionId}" class="inline-flex items-center justify-center bg-cosmic-600 text-white font-bold py-2 px-4 rounded-lg hover:bg-cosmic-700 transition">
           View Auction
           <i class="fas fa-arrow-right ml-2"></i>
         </a>
