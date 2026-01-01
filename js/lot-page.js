@@ -74,25 +74,17 @@ function initializeCarousel(images) {
     document.querySelectorAll('.thumbnail').forEach((thumb, index) => {
       thumb.classList.toggle('active', index === currentIndex);
     });
-
-    // Update button states
-    prevBtn.disabled = currentIndex === 0;
-    nextBtn.disabled = currentIndex === images.length - 1;
   }
 
-  // Carousel navigation
+  // Carousel navigation - infinite cycling
   prevBtn.addEventListener('click', () => {
-    if (currentIndex > 0) {
-      currentIndex--;
-      updateCarousel();
-    }
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    updateCarousel();
   });
 
   nextBtn.addEventListener('click', () => {
-    if (currentIndex < images.length - 1) {
-      currentIndex++;
-      updateCarousel();
-    }
+    currentIndex = (currentIndex + 1) % images.length;
+    updateCarousel();
   });
 
   // Click image to zoom
