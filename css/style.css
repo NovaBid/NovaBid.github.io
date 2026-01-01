@@ -1,127 +1,167 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
-    /* Logo Animation */
-    @keyframes spin-slow {
-      0% {
-        transform: rotate(0deg);
-      }
+/* ============================================================================
+   ANIMATIONS
+   ============================================================================ */
 
-      100% {
-        transform: rotate(360deg);
-      }
-    }
+@keyframes spin-slow {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 
-    .animate-spin-slow {
-      animation: spin-slow 20s linear infinite;
-    }
+@keyframes pulse-slow {
+  0%, 100% {
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 1;
+  }
+}
 
-    /* Navbar Scroll Effects */
-    .nav-scrolled {
-      background: rgba(15, 26, 60, 0.92);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid rgba(0, 243, 255, 0.1);
-      box-shadow: 0 4px 20px -5px rgba(0, 20, 40, 0.7);
-      padding-top: 8px !important;
-      padding-bottom: 8px !important;
-    }
+.animate-spin-slow {
+  animation: spin-slow 20s linear infinite;
+}
 
-    .nav-shadow-visible {
-      opacity: 1 !important;
-    }
+/* ============================================================================
+   TYPOGRAPHY
+   ============================================================================ */
 
-    /* Prevent logo text overflow on mobile */
-    @media (max-width: 768px) {
-      .truncate {
-        max-width: 140px;
-        overflow: hidden;
-        text-overflow: ellipsis;
-      }
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: #f8fafc;
+}
 
-      /* Reduce orbit animation speed on mobile */
-      .animate-spin-slow {
-        animation-duration: 30s !important;
-      }
-    }
+/* ============================================================================
+   LAYOUT & BACKGROUNDS
+   ============================================================================ */
 
-    /* Fix for iOS Safari flex-wrap issue */
-    @media (max-width: 480px) {
-      .min-w-fit {
-        min-width: auto !important;
-      }
+.gradient-bg {
+  background: linear-gradient(135deg, #0f1a3c 0%, #1e3a8a 100%);
+  position: relative;
+  overflow: hidden;
+}
 
-      /* Hide tagline completely on small mobile */
-      .text-xs {
-        display: none;
-      }
+.gradient-bg::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(0, 243, 255, 0.15) 0%, transparent 70%);
+  transform: rotate(30deg);
+}
 
-      .truncate {
-        overflow: hidden;
-      }
+/* ============================================================================
+   NAVIGATION
+   ============================================================================ */
 
-      /* Reduce right padding */
-      .px-4 {
-        padding-left: 0.75rem !important;
-        padding-right: 0.75rem !important;
-      }
-    }
+.nav-scrolled {
+  background: rgba(15, 26, 60, 0.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(0, 243, 255, 0.1);
+  box-shadow: 0 4px 20px -5px rgba(0, 20, 40, 0.7);
+  padding-top: 8px !important;
+  padding-bottom: 8px !important;
+}
 
-    body {
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-      background-color: #f8fafc;
-    }
+.nav-shadow-visible {
+  opacity: 1 !important;
+}
 
-    .gradient-bg {
-      background: linear-gradient(135deg, #0f1a3c 0%, #1e3a8a 100%);
-      position: relative;
-      overflow: hidden;
-    }
+/* ============================================================================
+   CARDS & COMPONENTS
+   ============================================================================ */
 
-    .gradient-bg::before {
-      content: "";
-      position: absolute;
-      top: -50%;
-      left: -50%;
-      width: 200%;
-      height: 200%;
-      background: radial-gradient(circle, rgba(0, 243, 255, 0.15) 0%, transparent 70%);
-      transform: rotate(30deg);
-    }
+.card-hover {
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
 
-    .star {
-      position: absolute;
-      background: white;
-      border-radius: 50%;
-      opacity: 0.7;
-    }
+.card-hover:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px -5px rgba(0, 195, 255, 0.25);
+  border-color: #00f3ff;
+}
 
-    .live-counter {
-      font-variant-numeric: tabular-nums;
-      animation: pulse-slow 3s infinite;
-    }
+/* ============================================================================
+   STARS
+   ============================================================================ */
 
-    .card-hover {
-      transition: all 0.3s ease;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-    }
+.star {
+  position: absolute;
+  background: white;
+  border-radius: 50%;
+  opacity: 0.7;
+  animation: pulse-slow 3s infinite;
+}
 
-    .card-hover:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 25px -5px rgba(0, 195, 255, 0.25);
-      border-color: #00f3ff;
-    }
+/* ============================================================================
+   LIVE COUNTER
+   ============================================================================ */
 
-    /* Logo image optimizations */
-    #nova-logo img {
-      filter: drop-shadow(0 2px 4px rgba(0, 20, 40, 0.2));
-      transition: all 0.3s ease;
-    }
+.live-counter {
+  font-variant-numeric: tabular-nums;
+  animation: pulse-slow 3s infinite;
+}
 
-    #nova-logo img:hover {
-      filter: drop-shadow(0 4px 8px rgba(0, 243, 255, 0.25));
-    }
+/* ============================================================================
+   LOGO
+   ============================================================================ */
 
-    /* Prevent logo distortion */
-    .logo-container {
-      max-width: 100%;
-      height: auto;
-    }
+#nova-logo img {
+  filter: drop-shadow(0 2px 4px rgba(0, 20, 40, 0.2));
+  transition: all 0.3s ease;
+}
+
+#nova-logo img:hover {
+  filter: drop-shadow(0 4px 8px rgba(0, 243, 255, 0.25));
+}
+
+.logo-container {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ============================================================================
+   RESPONSIVE - TABLET & UP
+   ============================================================================ */
+
+@media (max-width: 768px) {
+  .truncate {
+    max-width: 140px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .animate-spin-slow {
+    animation-duration: 30s !important;
+  }
+}
+
+/* ============================================================================
+   RESPONSIVE - MOBILE
+   ============================================================================ */
+
+@media (max-width: 480px) {
+  .min-w-fit {
+    min-width: auto !important;
+  }
+
+  .text-xs {
+    display: none;
+  }
+
+  .truncate {
+    overflow: hidden;
+  }
+
+  .px-4 {
+    padding-left: 0.75rem !important;
+    padding-right: 0.75rem !important;
+  }
+}
