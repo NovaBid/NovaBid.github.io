@@ -99,15 +99,18 @@
   <script>
     // Populate CSRF token from meta tag into all hidden inputs
     (function() {
-      const csrfToken = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
-      const csrfInputs = document.querySelectorAll('.csrf-token-input');
-      csrfInputs.forEach(input => {
-        input.value = csrfToken;
-      });
+      const csrfMeta = document.querySelector('meta[name="csrf-token"]');
+      if (csrfMeta) {
+        const csrfToken = csrfMeta.getAttribute('content');
+        const csrfInputs = document.querySelectorAll('.csrf-token-input');
+        csrfInputs.forEach(input => {
+          input.value = csrfToken;
+        });
+      }
     })();
 
     // Toggle between Login and Register forms
-    document.getElementById('toggle-form-link').addEventListener('click', function(e) {
+    function toggleForms(e) {
       e.preventDefault();
       
       const loginForm = document.getElementById('login-form');
@@ -133,8 +136,10 @@
       }
       
       // Re-attach event listener to the new link
-      document.getElementById('toggle-form-link').addEventListener('click', arguments.callee);
-    });
+      document.getElementById('toggle-form-link').addEventListener('click', toggleForms);
+    }
+    
+    document.getElementById('toggle-form-link').addEventListener('click', toggleForms);
   </script>
 </body>
 
