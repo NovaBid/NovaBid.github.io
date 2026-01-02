@@ -49,6 +49,74 @@ const UIEffects = {
       currentBid += increment;
       bidElement.textContent = `$${currentBid.toLocaleString()}`;
     }, interval);
+  },
+
+  /**
+   * Initialize tab slider functionality
+   * Handles tab switching with animated indicator
+   */
+  initTabSlider() {
+    // Only initialize if tab elements exist on the page
+    const buyerTab = document.getElementById('buyer-tab');
+    const vendorTab = document.getElementById('vendor-tab');
+    const indicator = document.getElementById('slider-indicator');
+    
+    if (!buyerTab || !vendorTab || !indicator) return;
+
+    // State management
+    let currentTab = 'buyer';
+
+    /**
+     * Switch between tabs
+     * @param {string} tab - 'buyer' or 'vendor'
+     */
+    const switchTab = (tab) => {
+      if (currentTab === tab) return;
+
+      currentTab = tab;
+
+      const buyerContent = document.getElementById('buyer-content');
+      const vendorContent = document.getElementById('vendor-content');
+
+      if (tab === 'buyer') {
+        buyerTab.classList.add('active');
+        vendorTab.classList.remove('active');
+        if (buyerContent) buyerContent.classList.remove('hidden');
+        if (vendorContent) vendorContent.classList.add('hidden');
+        indicator.style.width = buyerTab.offsetWidth + 'px';
+        indicator.style.transform = 'translateX(0)';
+      } else {
+        vendorTab.classList.add('active');
+        buyerTab.classList.remove('active');
+        if (vendorContent) vendorContent.classList.remove('hidden');
+        if (buyerContent) buyerContent.classList.add('hidden');
+        indicator.style.width = vendorTab.offsetWidth + 'px';
+        indicator.style.transform = `translateX(${buyerTab.offsetWidth}px)`;
+      }
+    };
+
+    /**
+     * Initialize slider indicator position
+     */
+    const initializeSlider = () => {
+      indicator.style.width = buyerTab.offsetWidth + 'px';
+    };
+
+    // Add event listeners to tab buttons using data-tab attributes
+    buyerTab.addEventListener('click', () => switchTab(buyerTab.dataset.tab));
+    vendorTab.addEventListener('click', () => switchTab(vendorTab.dataset.tab));
+
+    // Initialize on load
+    initializeSlider();
+
+    // Handle window resize to adjust slider
+    window.addEventListener('resize', () => {
+      initializeSlider();
+      if (currentTab === 'vendor' && buyerTab && vendorTab && indicator) {
+        indicator.style.width = vendorTab.offsetWidth + 'px';
+        indicator.style.transform = `translateX(${buyerTab.offsetWidth}px)`;
+      }
+    });
   }
 };
 
@@ -56,4 +124,5 @@ const UIEffects = {
 document.addEventListener('DOMContentLoaded', () => {
   UIEffects.generateStars('stars');
   UIEffects.initBidCounter('.live-counter');
+  UIEffects.initTabSlider();
 });
