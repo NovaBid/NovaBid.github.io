@@ -102,8 +102,9 @@ const UIEffects = {
       indicator.style.width = buyerTab.offsetWidth + 'px';
     };
 
-    // Make switchTab globally accessible for onclick handlers
-    window.switchTab = switchTab;
+    // Add event listeners to tab buttons
+    buyerTab.addEventListener('click', () => switchTab('buyer'));
+    vendorTab.addEventListener('click', () => switchTab('vendor'));
 
     // Initialize on load
     initializeSlider();
