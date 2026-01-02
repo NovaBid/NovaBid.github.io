@@ -62,6 +62,7 @@ window.addEventListener('resize', () => {
     const buyerTab = document.getElementById('buyer-tab');
     const vendorTab = document.getElementById('vendor-tab');
     const indicator = document.getElementById('slider-indicator');
+    // Ensure all elements exist before manipulating
     if (buyerTab && vendorTab && indicator) {
       indicator.style.width = vendorTab.offsetWidth + 'px';
       indicator.style.transform = `translateX(${buyerTab.offsetWidth}px)`;
