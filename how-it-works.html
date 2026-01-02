@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How It Works | NovaBid.market</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="/css/style.css">
+  <style>
+    /* Hidden class for Tailwind compatibility */
+    .hidden {
+      display: none !important;
+    }
+
+    /* Tab Slider Styles */
+    .tab-slider {
+      position: relative;
+      display: inline-flex;
+      background: #e0f0ff;
+      border-radius: 12px;
+      padding: 4px;
+      box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .tab-button {
+      position: relative;
+      z-index: 2;
+      padding: 12px 32px;
+      font-weight: 600;
+      border: none;
+      background: transparent;
+      cursor: pointer;
+      transition: color 0.3s ease;
+      border-radius: 8px;
+      color: #0a1128;
+    }
+
+    .tab-button.active {
+      color: white;
+    }
+
+    .tab-slider-indicator {
+      position: absolute;
+      top: 4px;
+      left: 4px;
+      height: calc(100% - 8px);
+      background: linear-gradient(135deg, #0f1a3c 0%, #1e3a8a 100%);
+      border-radius: 8px;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+    }
+
+    /* Content fade animation */
+    .content-fade-enter {
+      animation: fadeIn 0.3s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Markdown content styling */
+    .markdown-content {
+      line-height: 1.8;
+    }
+
+    .markdown-content h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+      color: #0a1128;
+    }
+
+    .markdown-content h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+      color: #0a1128;
+      border-bottom: 2px solid #e0f0ff;
+      padding-bottom: 0.5rem;
+    }
+
+    .markdown-content h3 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-top: 2rem;
+      margin-bottom: 0.75rem;
+      color: #0f1a3c;
+    }
+
+    .markdown-content p {
+      margin-bottom: 1rem;
+      color: #4b5563;
+    }
+
+    .markdown-content ul,
+    .markdown-content ol {
+      margin-bottom: 1rem;
+      padding-left: 2rem;
+    }
+
+    .markdown-content li {
+      margin-bottom: 0.5rem;
+      color: #4b5563;
+    }
+
+    .markdown-content ul li {
+      list-style-type: disc;
+    }
+
+    .markdown-content ol li {
+      list-style-type: decimal;
+    }
+
+    .markdown-content hr {
+      margin: 2rem 0;
+      border: none;
+      border-top: 1px solid #e0f0ff;
+    }
+
+    .markdown-content strong {
+      font-weight: 600;
+      color: #0a1128;
+    }
+
+    .markdown-content code {
+      background-color: #f0f7ff;
+      padding: 0.2rem 0.4rem;
+      border-radius: 4px;
+      font-family: 'Monaco', 'Courier New', monospace;
+      font-size: 0.9em;
+    }
+
+    .markdown-content blockquote {
+      border-left: 4px solid #00f3ff;
+      padding-left: 1rem;
+      margin: 1.5rem 0;
+      font-style: italic;
+      color: #6b7280;
+    }
+  </style>
+</head>
+
+<body class="text-gray-800 bg-cosmic-50">
+  <div id="header-placeholder"></div>
+
+  <!-- Spacer for Fixed Header -->
+  <div class="h-16 md:h-20"></div>
+
+  <!-- Hero Section -->
+  <section class="gradient-bg text-white py-16 px-4">
+    <div class="max-w-4xl mx-auto text-center">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">How NovaBid Works</h1>
+      <p class="text-xl text-cosmic-100 max-w-2xl mx-auto">
+        Learn how NovaBid creates transparent, fair, and efficient auctions for both buyers and vendors.
+      </p>
+    </div>
+  </section>
+
+  <!-- Tab Selector -->
+  <section class="py-12 px-4">
+    <div class="max-w-4xl mx-auto">
+      <div class="flex justify-center mb-12">
+        <div class="tab-slider">
+          <div class="tab-slider-indicator" id="slider-indicator"></div>
+          <button class="tab-button active" id="buyer-tab" onclick="switchTab('buyer')">
+            <i class="fas fa-user mr-2"></i>For Buyers
+          </button>
+          <button class="tab-button" id="vendor-tab" onclick="switchTab('vendor')">
+            <i class="fas fa-crown mr-2"></i>For Vendors
+          </button>
+        </div>
+      </div>
+
+      <!-- Content Area -->
+      <div class="bg-white rounded-2xl shadow-lg p-8 md:p-12 border border-cosmic-100">
+        <div id="buyer-content" class="markdown-content content-fade-enter">
+          <div class="text-center py-8">
+            <i class="fas fa-spinner fa-spin text-4xl text-cosmic-600"></i>
+            <p class="mt-4 text-gray-600">Loading buyer guide...</p>
+          </div>
+        </div>
+        <div id="vendor-content" class="markdown-content content-fade-enter hidden">
+          <div class="text-center py-8">
+            <i class="fas fa-spinner fa-spin text-4xl text-cosmic-600"></i>
+            <p class="mt-4 text-gray-600">Loading vendor guide...</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-20 px-4 gradient-bg text-white">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Get Started?</h2>
+      <p class="text-xl text-cosmic-100 max-w-2xl mx-auto mb-10">
+        Join thousands of users who trust NovaBid for transparent and efficient auctions.
+      </p>
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <a href="/vendor/register.html"
+          class="bg-white text-cosmic-700 font-bold py-4 px-8 rounded-xl text-lg hover:bg-gray-100 transition shadow-lg">
+          Register as Vendor
+        </a>
+        <a href="/bidder/auctions.html"
+          class="bg-transparent border-2 border-white text-white font-bold py-4 px-8 rounded-xl text-lg hover:bg-white/10 transition">
+          Browse Auctions
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer-placeholder"></div>
+
+  <script src="/js/script.js"></script>
+  <script src="/js/loader.js"></script>
+  <script src="/js/common.js"></script>
+  <script src="/js/navigation.js"></script>
+  <script>
+    // State management
+    let currentTab = 'buyer';
+    let buyerMarkdown = '';
+    let vendorMarkdown = '';
+
+    // Simple markdown to HTML converter
+    function parseMarkdown(markdown) {
+      let html = markdown;
+
+      // Convert headers
+      html = html.replace(/^### (.*$)/gim, '<h3>$1</h3>');
+      html = html.replace(/^## (.*$)/gim, '<h2>$1</h2>');
+      html = html.replace(/^# (.*$)/gim, '<h1>$1</h1>');
+
+      // Convert bold
+      html = html.replace(/\*\*(.*?)\*\*/gim, '<strong>$1</strong>');
+
+      // Convert italic
+      html = html.replace(/\*(.*?)\*/gim, '<em>$1</em>');
+
+      // Convert horizontal rules
+      html = html.replace(/^---$/gim, '<hr>');
+
+      // Convert unordered lists
+      html = html.replace(/^\* (.+)$/gim, '<li>$1</li>');
+      html = html.replace(/(<li>.*<\/li>)/gim, function(match) {
+        return '<ul>' + match + '</ul>';
+      });
+
+      // Merge consecutive ul tags
+      html = html.replace(/<\/ul>\s*<ul>/gim, '');
+
+      // Convert paragraphs (lines not already in tags)
+      const lines = html.split('\n');
+      const processedLines = [];
+      let inList = false;
+
+      for (let i = 0; i < lines.length; i++) {
+        const line = lines[i].trim();
+        
+        if (line === '') {
+          processedLines.push('');
+          continue;
+        }
+
+        if (line.match(/^<(h1|h2|h3|hr|ul|li)/)) {
+          if (line.startsWith('<ul')) inList = true;
+          if (line.startsWith('</ul')) inList = false;
+          processedLines.push(line);
+        } else if (!inList && !line.match(/^<\//)) {
+          processedLines.push('<p>' + line + '</p>');
+        } else {
+          processedLines.push(line);
+        }
+      }
+
+      html = processedLines.join('\n');
+
+      return html;
+    }
+
+    // Load markdown files
+    async function loadMarkdownFiles() {
+      try {
+        const [buyerResponse, vendorResponse] = await Promise.all([
+          fetch('/buyer-how-it-works.md'),
+          fetch('/vendor-how-it-works.md')
+        ]);
+
+        buyerMarkdown = await buyerResponse.text();
+        vendorMarkdown = await vendorResponse.text();
+
+        // Render initial content
+        renderContent('buyer');
+      } catch (error) {
+        console.error('Error loading markdown files:', error);
+        document.getElementById('buyer-content').innerHTML = '<p class="text-red-600">Error loading content. Please try again later.</p>';
+      }
+    }
+
+    // Render markdown content
+    function renderContent(tab) {
+      const markdown = tab === 'buyer' ? buyerMarkdown : vendorMarkdown;
+      const contentId = `${tab}-content`;
+      const contentElement = document.getElementById(contentId);
+
+      if (markdown) {
+        contentElement.innerHTML = parseMarkdown(markdown);
+        contentElement.classList.add('content-fade-enter');
+        // Remove animation class after animation completes
+        setTimeout(() => {
+          contentElement.classList.remove('content-fade-enter');
+        }, 300);
+      }
+    }
+
+    // Switch between tabs
+    function switchTab(tab) {
+      if (currentTab === tab) return;
+
+      currentTab = tab;
+
+      // Update tab buttons
+      const buyerTab = document.getElementById('buyer-tab');
+      const vendorTab = document.getElementById('vendor-tab');
+      const buyerContent = document.getElementById('buyer-content');
+      const vendorContent = document.getElementById('vendor-content');
+      const indicator = document.getElementById('slider-indicator');
+
+      if (tab === 'buyer') {
+        buyerTab.classList.add('active');
+        vendorTab.classList.remove('active');
+        buyerContent.classList.remove('hidden');
+        vendorContent.classList.add('hidden');
+        indicator.style.width = buyerTab.offsetWidth + 'px';
+        indicator.style.transform = 'translateX(0)';
+      } else {
+        vendorTab.classList.add('active');
+        buyerTab.classList.remove('active');
+        vendorContent.classList.remove('hidden');
+        buyerContent.classList.add('hidden');
+        indicator.style.width = vendorTab.offsetWidth + 'px';
+        indicator.style.transform = `translateX(${buyerTab.offsetWidth}px)`;
+      }
+
+      // Render content if not already rendered
+      if (tab === 'vendor' && vendorContent.querySelector('.fa-spinner')) {
+        renderContent('vendor');
+      }
+    }
+
+    // Initialize slider indicator position
+    function initializeSlider() {
+      const buyerTab = document.getElementById('buyer-tab');
+      const indicator = document.getElementById('slider-indicator');
+      indicator.style.width = buyerTab.offsetWidth + 'px';
+    }
+
+    // Load content on page load
+    document.addEventListener('DOMContentLoaded', () => {
+      initializeSlider();
+      loadMarkdownFiles();
+    });
+
+    // Handle window resize to adjust slider
+    window.addEventListener('resize', () => {
+      initializeSlider();
+      if (currentTab === 'vendor') {
+        const buyerTab = document.getElementById('buyer-tab');
+        const vendorTab = document.getElementById('vendor-tab');
+        const indicator = document.getElementById('slider-indicator');
+        indicator.style.width = vendorTab.offsetWidth + 'px';
+        indicator.style.transform = `translateX(${buyerTab.offsetWidth}px)`;
+      }
+    });
+  </script>
+</body>
+
+</html>
