@@ -102,9 +102,9 @@ const UIEffects = {
       indicator.style.width = buyerTab.offsetWidth + 'px';
     };
 
-    // Add event listeners to tab buttons
-    buyerTab.addEventListener('click', () => switchTab('buyer'));
-    vendorTab.addEventListener('click', () => switchTab('vendor'));
+    // Add event listeners to tab buttons using data-tab attributes
+    buyerTab.addEventListener('click', () => switchTab(buyerTab.dataset.tab));
+    vendorTab.addEventListener('click', () => switchTab(vendorTab.dataset.tab));
 
     // Initialize on load
     initializeSlider();
