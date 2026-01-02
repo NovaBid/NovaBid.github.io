@@ -185,17 +185,281 @@
 
       <!-- Content Area -->
       <div class="bg-white rounded-2xl shadow-lg p-8 md:p-12 border border-cosmic-100">
-        <div id="buyer-content" class="markdown-content content-fade-enter">
-          <div class="text-center py-8">
-            <i class="fas fa-spinner fa-spin text-4xl text-cosmic-600"></i>
-            <p class="mt-4 text-gray-600">Loading buyer guide...</p>
-          </div>
+        <div id="buyer-content" class="markdown-content">
+          <h1>NovaBid Buyer Guide: How It Works</h1>
+
+          <h2>Purpose</h2>
+
+          <p>This guide explains how NovaBid works from a <strong>buyer's perspective</strong>. It is intended for new and prospective buyers who want transparent pricing, fair competition, and fast outcomes without prolonged negotiation.</p>
+
+          <hr>
+
+          <h2>What Is NovaBid?</h2>
+
+          <p>NovaBid is a real-time auction platform built around <strong>time-bound lots</strong>. Instead of static listings or private negotiations, buyers compete openly under predefined rules set by the vendor.</p>
+
+          <p>Every bid is:</p>
+
+          <ul>
+            <li>Time-stamped</li>
+            <li>Cryptographically signed</li>
+            <li>Immutable once submitted</li>
+          </ul>
+
+          <p>This ensures fairness, auditability, and trust.</p>
+
+          <hr>
+
+          <h2>Key Concepts for Buyers</h2>
+
+          <h3>Lots</h3>
+
+          <p>A <strong>lot</strong> is a single auction event. Each lot clearly defines:</p>
+
+          <ul>
+            <li>What is being sold</li>
+            <li>Auction start and end time</li>
+            <li>Bid rules (increments, reserve price, pricing model)</li>
+            <li>Eligibility requirements</li>
+          </ul>
+
+          <p>Lots are temporary. Once closed, outcomes are final.</p>
+
+          <h3>Bids</h3>
+
+          <p>A <strong>bid</strong> represents your offer under the lot's rules. Bids:</p>
+
+          <ul>
+            <li>Cannot be altered after submission</li>
+            <li>Are validated instantly</li>
+            <li>Compete fairly against other buyers</li>
+          </ul>
+
+          <p>There are no hidden bids or preferential treatment.</p>
+
+          <h3>Events</h3>
+
+          <p>NovaBid operates on an <strong>event-driven model</strong>. All actions—bids, updates, closures—are recorded as verifiable events, ensuring a clear and complete auction history.</p>
+
+          <hr>
+
+          <h2>Buyer Journey</h2>
+
+          <h3>1. Discover Available Lots</h3>
+
+          <p>Buyers browse or subscribe to active and upcoming lots. Each lot provides full visibility into:</p>
+
+          <ul>
+            <li>Item or service details</li>
+            <li>Vendor identity and reputation signals</li>
+            <li>Auction rules and timing</li>
+          </ul>
+
+          <p>You know exactly what you are bidding on and under what conditions.</p>
+
+          <h3>2. Eligibility & Access</h3>
+
+          <p>Some lots may be:</p>
+
+          <ul>
+            <li>Public</li>
+            <li>Invite-only</li>
+            <li>Restricted by region, verification status, or buyer type</li>
+          </ul>
+
+          <p>NovaBid enforces eligibility <strong>before bidding</strong>, eliminating uncertainty.</p>
+
+          <h3>3. Place Bids in Real Time</h3>
+
+          <p>During an active auction:</p>
+
+          <ul>
+            <li>Bids are submitted over secure WebSocket (WSS) connections</li>
+            <li>Validation and acknowledgment occur in milliseconds</li>
+            <li>Competing bids are reflected in near real time</li>
+          </ul>
+
+          <p>Speed is balanced with fairness—no silent bid manipulation or reordering.</p>
+
+          <h3>4. Auction Close</h3>
+
+          <p>When the auction ends:</p>
+
+          <ul>
+            <li>The winning bid is selected deterministically</li>
+            <li>Buyers receive immediate confirmation</li>
+            <li>Non-winning bids are finalized cleanly</li>
+          </ul>
+
+          <p>There are no extensions or manual overrides.</p>
+
+          <h3>5. Settlement & Next Steps</h3>
+
+          <p>Depending on the lot configuration:</p>
+
+          <ul>
+            <li>Settlement instructions may be issued automatically, or</li>
+            <li>You proceed through a vendor-defined post-auction workflow</li>
+          </ul>
+
+          <p>All outcomes are backed by a verifiable event trail.</p>
+
+          <hr>
+
+          <h2>Buyer Protections</h2>
+
+          <p>NovaBid is designed to protect buyers through:</p>
+
+          <ul>
+            <li>Immutable bid records</li>
+            <li>Transparent auction rules</li>
+            <li>Deterministic outcomes</li>
+            <li>Secure, encrypted transport</li>
+          </ul>
+
+          <p>What you see during the auction is exactly what the system enforces.</p>
+
+          <hr>
+
+          <h2>Why Buyers Choose NovaBid</h2>
+
+          <p>Compared to traditional marketplaces, NovaBid offers:</p>
+
+          <ul>
+            <li>Clear pricing competition</li>
+            <li>No hidden negotiations</li>
+            <li>Faster decision cycles</li>
+            <li>Verifiable fairness</li>
+          </ul>
+
+          <p>You compete on equal footing, every time.</p>
+
+          <hr>
+
+          <h2>Getting Started as a Buyer</h2>
+
+          <ol>
+            <li>Create an account</li>
+            <li>Complete any required verification</li>
+            <li>Browse or subscribe to lots</li>
+            <li>Bid confidently</li>
+          </ol>
+
+          <p>NovaBid handles the rest.</p>
         </div>
-        <div id="vendor-content" class="markdown-content content-fade-enter hidden">
-          <div class="text-center py-8">
-            <i class="fas fa-spinner fa-spin text-4xl text-cosmic-600"></i>
-            <p class="mt-4 text-gray-600">Loading vendor guide...</p>
-          </div>
+        <div id="vendor-content" class="markdown-content hidden">
+          <h1>NovaBid Vendor Guide: How It Works</h1>
+
+          <h2>Purposes</h2>
+
+          <p>This guide explains how NovaBid works from a vendor's perspective. It is intended for sellers who want controlled price discovery, qualified demand, and trust-backed auction outcomes.</p>
+
+          <hr>
+
+          <h2>What Is NovaBid?</h2>
+
+          <p>NovaBid is an event-driven auction platform where vendors create time-bound lots and allow qualified buyers to compete transparently.</p>
+
+          <p>Vendors define the rules once. NovaBid enforces them automatically.</p>
+
+          <hr>
+
+          <h2>Key Concepts for Vendors</h2>
+
+          <h3>Lots</h3>
+
+          <p>A lot is a single auction instance created by a vendor. Each lot specifies:</p>
+
+          <ul>
+            <li>Product or service details</li>
+            <li>Auction duration</li>
+            <li>Pricing model (starting price, reserve, increments, etc.)</li>
+            <li>Buyer eligibility requirements</li>
+          </ul>
+
+          <p>Lots are immutable once live, ensuring buyer trust.</p>
+
+          <h3>Bids</h3>
+
+          <p>Bids submitted by buyers are:</p>
+
+          <ul>
+            <li>Signed and time-stamped</li>
+            <li>Validated against lot rules</li>
+            <li>Ranked deterministically</li>
+          </ul>
+
+          <p>Vendors cannot alter or reorder bids.</p>
+
+          <h3>Events</h3>
+
+          <p>Every action in NovaBid is captured as a signed event. This creates:</p>
+
+          <ul>
+            <li>Full auditability</li>
+            <li>Strong dispute resolution</li>
+            <li>Compliance-ready records</li>
+          </ul>
+
+          <hr>
+
+          <h2>Vendor Workflow</h2>
+
+          <h3>1. Create a Lot</h3>
+
+          <p>Vendors define auction parameters upfront, including:</p>
+
+          <ul>
+            <li>Description and media</li>
+            <li>Pricing rules</li>
+            <li>Auction timing</li>
+            <li>Buyer qualification requirements</li>
+          </ul>
+
+          <p>Clear rules reduce unqualified participation and post-auction friction.</p>
+
+          <h3>2. Publish and Monitor</h3>
+
+          <p>Once published:</p>
+
+          <ul>
+            <li>The auction runs autonomously</li>
+            <li>Bids are validated and processed in real time</li>
+            <li>Vendors can monitor activity without intervention</li>
+          </ul>
+
+          <p>NovaBid prevents bid spoofing, replay, and manipulation.</p>
+
+          <h3>3. Demand Discovery</h3>
+
+          <p>NovaBid excels at revealing real demand:</p>
+
+          <ul>
+            <li>Competitive bidding exposes true willingness to pay</li>
+            <li>Time limits reduce negotiation fatigue</li>
+            <li>Even unsold lots provide pricing insight</li>
+          </ul>
+
+          <h3>4. Auction Close</h3>
+
+          <p>At close:</p>
+
+          <ul>
+            <li>The system finalizes results strictly based on predefined rules</li>
+            <li>No retroactive changes are possible</li>
+            <li>Buyer trust is preserved by design</li>
+          </ul>
+
+          <h3>5. Fulfillment & Settlement</h3>
+
+          <p>After closing:</p>
+
+          <ul>
+            <li>Vendors receive the winning bid details</li>
+            <li>Time limits reduce negotiation fatigue</li>
+          </ul>
+
+          <p>This allows vendors to refine future offerings without micromanagement, not policing.</p>
         </div>
       </div>
     </div>
@@ -230,99 +494,6 @@
   <script>
     // State management
     let currentTab = 'buyer';
-    let buyerMarkdown = '';
-    let vendorMarkdown = '';
-
-    // Simple markdown to HTML converter
-    function parseMarkdown(markdown) {
-      let html = markdown;
-
-      // Convert headers
-      html = html.replace(/^### (.*$)/gim, '<h3>$1</h3>');
-      html = html.replace(/^## (.*$)/gim, '<h2>$1</h2>');
-      html = html.replace(/^# (.*$)/gim, '<h1>$1</h1>');
-
-      // Convert bold
-      html = html.replace(/\*\*(.*?)\*\*/gim, '<strong>$1</strong>');
-
-      // Convert italic
-      html = html.replace(/\*(.*?)\*/gim, '<em>$1</em>');
-
-      // Convert horizontal rules
-      html = html.replace(/^---$/gim, '<hr>');
-
-      // Convert unordered lists
-      html = html.replace(/^\* (.+)$/gim, '<li>$1</li>');
-      html = html.replace(/(<li>.*<\/li>)/gim, function(match) {
-        return '<ul>' + match + '</ul>';
-      });
-
-      // Merge consecutive ul tags
-      html = html.replace(/<\/ul>\s*<ul>/gim, '');
-
-      // Convert paragraphs (lines not already in tags)
-      const lines = html.split('\n');
-      const processedLines = [];
-      let inList = false;
-
-      for (let i = 0; i < lines.length; i++) {
-        const line = lines[i].trim();
-        
-        if (line === '') {
-          processedLines.push('');
-          continue;
-        }
-
-        if (line.match(/^<(h1|h2|h3|hr|ul|li)/)) {
-          if (line.startsWith('<ul')) inList = true;
-          if (line.startsWith('</ul')) inList = false;
-          processedLines.push(line);
-        } else if (!inList && !line.match(/^<\//)) {
-          processedLines.push('<p>' + line + '</p>');
-        } else {
-          processedLines.push(line);
-        }
-      }
-
-      html = processedLines.join('\n');
-
-      return html;
-    }
-
-    // Load markdown files
-    async function loadMarkdownFiles() {
-      try {
-        const [buyerResponse, vendorResponse] = await Promise.all([
-          fetch('/buyer-how-it-works.md'),
-          fetch('/vendor-how-it-works.md')
-        ]);
-
-        buyerMarkdown = await buyerResponse.text();
-        vendorMarkdown = await vendorResponse.text();
-
-        // Render initial content
-        renderContent('buyer');
-      } catch (error) {
-        console.error('Error loading markdown files:', error);
-        document.getElementById('buyer-content').innerHTML = '<p class="text-red-600">Error loading content. Please try again later.</p>';
-      }
-    }
-
-    // Render markdown content
-    function renderContent(tab) {
-      const markdown = tab === 'buyer' ? buyerMarkdown : vendorMarkdown;
-      const contentId = `${tab}-content`;
-      const contentElement = document.getElementById(contentId);
-
-      if (markdown) {
-        contentElement.innerHTML = parseMarkdown(markdown);
-        contentElement.classList.add('content-fade-enter');
-        // Remove animation class after animation completes
-        setTimeout(() => {
-          contentElement.classList.remove('content-fade-enter');
-        }, 300);
-      }
-    }
 
     // Switch between tabs
     function switchTab(tab) {
@@ -352,11 +523,6 @@
         indicator.style.width = vendorTab.offsetWidth + 'px';
         indicator.style.transform = `translateX(${buyerTab.offsetWidth}px)`;
       }
-
-      // Render content if not already rendered
-      if (tab === 'vendor' && vendorContent.querySelector('.fa-spinner')) {
-        renderContent('vendor');
-      }
     }
 
     // Initialize slider indicator position
@@ -366,10 +532,9 @@
       indicator.style.width = buyerTab.offsetWidth + 'px';
     }
 
-    // Load content on page load
+    // Initialize on page load
     document.addEventListener('DOMContentLoaded', () => {
       initializeSlider();
-      loadMarkdownFiles();
     });
 
     // Handle window resize to adjust slider
