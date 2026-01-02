@@ -73,6 +73,23 @@ body {
   opacity: 1 !important;
 }
 
+/* Skip link for accessibility */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  z-index: 999;
+  padding: 1rem;
+  background-color: #0f1a3c;
+  color: white;
+  text-decoration: none;
+}
+
+.skip-link:focus {
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0;
+}
+
 /* ============================================================================
    CARDS & COMPONENTS
    ============================================================================ */
