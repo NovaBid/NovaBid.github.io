@@ -52,6 +52,9 @@ document.addEventListener('DOMContentLoaded', () => {
       'No lots available for this auction yet.'
     );
 
+    // Add event listeners to watchlist buttons
+    attachWatchlistListeners();
+
     // Render pagination
     renderPagination();
 
@@ -106,6 +109,31 @@ document.addEventListener('DOMContentLoaded', () => {
 
     paginationHTML += '</div>';
     paginationContainer.innerHTML = paginationHTML;
+  }
+
+  // Attach event listeners to watchlist buttons
+  function attachWatchlistListeners() {
+    const watchlistButtons = document.querySelectorAll('.watchlist-card-btn');
+    
+    watchlistButtons.forEach(button => {
+      button.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        
+        const lotId = parseInt(this.getAttribute('data-lot-id'));
+        
+        if (!isAuthenticated()) {
+          window.location.href = '/bidder/login.html';
+          return;
+        }
+        
+        // Toggle watchlist
+        const inWatchlist = toggleWatchlist(lotId);
+        
+        // Update button appearance using shared utility function
+        updateWatchlistButtonAppearance(this, inWatchlist);
+      });
+    });
   }
 
   // Expose pagination function globally
