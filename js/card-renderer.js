@@ -46,7 +46,7 @@ const CardRenderer = {
   createLotCard(lot) {
     const startingBid = lot.starting_bid || 0;
     const inWatchlist = isInWatchlist(lot.lotId);
-    const { heartClass, btnClass } = getWatchlistButtonClasses(inWatchlist);
+    const { buttonText, btnClass } = getWatchlistButtonClasses(inWatchlist);
     
     return `
       <div class="card-hover bg-white rounded-2xl p-6 border border-cosmic-100 flex flex-col">
@@ -60,11 +60,11 @@ const CardRenderer = {
         </a>
         <div class="flex gap-2">
           <button 
-            class="watchlist-card-btn ${btnClass} font-bold w-10 h-10 rounded-lg transition shadow-md flex items-center justify-center" 
+            class="watchlist-card-btn ${btnClass} font-bold px-4 py-2 rounded-lg transition shadow-md flex items-center justify-center min-w-[100px]" 
             data-lot-id="${lot.lotId}"
             aria-label="Toggle watchlist"
             title="${inWatchlist ? 'Remove from watchlist' : 'Add to watchlist'}">
-            <i class="${heartClass} fa-heart"></i>
+            ${buttonText}
           </button>
           <a href="/bidder/lot.html?id=${lot.lotId}" class="flex-1 inline-flex items-center justify-center bg-cosmic-600 text-white font-bold py-2 px-4 rounded-lg hover:bg-cosmic-700 transition no-underline">
             View Lot

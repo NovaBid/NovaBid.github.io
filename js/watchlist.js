@@ -142,14 +142,14 @@ function clearWatchlist() {
 /**
  * Get watchlist button classes based on watchlist state
  * @param {boolean} inWatchlist - Whether the item is in the watchlist
- * @returns {object} Object with heartClass and btnClass properties
+ * @returns {object} Object with buttonText and btnClass properties
  */
 function getWatchlistButtonClasses(inWatchlist) {
     return {
-        heartClass: inWatchlist ? 'fas' : 'far',
+        buttonText: inWatchlist ? 'Unwatch' : 'Watch',
         btnClass: inWatchlist 
-            ? 'bg-nova-400 text-white hover:bg-nova-500' 
-            : 'bg-white border-2 border-nova-400 text-nova-400 hover:bg-nova-50'
+            ? 'bg-cosmic-600 text-white hover:bg-cosmic-700' 
+            : 'bg-white text-cosmic-600 hover:bg-gray-100'
     };
 }
 
@@ -159,15 +159,13 @@ function getWatchlistButtonClasses(inWatchlist) {
  * @param {boolean} inWatchlist - Whether the item is in the watchlist
  */
 function updateWatchlistButtonAppearance(button, inWatchlist) {
-    const icon = button.querySelector('i');
-    const { heartClass, btnClass } = getWatchlistButtonClasses(inWatchlist);
+    const { buttonText, btnClass } = getWatchlistButtonClasses(inWatchlist);
     
-    if (icon) {
-        icon.className = `${heartClass} fa-heart`;
-    }
+    // Update button text content
+    button.textContent = buttonText;
     
     // Remove all possible classes
-    button.classList.remove('bg-white', 'border-2', 'border-nova-400', 'text-nova-400', 'hover:bg-nova-50', 'bg-nova-400', 'text-white', 'hover:bg-nova-500');
+    button.classList.remove('bg-white', 'text-cosmic-600', 'hover:bg-gray-100', 'bg-cosmic-600', 'text-white', 'hover:bg-cosmic-700');
     
     // Add the appropriate classes
     btnClass.split(' ').forEach(cls => button.classList.add(cls));

@@ -42,9 +42,8 @@ document.addEventListener('DOMContentLoaded', function() {
  */
 function initializeWatchlistButton(lotId) {
   const watchlistBtn = document.getElementById('watchlist-toggle-btn');
-  const watchlistIcon = document.getElementById('watchlist-icon');
 
-  if (!watchlistBtn || !watchlistIcon) return;
+  if (!watchlistBtn) return;
 
   // Update button state based on whether lot is in watchlist
   function updateButtonState() {
