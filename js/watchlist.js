@@ -138,3 +138,39 @@ function getWatchlistCount() {
 function clearWatchlist() {
     return saveWatchlist([]);
 }
+
+/**
+ * Get watchlist button classes based on watchlist state
+ * @param {boolean} inWatchlist - Whether the item is in the watchlist
+ * @returns {object} Object with heartClass and btnClass properties
+ */
+function getWatchlistButtonClasses(inWatchlist) {
+    return {
+        heartClass: inWatchlist ? 'fas' : 'far',
+        btnClass: inWatchlist 
+            ? 'bg-nova-400 text-white hover:bg-nova-500' 
+            : 'bg-white border-2 border-nova-400 text-nova-400 hover:bg-nova-50'
+    };
+}
+
+/**
+ * Update watchlist button appearance
+ * @param {HTMLElement} button - The button element to update
+ * @param {boolean} inWatchlist - Whether the item is in the watchlist
+ */
+function updateWatchlistButtonAppearance(button, inWatchlist) {
+    const icon = button.querySelector('i');
+    const { heartClass, btnClass } = getWatchlistButtonClasses(inWatchlist);
+    
+    if (icon) {
+        icon.className = `${heartClass} fa-heart`;
+    }
+    
+    // Remove all possible classes
+    button.classList.remove('bg-white', 'border-2', 'border-nova-400', 'text-nova-400', 'hover:bg-nova-50', 'bg-nova-400', 'text-white', 'hover:bg-nova-500');
+    
+    // Add the appropriate classes
+    btnClass.split(' ').forEach(cls => button.classList.add(cls));
+    
+    button.title = inWatchlist ? 'Remove from watchlist' : 'Add to watchlist';
+}

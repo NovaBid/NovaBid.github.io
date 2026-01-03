@@ -49,24 +49,8 @@ function initializeWatchlistButton(lotId) {
   // Update button state based on whether lot is in watchlist
   function updateButtonState() {
     const inWatchlist = isInWatchlist(lotId);
-    
-    if (inWatchlist) {
-      // Filled heart for items in watchlist
-      watchlistIcon.classList.remove('far');
-      watchlistIcon.classList.add('fas');
-      watchlistBtn.classList.remove('border-nova-400', 'text-nova-400', 'hover:bg-nova-50');
-      watchlistBtn.classList.add('bg-nova-400', 'text-white', 'hover:bg-nova-500');
-      watchlistBtn.title = 'Remove from watchlist';
-      watchlistBtn.setAttribute('aria-label', 'Remove from watchlist');
-    } else {
-      // Hollow heart for items not in watchlist
-      watchlistIcon.classList.remove('fas');
-      watchlistIcon.classList.add('far');
-      watchlistBtn.classList.remove('bg-nova-400', 'text-white', 'hover:bg-nova-500');
-      watchlistBtn.classList.add('border-nova-400', 'text-nova-400', 'hover:bg-nova-50');
-      watchlistBtn.title = 'Add to watchlist';
-      watchlistBtn.setAttribute('aria-label', 'Add to watchlist');
-    }
+    updateWatchlistButtonAppearance(watchlistBtn, inWatchlist);
+    watchlistBtn.setAttribute('aria-label', inWatchlist ? 'Remove from watchlist' : 'Add to watchlist');
   }
 
   // Initial state

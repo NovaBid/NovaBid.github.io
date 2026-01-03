@@ -130,21 +130,8 @@ document.addEventListener('DOMContentLoaded', () => {
         // Toggle watchlist
         const isAdded = toggleWatchlist(lotId);
         
-        // Update button appearance
-        const icon = this.querySelector('i');
-        if (isAdded) {
-          icon.classList.remove('far');
-          icon.classList.add('fas');
-          this.classList.remove('bg-white', 'border-2', 'border-nova-400', 'text-nova-400', 'hover:bg-nova-50');
-          this.classList.add('bg-nova-400', 'text-white', 'hover:bg-nova-500');
-          this.title = 'Remove from watchlist';
-        } else {
-          icon.classList.remove('fas');
-          icon.classList.add('far');
-          this.classList.remove('bg-nova-400', 'text-white', 'hover:bg-nova-500');
-          this.classList.add('bg-white', 'border-2', 'border-nova-400', 'text-nova-400', 'hover:bg-nova-50');
-          this.title = 'Add to watchlist';
-        }
+        // Update button appearance using shared utility function
+        updateWatchlistButtonAppearance(this, isAdded);
       });
     });
   }

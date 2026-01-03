@@ -45,9 +45,8 @@ const CardRenderer = {
    */
   createLotCard(lot) {
     const startingBid = lot.starting_bid || 0;
-    const inWatchlist = typeof isInWatchlist === 'function' ? isInWatchlist(lot.lotId) : false;
-    const heartClass = inWatchlist ? 'fas' : 'far';
-    const btnClass = inWatchlist ? 'bg-nova-400 text-white hover:bg-nova-500' : 'bg-white border-2 border-nova-400 text-nova-400 hover:bg-nova-50';
+    const inWatchlist = isInWatchlist(lot.lotId);
+    const { heartClass, btnClass } = getWatchlistButtonClasses(inWatchlist);
     
     return `
       <div class="card-hover bg-white rounded-2xl p-6 border border-cosmic-100 flex flex-col">
