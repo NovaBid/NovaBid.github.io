@@ -69,11 +69,17 @@
             <p class="text-lg font-bold text-amber-600" id="lot-reserve"></p>
           </div>
 
-          <!-- Action Button -->
-          <button class="w-full bg-cosmic-600 text-white font-bold py-4 px-6 rounded-lg hover:bg-cosmic-700 transition shadow-md">
-            Place Bid
-            <i class="fas fa-gavel ml-2"></i>
-          </button>
+          <!-- Action Buttons -->
+          <div class="flex flex-col sm:flex-row gap-4">
+            <button class="flex-1 bg-cosmic-600 text-white font-bold py-4 px-6 rounded-lg hover:bg-cosmic-700 transition shadow-md">
+              Place Bid
+              <i class="fas fa-gavel ml-2"></i>
+            </button>
+            <button id="watchlist-toggle-btn" class="sm:w-auto bg-white border-2 border-nova-400 text-nova-400 font-bold py-4 px-6 rounded-lg hover:bg-nova-50 transition shadow-md" title="Add to watchlist">
+              <i class="fas fa-heart mr-2"></i>
+              <span id="watchlist-btn-text">Add to Watchlist</span>
+            </button>
+          </div>
         </div>
       </div>
     </div>
@@ -97,6 +103,7 @@
   <script src="/js/navigation.js"></script>
   <script src="/js/auth.js"></script>
   <script src="/js/mock-data.js"></script>
+  <script src="/js/watchlist.js"></script>
   <script src="/js/lot-page.js"></script>
   <script src="/js/main.js"></script>
 </body>

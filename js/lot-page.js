@@ -32,7 +32,63 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Initialize carousel
   initializeCarousel(lot.images);
+
+  // Initialize watchlist button
+  initializeWatchlistButton(lotId);
 });
+
+/**
+ * Initialize watchlist button state and functionality
+ */
+function initializeWatchlistButton(lotId) {
+  const watchlistBtn = document.getElementById('watchlist-toggle-btn');
+  const watchlistBtnText = document.getElementById('watchlist-btn-text');
+
+  if (!watchlistBtn) return;
+
+  // Update button state based on whether lot is in watchlist
+  function updateButtonState() {
+    const inWatchlist = isInWatchlist(lotId);
+    
+    if (inWatchlist) {
+      watchlistBtnText.textContent = 'Remove from Watchlist';
+      watchlistBtn.classList.remove('border-nova-400', 'text-nova-400', 'hover:bg-nova-50');
+      watchlistBtn.classList.add('bg-nova-400', 'text-white', 'hover:bg-nova-500');
+      watchlistBtn.title = 'Remove from watchlist';
+    } else {
+      watchlistBtnText.textContent = 'Add to Watchlist';
+      watchlistBtn.classList.remove('bg-nova-400', 'text-white', 'hover:bg-nova-500');
+      watchlistBtn.classList.add('border-nova-400', 'text-nova-400', 'hover:bg-nova-50');
+      watchlistBtn.title = 'Add to watchlist';
+    }
+  }
+
+  // Initial state
+  updateButtonState();
+
+  // Handle button click
+  watchlistBtn.addEventListener('click', function() {
+    if (!isAuthenticated()) {
+      // Redirect to login if not authenticated
+      alert('Please log in to add items to your watchlist.');
+      window.location.href = '/bidder/login.html';
+      return;
+    }
+
+    // Toggle watchlist
+    toggleWatchlist(lotId);
+    updateButtonState();
+
+    // Show feedback
+    const inWatchlist = isInWatchlist(lotId);
+    const message = inWatchlist 
+      ? 'Added to watchlist!' 
+      : 'Removed from watchlist!';
+    
+    // You could add a toast notification here if you have that component
+    console.log(message);
+  });
+}
 
 function initializeCarousel(images) {
   let currentIndex = 0;
