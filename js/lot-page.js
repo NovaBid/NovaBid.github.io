@@ -42,21 +42,25 @@ document.addEventListener('DOMContentLoaded', function() {
  */
 function initializeWatchlistButton(lotId) {
   const watchlistBtn = document.getElementById('watchlist-toggle-btn');
-  const watchlistBtnText = document.getElementById('watchlist-btn-text');
+  const watchlistIcon = document.getElementById('watchlist-icon');
 
-  if (!watchlistBtn) return;
+  if (!watchlistBtn || !watchlistIcon) return;
 
   // Update button state based on whether lot is in watchlist
   function updateButtonState() {
     const inWatchlist = isInWatchlist(lotId);
     
     if (inWatchlist) {
-      watchlistBtnText.textContent = 'Remove from Watchlist';
+      // Filled heart for items in watchlist
+      watchlistIcon.classList.remove('far');
+      watchlistIcon.classList.add('fas');
       watchlistBtn.classList.remove('border-nova-400', 'text-nova-400', 'hover:bg-nova-50');
       watchlistBtn.classList.add('bg-nova-400', 'text-white', 'hover:bg-nova-500');
       watchlistBtn.title = 'Remove from watchlist';
     } else {
-      watchlistBtnText.textContent = 'Add to Watchlist';
+      // Hollow heart for items not in watchlist
+      watchlistIcon.classList.remove('fas');
+      watchlistIcon.classList.add('far');
       watchlistBtn.classList.remove('bg-nova-400', 'text-white', 'hover:bg-nova-500');
       watchlistBtn.classList.add('border-nova-400', 'text-nova-400', 'hover:bg-nova-50');
       watchlistBtn.title = 'Add to watchlist';
