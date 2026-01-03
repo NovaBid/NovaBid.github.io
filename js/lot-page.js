@@ -18,12 +18,22 @@ document.addEventListener('DOMContentLoaded', function() {
     return;
   }
 
+  // Get current bid from localStorage or use starting bid
+  const currentBid = getCurrentBid(lotId, lot.starting_bid);
+  const hasBids = currentBid > lot.starting_bid;
+
   // Render lot information
   document.getElementById('lot-title').textContent = lot.title;
   document.getElementById('lot-description').textContent = lot.description;
-  document.getElementById('lot-starting-bid').textContent = `$${lot.starting_bid}`;
+  document.getElementById('lot-starting-bid').textContent = `$${currentBid}`;
   document.getElementById('lot-id').textContent = lot.lotId;
   document.getElementById('lot-reserve').textContent = lot.reserve ? 'Reserve Not Met' : '';
+
+  // Update label based on whether bids have been placed
+  const bidLabel = document.querySelector('[id="lot-starting-bid"]').previousElementSibling;
+  if (bidLabel && hasBids) {
+    bidLabel.textContent = 'Current Bid';
+  }
 
   // Update back link to go to correct auction
   if (auction) {
@@ -35,6 +45,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Initialize watchlist button
   initializeWatchlistButton(lotId);
+
+  // Initialize bid button
+  initializeBidButton(lotId, lot.starting_bid);
 });
 
 /**
@@ -162,4 +175,83 @@ function initializeCarousel(images) {
 
   // Initialize carousel display
   updateCarousel();
+}
+
+/**
+ * Get the current bid for a lot from localStorage
+ */
+function getCurrentBid(lotId, startingBid) {
+  try {
+    const bidsData = localStorage.getItem('novabid_bids');
+    if (!bidsData) {
+      return startingBid;
+    }
+
+    const bids = JSON.parse(bidsData);
+    return bids[lotId] || startingBid;
+  } catch (error) {
+    console.error('Error retrieving bid:', error);
+    return startingBid;
+  }
+}
+
+/**
+ * Store a bid for a lot in localStorage
+ */
+function storeBid(lotId, bidAmount) {
+  try {
+    let bids = {};
+    const bidsData = localStorage.getItem('novabid_bids');
+    
+    if (bidsData) {
+      bids = JSON.parse(bidsData);
+    }
+
+    bids[lotId] = bidAmount;
+    localStorage.setItem('novabid_bids', JSON.stringify(bids));
+    return true;
+  } catch (error) {
+    console.error('Error storing bid:', error);
+    return false;
+  }
+}
+
+/**
+ * Initialize bid button functionality
+ */
+function initializeBidButton(lotId, startingBid) {
+  const bidButton = document.querySelector('button.flex-1.bg-cosmic-600');
+  
+  if (!bidButton) return;
+
+  // Handle button click
+  bidButton.addEventListener('click', function() {
+    // Check if user is authenticated
+    if (!isAuthenticated()) {
+      // Redirect to login if not authenticated
+      window.location.href = '/bidder/login.html';
+      return;
+    }
+
+    // Get current bid and increment by $10
+    const currentBid = getCurrentBid(lotId, startingBid);
+    const newBid = currentBid + 10;
+
+    // Store the new bid
+    if (storeBid(lotId, newBid)) {
+      // Update the displayed bid amount
+      document.getElementById('lot-starting-bid').textContent = `$${newBid}`;
+      
+      // Update the label to "Current Bid" if it was "Starting Bid"
+      const bidLabel = document.getElementById('lot-starting-bid').previousElementSibling;
+      if (bidLabel && bidLabel.textContent === 'Starting Bid') {
+        bidLabel.textContent = 'Current Bid';
+      }
+
+      // Log success for debugging
+      console.log(`Bid placed: $${newBid} on lot ${lotId}`);
+    } else {
+      alert('Failed to place bid. Please try again.');
+    }
+  });
 }
