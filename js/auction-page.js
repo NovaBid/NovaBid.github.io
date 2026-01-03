@@ -52,6 +52,9 @@ document.addEventListener('DOMContentLoaded', () => {
       'No lots available for this auction yet.'
     );
 
+    // Add event listeners to watchlist buttons
+    attachWatchlistListeners();
+
     // Render pagination
     renderPagination();
 
@@ -106,6 +109,44 @@ document.addEventListener('DOMContentLoaded', () => {
 
     paginationHTML += '</div>';
     paginationContainer.innerHTML = paginationHTML;
+  }
+
+  // Attach event listeners to watchlist buttons
+  function attachWatchlistListeners() {
+    const watchlistButtons = document.querySelectorAll('.watchlist-card-btn');
+    
+    watchlistButtons.forEach(button => {
+      button.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        
+        const lotId = parseInt(this.getAttribute('data-lot-id'));
+        
+        if (!isAuthenticated()) {
+          window.location.href = '/bidder/login.html';
+          return;
+        }
+        
+        // Toggle watchlist
+        const isAdded = toggleWatchlist(lotId);
+        
+        // Update button appearance
+        const icon = this.querySelector('i');
+        if (isAdded) {
+          icon.classList.remove('far');
+          icon.classList.add('fas');
+          this.classList.remove('bg-white', 'border-2', 'border-nova-400', 'text-nova-400', 'hover:bg-nova-50');
+          this.classList.add('bg-nova-400', 'text-white', 'hover:bg-nova-500');
+          this.title = 'Remove from watchlist';
+        } else {
+          icon.classList.remove('fas');
+          icon.classList.add('far');
+          this.classList.remove('bg-nova-400', 'text-white', 'hover:bg-nova-500');
+          this.classList.add('bg-white', 'border-2', 'border-nova-400', 'text-nova-400', 'hover:bg-nova-50');
+          this.title = 'Add to watchlist';
+        }
+      });
+    });
   }
 
   // Expose pagination function globally
