@@ -128,10 +128,10 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         
         // Toggle watchlist
-        const isAdded = toggleWatchlist(lotId);
+        const inWatchlist = toggleWatchlist(lotId);
         
         // Update button appearance using shared utility function
-        updateWatchlistButtonAppearance(this, isAdded);
+        updateWatchlistButtonAppearance(this, inWatchlist);
       });
     });
   }
