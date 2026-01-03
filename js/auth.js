@@ -258,6 +258,17 @@ function updateHeaderForAuthenticatedUser(user) {
                     handleLogout();
                 };
             }
+
+            // Show watchlist links for authenticated users
+            const watchlistNavLink = headerPlaceholder.querySelector('#watchlist-nav-link');
+            const watchlistMobileLink = headerPlaceholder.querySelector('#watchlist-mobile-link');
+            
+            if (watchlistNavLink) {
+                watchlistNavLink.classList.remove('hidden');
+            }
+            if (watchlistMobileLink) {
+                watchlistMobileLink.classList.remove('hidden');
+            }
         }
     }, 200);
     

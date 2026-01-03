@@ -32,7 +32,66 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Initialize carousel
   initializeCarousel(lot.images);
+
+  // Initialize watchlist button
+  initializeWatchlistButton(lotId);
 });
+
+/**
+ * Initialize watchlist button state and functionality
+ */
+function initializeWatchlistButton(lotId) {
+  const watchlistBtn = document.getElementById('watchlist-toggle-btn');
+  const watchlistIcon = document.getElementById('watchlist-icon');
+
+  if (!watchlistBtn || !watchlistIcon) return;
+
+  // Update button state based on whether lot is in watchlist
+  function updateButtonState() {
+    const inWatchlist = isInWatchlist(lotId);
+    
+    if (inWatchlist) {
+      // Filled heart for items in watchlist
+      watchlistIcon.classList.remove('far');
+      watchlistIcon.classList.add('fas');
+      watchlistBtn.classList.remove('border-nova-400', 'text-nova-400', 'hover:bg-nova-50');
+      watchlistBtn.classList.add('bg-nova-400', 'text-white', 'hover:bg-nova-500');
+      watchlistBtn.title = 'Remove from watchlist';
+      watchlistBtn.setAttribute('aria-label', 'Remove from watchlist');
+    } else {
+      // Hollow heart for items not in watchlist
+      watchlistIcon.classList.remove('fas');
+      watchlistIcon.classList.add('far');
+      watchlistBtn.classList.remove('bg-nova-400', 'text-white', 'hover:bg-nova-500');
+      watchlistBtn.classList.add('border-nova-400', 'text-nova-400', 'hover:bg-nova-50');
+      watchlistBtn.title = 'Add to watchlist';
+      watchlistBtn.setAttribute('aria-label', 'Add to watchlist');
+    }
+  }
+
+  // Initial state
+  updateButtonState();
+
+  // Handle button click
+  watchlistBtn.addEventListener('click', function() {
+    if (!isAuthenticated()) {
+      // Redirect to login if not authenticated
+      window.location.href = '/bidder/login.html';
+      return;
+    }
+
+    // Toggle watchlist
+    toggleWatchlist(lotId);
+    updateButtonState();
+
+    // Log feedback for debugging
+    const inWatchlist = isInWatchlist(lotId);
+    const message = inWatchlist 
+      ? 'Added to watchlist!' 
+      : 'Removed from watchlist!';
+    console.log(message);
+  });
+}
 
 function initializeCarousel(images) {
   let currentIndex = 0;
