@@ -43,11 +43,9 @@ function loadWatchlist() {
   // Clear existing content
   watchlistGrid.innerHTML = '';
 
-  // Render each lot card with expiration info
-  lots.forEach(lot => {
-    const card = createWatchlistLotCard(lot);
-    watchlistGrid.innerHTML += card;
-  });
+  // Render each lot card with expiration info - build HTML string first for better performance
+  const cardsHtml = lots.map(lot => createWatchlistLotCard(lot)).join('');
+  watchlistGrid.innerHTML = cardsHtml;
 
   // Add event listeners for remove buttons after cards are rendered
   document.querySelectorAll('[data-remove-lot]').forEach(button => {

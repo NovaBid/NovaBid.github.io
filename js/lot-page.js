@@ -70,7 +70,6 @@ function initializeWatchlistButton(lotId) {
   watchlistBtn.addEventListener('click', function() {
     if (!isAuthenticated()) {
       // Redirect to login if not authenticated
-      alert('Please log in to add items to your watchlist.');
       window.location.href = '/bidder/login.html';
       return;
     }
@@ -79,13 +78,11 @@ function initializeWatchlistButton(lotId) {
     toggleWatchlist(lotId);
     updateButtonState();
 
-    // Show feedback
+    // Log feedback for debugging
     const inWatchlist = isInWatchlist(lotId);
     const message = inWatchlist 
       ? 'Added to watchlist!' 
       : 'Removed from watchlist!';
-    
-    // You could add a toast notification here if you have that component
     console.log(message);
   });
 }
