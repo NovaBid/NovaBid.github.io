@@ -16,7 +16,7 @@ const AUTH_TOKEN_KEY = 'novabid_auth_token';
  * Generate a random user ID
  */
 function generateUserId() {
-    return 'user_' + Math.random().toString(36).substr(2, 9) + Date.now().toString(36);
+    return 'user_' + Math.random().toString(36).substring(2, 11) + Date.now().toString(36);
 }
 
 /**
@@ -259,7 +259,7 @@ function updateHeaderForAuthenticatedUser(user) {
                 };
             }
         }
-    }, 100);
+    }, 200);
     
     // Clear interval after 5 seconds if header still hasn't loaded
     setTimeout(() => clearInterval(checkHeader), 5000);
