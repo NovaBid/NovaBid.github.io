@@ -118,7 +118,7 @@ function createCompactBidLotCard(lot) {
   if (timeRemaining < 0) {
     timeRemainingText = 'Expired';
     timeRemainingColor = 'text-red-600';
-  } else if (daysRemaining === 0 && hoursRemaining < 24) {
+  } else if (daysRemaining === 0) {
     timeRemainingText = `${hoursRemaining}h remaining`;
     timeRemainingColor = 'text-red-600';
   } else if (daysRemaining < 2) {
