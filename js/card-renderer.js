@@ -45,8 +45,17 @@ const CardRenderer = {
    */
   createLotCard(lot) {
     const startingBid = lot.starting_bid || 0;
+    const currentBid = getCurrentBid(lot.lotId, startingBid);
+    const isHighBidder = isUserHighBidder(lot.lotId, startingBid);
     const inWatchlist = isInWatchlist(lot.lotId);
     const { buttonText, btnClass } = getWatchlistButtonClasses(inWatchlist);
+    
+    // Place bid button state
+    const placeBidDisabled = isHighBidder ? 'disabled' : '';
+    const placeBidBtnClass = isHighBidder 
+      ? 'bg-gray-400 cursor-not-allowed' 
+      : 'bg-cosmic-600 hover:bg-cosmic-700';
+    const placeBidTitle = isHighBidder ? 'You are the high bidder' : 'View lot to place bid';
     
     return `
       <div class="card-hover bg-white rounded-2xl p-6 border border-cosmic-100 flex flex-col">
@@ -56,7 +65,7 @@ const CardRenderer = {
           </div>
           <h3 class="text-xl font-bold mb-2">${lot.title}</h3>
           <p class="text-gray-600 mb-4 flex-grow">${lot.description}</p>
-          <div class="text-lg font-bold text-nova-400 mb-4">Starting Bid: $${startingBid.toLocaleString()}</div>
+          <div class="text-lg font-bold text-nova-400 mb-4">Current Bid: $${currentBid.toLocaleString()}</div>
         </a>
         <div class="flex gap-2">
           <button 
@@ -66,7 +75,9 @@ const CardRenderer = {
             title="${inWatchlist ? 'Remove from watchlist' : 'Add to watchlist'}">
             ${buttonText}
           </button>
-          <a href="/bidder/lot.html?id=${lot.lotId}" class="flex-1 inline-flex items-center justify-center bg-cosmic-600 text-white font-bold py-2 px-4 rounded-lg hover:bg-cosmic-700 transition no-underline">
+          <a href="/bidder/lot.html?id=${lot.lotId}" 
+            class="flex-1 inline-flex items-center justify-center ${placeBidBtnClass} text-white font-bold py-2 px-4 rounded-lg transition no-underline ${isHighBidder ? 'pointer-events-none' : ''}"
+            title="${placeBidTitle}">
             View Lot
             <i class="fas fa-arrow-right ml-2"></i>
           </a>

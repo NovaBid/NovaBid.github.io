@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Watchlist | NovaBid.market</title>
+  <title>My Bids | NovaBid.market</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="/css/style.css">
@@ -19,11 +19,11 @@
       <!-- Page Header -->
       <div class="mb-12 text-center">
         <h1 class="text-4xl md:text-5xl font-bold mb-4">
-          <i class="fas fa-heart text-nova-400 mr-3"></i>
-          My Watchlist
+          <i class="fas fa-gavel text-nova-400 mr-3"></i>
+          My Bids
         </h1>
         <p class="text-xl text-gray-600">
-          Track your favorite lots and never miss a bidding opportunity
+          Track all your active bids and never miss an auction closing
         </p>
       </div>
 
@@ -31,34 +31,34 @@
       <div id="auth-required-message" class="hidden max-w-2xl mx-auto bg-amber-50 border border-amber-200 rounded-lg p-6 text-center mb-8">
         <i class="fas fa-lock text-amber-500 text-4xl mb-4"></i>
         <h2 class="text-2xl font-bold mb-2">Authentication Required</h2>
-        <p class="text-gray-600 mb-4">Please log in to access your watchlist.</p>
+        <p class="text-gray-600 mb-4">Please log in to access your bids.</p>
         <a href="/bidder/login.html" class="inline-block bg-cosmic-600 text-white font-bold py-3 px-6 rounded-lg hover:bg-cosmic-700 transition">
           Sign In / Register
           <i class="fas fa-arrow-right ml-2"></i>
         </a>
       </div>
 
-      <!-- Watchlist Count -->
-      <div id="watchlist-count-section" class="mb-8 text-center">
+      <!-- Bids Count -->
+      <div id="bids-count-section" class="mb-8 text-center">
         <p class="text-lg text-gray-600">
-          <span id="watchlist-count" class="font-bold text-nova-400">0</span> items in your watchlist
+          <span id="bids-count" class="font-bold text-nova-400">0</span> active bids
         </p>
       </div>
 
       <!-- Empty State (Hidden by default) -->
       <div id="empty-state" class="hidden max-w-2xl mx-auto text-center py-12">
-        <i class="fas fa-heart-broken text-gray-300 text-6xl mb-6"></i>
-        <h2 class="text-2xl font-bold mb-4">Your watchlist is empty</h2>
-        <p class="text-gray-600 mb-6">Start adding lots to your watchlist to keep track of items you're interested in.</p>
+        <i class="fas fa-gavel text-gray-300 text-6xl mb-6"></i>
+        <h2 class="text-2xl font-bold mb-4">You haven't placed any bids yet</h2>
+        <p class="text-gray-600 mb-6">Start bidding on lots to see them appear here.</p>
         <a href="/bidder/auctions.html" class="inline-block bg-cosmic-600 text-white font-bold py-3 px-6 rounded-lg hover:bg-cosmic-700 transition">
           Browse Auctions
           <i class="fas fa-gavel ml-2"></i>
         </a>
       </div>
 
-      <!-- Watchlist Grid -->
-      <div id="watchlist-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <!-- Lot cards will be dynamically inserted here -->
+      <!-- My Bids Grid -->
+      <div id="my-bids-grid" class="space-y-4">
+        <!-- Compact lot cards will be dynamically inserted here -->
       </div>
     </div>
   </section>
@@ -74,7 +74,7 @@
   <script src="/js/watchlist.js"></script>
   <script src="/js/bidding.js"></script>
   <script src="/js/card-renderer.js"></script>
-  <script src="/js/watchlist-page.js"></script>
+  <script src="/js/my-bids-page.js"></script>
   <script src="/js/main.js"></script>
 </body>
 </html>
