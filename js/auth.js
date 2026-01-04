@@ -262,12 +262,20 @@ function updateHeaderForAuthenticatedUser(user) {
             // Show watchlist links for authenticated users
             const watchlistNavLink = headerPlaceholder.querySelector('#watchlist-nav-link');
             const watchlistMobileLink = headerPlaceholder.querySelector('#watchlist-mobile-link');
+            const myBidsNavLink = headerPlaceholder.querySelector('#my-bids-nav-link');
+            const myBidsMobileLink = headerPlaceholder.querySelector('#my-bids-mobile-link');
             
             if (watchlistNavLink) {
                 watchlistNavLink.classList.remove('hidden');
             }
             if (watchlistMobileLink) {
                 watchlistMobileLink.classList.remove('hidden');
+            }
+            if (myBidsNavLink) {
+                myBidsNavLink.classList.remove('hidden');
+            }
+            if (myBidsMobileLink) {
+                myBidsMobileLink.classList.remove('hidden');
             }
         }
     }, 200);

@@ -178,51 +178,34 @@ function initializeCarousel(images) {
 }
 
 /**
- * Get the current bid for a lot from localStorage
- */
-function getCurrentBid(lotId, startingBid) {
-  try {
-    const bidsData = localStorage.getItem('novabid_bids');
-    if (!bidsData) {
-      return startingBid;
-    }
-
-    const bids = JSON.parse(bidsData);
-    return bids[lotId] || startingBid;
-  } catch (error) {
-    console.error('Error retrieving bid:', error);
-    return startingBid;
-  }
-}
-
-/**
- * Store a bid for a lot in localStorage
- */
-function storeBid(lotId, bidAmount) {
-  try {
-    let bids = {};
-    const bidsData = localStorage.getItem('novabid_bids');
-    
-    if (bidsData) {
-      bids = JSON.parse(bidsData);
-    }
-
-    bids[lotId] = bidAmount;
-    localStorage.setItem('novabid_bids', JSON.stringify(bids));
-    return true;
-  } catch (error) {
-    console.error('Error storing bid:', error);
-    return false;
-  }
-}
-
-/**
  * Initialize bid button functionality
  */
 function initializeBidButton(lotId, startingBid) {
   const bidButton = document.querySelector('button.flex-1.bg-cosmic-600');
   
   if (!bidButton) return;
+
+  // Function to update button state based on high bidder status
+  function updateBidButtonState() {
+    const isHighBidder = isUserHighBidder(lotId, startingBid);
+    
+    if (isHighBidder) {
+      // Disable button and make it gray
+      bidButton.disabled = true;
+      bidButton.classList.remove('bg-cosmic-600', 'hover:bg-cosmic-700');
+      bidButton.classList.add('bg-gray-400', 'cursor-not-allowed');
+      bidButton.title = 'You are the high bidder';
+    } else {
+      // Enable button with normal styling
+      bidButton.disabled = false;
+      bidButton.classList.remove('bg-gray-400', 'cursor-not-allowed');
+      bidButton.classList.add('bg-cosmic-600', 'hover:bg-cosmic-700');
+      bidButton.title = 'Place bid';
+    }
+  }
+
+  // Initial button state
+  updateBidButtonState();
 
   // Handle button click
   bidButton.addEventListener('click', function() {
@@ -233,14 +216,16 @@ function initializeBidButton(lotId, startingBid) {
       return;
     }
 
-    // Get current bid and increment by $10
+    // Get current bid and calculate next bid
     const currentBid = getCurrentBid(lotId, startingBid);
-    const newBid = currentBid + 10;
+    const nextBid = calculateNextBid(currentBid);
 
-    // Store the new bid
-    if (storeBid(lotId, newBid)) {
+    // Place the bid using the new placeBid function
+    const result = placeBid(lotId, nextBid, startingBid);
+
+    if (result.success) {
       // Update the displayed bid amount
-      document.getElementById('lot-starting-bid').textContent = `$${newBid}`;
+      document.getElementById('lot-starting-bid').textContent = `$${result.bidAmount}`;
       
       // Update the label to "Current Bid" if it was "Starting Bid"
       const bidLabel = document.getElementById('lot-starting-bid').previousElementSibling;
@@ -248,10 +233,13 @@ function initializeBidButton(lotId, startingBid) {
         bidLabel.textContent = 'Current Bid';
       }
 
+      // Update button state
+      updateBidButtonState();
+
       // Log success for debugging
-      console.log(`Bid placed: $${newBid} on lot ${lotId}`);
+      console.log(`Bid placed: $${result.bidAmount} on lot ${lotId}`);
     } else {
-      alert('Failed to place bid. Please try again.');
+      alert(result.message);
     }
   });
 }
